@@ -24,6 +24,7 @@ svg, object{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding: 0.2em;
 }
 
 .logoContainer>span{
@@ -145,4 +146,15 @@ nav{
     .mobileElement{
         display: none;
     }
+}
+
+@media only screen and (max-width:1200px){
+    #searchForm{
+        display: none;
+        position:absolute;
+        width: 98%;
+        top: 5em;
+    }
+
+    #searc
 }

@@ -1,9 +1,3 @@
-#menu{
-    display: flex;
-    align-items: center;
-    height: 60px;
-}
-
 header{
     border-bottom: 1px solid black;
 }
@@ -15,6 +9,9 @@ svg, object{
 #menu{
     width: 100%;
     justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    height: 60px;
 }
 
 /*The logos on the top*/
@@ -39,9 +36,12 @@ nav{
     height: 100%;
 }
 
-.menuOption{
-    all: unset;
+.menuOption, .logoContainer, #menu>a{
+    text-decoration: none;
     color: black;
+}
+
+.menuOption{
     font-size: 1.2em;
     padding: 0.25em 0.5em;
 }
@@ -51,10 +51,6 @@ nav{
     transition: 0.5s;
     box-shadow: 0px 2px 3px #564125;
     border-radius: 5px;
-}
-
-.menuOption:active{
-    
 }
 
 #searchForm{
@@ -82,10 +78,6 @@ nav{
         display: none;
     }
 
-    #menu{
-        
-    }
-
     .mobileElement{
         display: flex;
     }
@@ -106,6 +98,11 @@ nav{
 
     .logoContainer{
         margin: 0 1em;
+    }
+
+    .logoContainer>span{
+        /*Command under can be added for the text of the logos to disappear when the phone version is*/
+        /*display: none;*/
     }
 
     #menu>nav {

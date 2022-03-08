@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Frontpage</title>
+        <title>Former order</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
         <link href = "CSS/menu.css" rel = "stylesheet" type="text/css">
+        <link href = "CSS/formerOrder.css" rel = "stylesheet" type="text/css"
     </head>
     <body>
         <header id = "menu">
@@ -71,13 +72,78 @@
         </header>
         <script src = "javascript/menu.js">   
         </script>
+        <script src = "javascript/formerOrders.js">
+        </script>
         <section class = "mainSection">
-            <a href = "https://www.youtube.com/watch?v=Zjx56Pc4PDY">
-                <h1>
-                    Frontpage magic
-                </h1>
-            </a>
-            
+            <h2>
+                Orders
+            </h2>
+            <div class = "orderContainer" id = "headerContainer">
+                <h3>
+                    Orderdate
+                </h3>
+                <h3>
+                    OrderStatus
+                </h3>
+                <h3>
+                    Total
+                </h3>
+            </div>
+            <div class = "orderContainer">
+                <p class = "orderDate">
+                    08.03.2022
+                </p>
+                <p class = "orderStatus">
+                    Sent
+                </p>
+                <p class = "orderPrice">
+                    500,- kr
+                </p>
+                <a href = "#" onclick = "getOrder">
+                    <object type="image/svg+xml" data="svg/cross.svg" class="logo">
+                    </object>
+                </a>
+                <div class = "order"  id = "orderID3221">
+                    <span class = "orderID">
+                        Product
+                    </span>
+                    <span>
+                        Order details
+                    </span>
+                    <div>
+                        <img src = "Images/greentea.jpg" alt = "">
+                        <span>
+                            Stoned green tea
+                        </span>
+                        <span>
+                            Lorem ipsum dolor sit amet
+                        </span>
+                    </div>
+                    <div>
+                        <div class = "orderDetails">
+                            <span>
+                                Price per: 899,- kr
+                            </span>
+                            <span>
+                                Amount: 2
+                            </span>
+                            <span>
+                                Delivery price: 0,- kr
+                            </span>
+                            <span>
+                                Total price 1798,- kr
+                            </span>
+                            <span>
+                                Delivery method: HeltHjem
+                            </span>
+                            <button>
+                                Leave review
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </body>
 </html>

@@ -3,4 +3,9 @@ body{
     max-width: 1200px;
     padding: 0.5em;
     margin: 0 auto;
+    font-size: 1rem;
+}
+
+.mainSection{
+    padding: 0.5em 1em;
 }

@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr;
     height: auto;
-    margin: 0 0.5em;
     border-bottom: 1px solid #3b2d19;
 }
 
@@ -32,7 +31,10 @@
 .product{
     display: flex;
     flex-flow: row wrap;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
+
 .product>*{
     width: 50%;
 }
@@ -45,7 +47,6 @@ p{
     font-size: 14px;
     margin: 0.7em 0;
 }
-
 
 .openContainer{
     background-color: white;
@@ -99,8 +100,6 @@ img{
 }
 
 .productDetails{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -115,6 +114,7 @@ img{
 }
 .returnButton{
     grid-column: 1/3;
+    margin: 0.5em 0;
 }
 
 .returnButton, .reviewButton{

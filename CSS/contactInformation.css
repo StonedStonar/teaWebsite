@@ -29,9 +29,13 @@
     margin: 1.5em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    background-color: white;
+    background-color: #FDF7EE;
     border: 0.1px solid rgba(0, 0, 0, 0.6);
     
+}
+.faq>a{
+    text-decoration: none;
+    color: black;
 }
 
 .faq:hover {
@@ -44,4 +48,12 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
+}
+
+figcaption{
+    color: gray;
+}
+
+img{
+    width: 100%;
 }

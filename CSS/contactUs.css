@@ -24,3 +24,11 @@
 .contactUsOption>a>span:first-child{
     font-weight: bold;
 }
+
+figcaption{
+    color: gray;
+}
+
+img{
+    width: 100%;
+}

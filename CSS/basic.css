@@ -9,3 +9,8 @@ body{
 .mainSection{
     padding: 0.5em 1em;
 }
+
+.button{
+    height: 40px;
+    border-radius: 10px;
+}

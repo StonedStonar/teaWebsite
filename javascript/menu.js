@@ -12,7 +12,6 @@ function closeMenu(){
 }
 
 function fixMenu(){
-    console.log(window.innerWidth)
     let width = window.innerWidth;
     if(width >= 800){
         let sidemenu = document.getElementById("sideMenu");

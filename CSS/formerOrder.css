@@ -22,6 +22,25 @@
 
 
 /*For the product inside the menus.*/
+.order{
+    grid-column: 1/5;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.product{
+    display: flex;
+    flex-flow: row wrap;
+}
+.product>*{
+    width: 50%;
+}
+
+.productSummation, .product{
+    width: 100%;
+}
+
 p{
     font-size: 14px;
     margin: 0.7em 0;
@@ -37,7 +56,11 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0.5em;
-    min-width: 250px;
+    min-width: 48%;
+}
+
+.orderDeatils>p:first-child{
+    margin: 0;
 }
 
 .orderHeader{
@@ -54,11 +77,11 @@ p{
 .underHeader{
     font-size: 1em;
     font-weight: bold;
-    margin: 0.35em 0;
+    margin: 0.5em 0;
 }
 
 .closeText{
-    margin: 0.35em 0;
+    margin: 0.25em 0;
 }
 
 img{
@@ -78,14 +101,13 @@ img{
 .productDetails{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    margin: 0.35em 0;
     display: flex;
-    flex-flow: column;
-    padding: 0.35em;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .reviewButton{
-    background-color: green;
+    background-color: #267F29;
     width: 70%;
     margin: auto 0;
     align-self: center;
@@ -96,6 +118,19 @@ img{
 }
 
 .returnButton, .reviewButton{
-    height: 40px;
-    border-radius: 10px;
+    border: none;
+}
+
+.reviewButton:hover{
+    background-color: #0f4911;
+}
+
+.returnButton:hover{
+    background-color: gray;
+}
+
+@media screen and (max-width:900px){
+    .orderDeatils{
+        width: 100%;
+    }
 }

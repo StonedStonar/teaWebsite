@@ -1,7 +1,7 @@
 body{
     background-color: #FDF7EE;
     max-width: 1200px;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     margin: 0 auto;
     font-size: 1rem;
 }
@@ -13,4 +13,8 @@ body{
 .button{
     height: 40px;
     border-radius: 10px;
+}
+
+.closeText{
+    margin: 0.25em 0;
 }

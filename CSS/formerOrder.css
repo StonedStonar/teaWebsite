@@ -1,3 +1,5 @@
+
+
 .orderContainer{
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr;
@@ -81,9 +83,6 @@ p{
     margin: 0.5em 0;
 }
 
-.closeText{
-    margin: 0.25em 0;
-}
 
 img{
     width: 100px;

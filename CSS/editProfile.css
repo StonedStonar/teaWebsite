@@ -1,0 +1,60 @@
+.editForm{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.editProfileContainer>div{
+    min-width: 48%;
+}
+
+label{
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+h3{
+    border-bottom: 1px solid black;
+}
+
+.editForm>input{
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 1em;
+    height: 20px;
+}
+
+.editForm>input:last-of-type{
+    height: 40px;
+}
+
+.button{
+    border: none;
+    background-color: #267F29;
+    color: white;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: #0f4911;
+}
+
+.button:active{
+    background-color: #34ac38;
+}
+
+.editProfileContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:600px){
+    .editProfileContainer>div{
+        width: 100%;
+    }
+
+    .editProfileContainer{
+        align-items: center;
+    }
+}

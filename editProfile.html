@@ -7,6 +7,8 @@
         <title>Edit profile</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
         <link href = "CSS/menu.css" rel = "stylesheet" type="text/css">
+        <link href = "CSS/editProfile.css" rel = "stylesheet" type="text/css">
+        <link href = "CSS/profile.css" referrerpolicy = "stylesheet" type = "text/css">
     </head>
     <body>
         <header id = "menu">
@@ -75,14 +77,43 @@
             <h2>
                 Profile information
             </h2>
-            <ul>
-                <li>
-                    Hei
-                </li>
-                <li>
-                    He 2
-                </li>
-            </ul>
+            <div class = "editProfileContainer">
+                <div>
+                    <h3>Profile details</h3>
+                    <form class = "editForm">
+                        <label for="firstName" ho>First name</label>
+                        <input type = "text" id = "firstName" placeholder = "Enter first name" class = "input">
+                        <label value = "lastName">Last name</label>
+                        <input type = "text" id = "lastName" placeholder = "Enter last name">
+                        <label for = "email">E-mail</label>
+                        <input type = "email" id = "email" placeholder = "Enter email address">
+                        <label for = "mobileNumber">Mobile number</label>
+                        <input type = "number" id = "mobileNumber" placeholder = "Enter mobile number">
+                        <input type = "submit" value = "Change details" id = "submit" class = "button">
+                    </form>
+                </div>
+                <div>
+                    <h3>
+                        Address
+                    </h3>
+                    <form class = "editForm">
+                        <label for = "streetName">Street name</label>
+                        <input type = "text" id = "streetName" placeholder = "Enter street name">
+                        <label for = "houseNumber">House number</label>
+                        <input type = "text" id = "houseNumber" placeholder = "Enter house number">
+                        <label for = "postalCode">Postal code</label>
+                        <input type = "number" id = "postalCode" placeholder = "Enter postal code">
+                        <label for = "city">City</label>
+                        <input type = "text" id = "city"  placeholder = "Enter city">
+                        <label for = "country">Country</label>
+                        <input type = "text" id = "country" placeholder = "Enter country">
+                        <input type = "submit" value = "Update address" class = "button">
+                    </form>
+                </div>
+                <h2>
+                    Add menu here for profile navigation
+                </h2>
+            </div>
         </section>
     </body>
 </html>

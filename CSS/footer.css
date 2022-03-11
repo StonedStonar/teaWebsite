@@ -7,10 +7,6 @@
     align-items: stretch;
 }
 
-footer>span{
-    background-color: red;
-}
-
 .logoSocials{
     width: 40px;
 }
@@ -18,4 +14,4 @@ footer>span{
 .logoSupport{
     width: 100px;
 }
-   
+

@@ -7,6 +7,10 @@
     align-items: stretch;
 }
 
+footer>span{
+    background-color: red;
+}
+
 .logoSocials{
     width: 40px;
 }

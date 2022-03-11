@@ -36,3 +36,19 @@ img{
 div{
     background-color: white;
 }
+
+
+.socialLogoContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.socialLogoContainer>a{
+    width: 40px;
+}
+
+.mainSection>div:last-child:hover{
+    background-color: white;
+}

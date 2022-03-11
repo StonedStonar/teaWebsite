@@ -1,0 +1,21 @@
+footer{
+    border-top: 1px solid black;
+}
+
+footer{
+    text-align: center;
+    margin: 100px;
+}
+
+footer{
+    display: flex;
+    align-content: flex-end;
+}
+
+.logoSocials{
+    width: 40px;
+}
+
+.logoSupport{
+    width: 100px;
+}

@@ -1,15 +1,12 @@
-footer{
+#footer{
     border-top: 1px solid black;
-}
-
-footer{
     text-align: center;
     margin: 100px;
-}
-
-footer{
     display: flex;
     align-content: flex-end;
+    flex: auto;
+    flex-wrap: nowrap; 
+    justify-content: space-around;
 }
 
 .logoSocials{
@@ -19,3 +16,4 @@ footer{
 .logoSupport{
     width: 100px;
 }
+   

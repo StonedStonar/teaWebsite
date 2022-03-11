@@ -1,12 +1,10 @@
 #footer{
     border-top: 1px solid black;
-    text-align: center;
-    margin: 100px;
     display: flex;
-    align-content: flex-end;
     flex: auto;
     flex-wrap: nowrap; 
     justify-content: space-around;
+    align-items: stretch;
 }
 
 .logoSocials{

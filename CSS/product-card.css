@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: white;
+    max-width: 300px;
+    height: 400px;
+    margin: 2rem 0rem 0 1.8rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.5rem 0 rgb(121, 118, 118);
+    text-align: center;
+}
+
+.card:hover {
+    cursor: pointer;
+    border: 1px solid rgb(158, 150, 150);
+
+}
+
+.card-title {
+    margin: 1rem 1rem 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.card-description {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(70, 67, 67);
+}
+
+.former-price {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: rgb(70, 67, 67);
+    margin: 3rem 9rem 0 0;
+    text-decoration: line-through;
+    opacity: 90%;
+}
+
+.card-pricing {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(216, 13, 13);
+    margin: -0.2rem 8rem 0 0;
+}
+
+.star {
+    margin: 1rem;
+    position: relative;
+
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.8rem;
+    
+    border-right:  0.3em solid transparent;
+    border-bottom: 0.7em  solid rgb(177, 176, 174);
+    border-left:   0.3em solid transparent;
+
+    /* Controlls the size of the stars. */
+    font-size: 1.2rem;
+}
+
+    .star:before, .star:after {
+    content: '';
+    
+    display: block;
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    top: 0.6em;
+    left: -1em;
+
+    border-right:  1em solid transparent;
+    border-bottom: 0.7em  solid rgb(177, 176, 174);
+    border-left:   1em solid transparent;
+
+    transform: rotate(-35deg);
+}
+
+.star:after {  
+    transform: rotate(35deg);
+}
+
+.card-container {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}

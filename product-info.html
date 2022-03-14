@@ -5,7 +5,6 @@
         <title>Product information</title>
 
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/menu.css" rel = "stylesheet" type="text/css">
         <link href = "CSS/contactUs.css" rel = "stylesheet" type="text/css">
         <link href= "CSS/product-card.css" rel="stylesheet" type="text/css">
     
@@ -14,29 +13,29 @@
     <body>
         <header id = "menu">
             <a class = "logoContainer mobileElement" id = "hamburgerMenu" onclick = "openMenu()">
-                <object type="image/svg+xml" data="svg/Menu.svg" class="logo">
+                <object type = "image/svg+xml" data = "svg/Menu.svg" class = "logo" alt = "A hambuger menu">
                 </object>
                 <span>
                     Menu
                 </span>
             </a>
-            <a class = "logoContainer mobileElement" id = "search">
-                <object type="image/svg+xml" data="svg/search.svg" class="logo">
+            <a class = "logoContainer" id = "search" onclick = "openSearch()">
+                <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
                 </object> 
                 <span>
                     Search
                 </span>
             </a>
-            <a href = "index.html">
+            <a href = "index.html" id = "companyHeader">
                 <h1>
                     NORTE
                 </h1>
             </a>
             <nav id = "sideMenu">
-                <a href = "#" id = "exit" class = "mobileElement" onclick = "closeMenu()">
-                    <object type="image/svg+xml" data="svg/cross.svg" class="logo">
+                <span id = "exit" class = "mobileElement" onclick = "closeMenu()">
+                    <object type="image/svg+xml" data="svg/cross.svg" class="logo" alt="A cross logo">
                     </object>
-                </a>
+                </span>
                 <a href = "products.html" class = "menuOption">
                     Products
                 </a>
@@ -51,21 +50,24 @@
                 </a> 
             </nav>
             <form id = "searchForm">
-                <object type="image/svg+xml" data="svg/search.svg" class="logo">
+                <label for = "productSearch">
+                    Search
+                </label>
+                <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
                 </object>
-                <input type = "text" id = "productSearch" name="productSearch">
+                <input type = "search" id = "productSearch" name="productSearch" onsearch="search()">
             </form>
-            <a class = "logoContainer">
-                <object type="image/svg+xml" data="svg/shoppingcart.svg" class="logo">
+            <a href = "cart.html" class = "logoContainer" id = "cartMenu">
+                <object type="image/svg+xml" data="svg/shoppingcart.svg" class="logo" alt = "An cart logo">
                     Cart
                 </object>
                 <span>
                     Cart
                 </span>
             </a>
-            <a class = "logoContainer" href = "profile.html">
-                <object type="image/svg+xml" data="svg/profile.svg" class="logo">
-                    Cart
+            <a class = "logoContainer" href = "profile.html" id = "profileMenu">
+                <object type="image/svg+xml" data="svg/profile.svg" class="logo" alt = "A profile logo">
+                    Profile
                 </object>
                 <span>
                     Profile

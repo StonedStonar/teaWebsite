@@ -1,3 +1,5 @@
+/*All Css done for the product card section under here: */ 
+
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +31,7 @@
 .card-description {
     font-size: 1.2rem;
     font-weight: 600;
-    color: rgb(70, 67, 67);
+    color: #464343;
 }
 
 .former-price {
@@ -94,4 +96,135 @@
     margin: 2rem 0 0 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
+
+.card-header> img {
+    width: 150px;
+}
+
+.card-info> .former-price {
+    font-size: 150%;
+}
+
+.card-info > .card-pricing {
+    font-size: 200%;
+}
+
+/*CSS used on the product info section */
+
+.card-info {
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+    color: rgb(58, 56, 56);
+    opacity: 95%;
+}
+
+.Add-To-Cart {
+    width: 100%;
+    height: 45px;
+    background-color: #267f29;
+    border-radius: 0.5rem;
+    margin: 2rem 0 0 0;
+    color: white;
+    font-size: 16px;
+}
+
+.Add-To-Cart:hover {
+    cursor: pointer;
+}
+
+.drop-down-meny li {
+    list-style-type: none;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+hr {
+    margin-top: 1rem;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    margin-top: 1rem;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 1rem 0 1rem 0;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+
+.last {
+    border-bottom: 1px solid black;
+}
+
+.tea-card-picture {
+    width: 150px;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    background-color: #267f29;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.amount-on-storage {
+    margin: 1rem 2rem 2rem 0;
+}
+
+.stars {
+    display: flex;
+    justify-content: space-between;
+}
+
+.increment-button, .decrement-button {
+    width: 2rem;
+    background-color: white;
+    font-weight: 400;
+    font-size: 24px;
+    border: none;
+} 
+
+.amount-of-product-button {
+    width: 4rem;
+    background-color: white;
+    font-size: 24px;
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.ins-dec-button {
+    margin-top: 1.5rem;
+    height: 2.2rem;
+}
+
+

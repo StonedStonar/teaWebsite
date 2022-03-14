@@ -8,76 +8,7 @@
         <link href = "CSS/menu.css" rel = "stylesheet" type="text/css">
         <link href = "CSS/contactUs.css" rel = "stylesheet" type="text/css">
         <link href= "CSS/product-card.css" rel="stylesheet" type="text/css">
-        
-        <style>
-
-            .card-info {
-                font-weight: 600;
-                font-family: 'Roboto', sans-serif;
-            }
-
-            h2 {
-                font-size: 2rem;
-                margin-top: 2rem;
-            }
-
-            p {
-                font-size: 1.4rem;
-                color: rgb(58, 56, 56);
-                opacity: 95%;
-            }
-
-            .Add-To-Cart {
-                width: 100%;
-                height: 45px;
-                background-color: #267f29;
-                border-radius: 0.5rem;
-                margin: 2rem 0 1rem 0;
-                color: white;
-                font-size: 16px;
-            }
-
-            .Add-To-Cart:hover {
-                cursor: pointer;
-            }
-
-            .drop-down-meny li {
-                list-style-type: none;
-                font-size: 24px;
-                font-weight: 600;
-            }
-
-            hr {
-                margin-top: 1rem;
-            }
-
-            h3 {
-                text-align: center;
-                margin-top: 2rem;
-                font-size: 20px;
-            }
-
-            img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 75%;
-                margin-top: 1rem;
-            }
-
-            .dropdown {
-                display: flex;
-                justify-content: space-between;
-                border-top: 1px solid black;
-                padding: 1rem 0 1rem 0;
-            }
-
-            .last {
-                border-bottom: 1px solid black;
-            }
-
-
-        </style>
+    
     
     </head>
     <body>
@@ -141,28 +72,51 @@
                 </span>
             </a>         
         </header>
-
-        <section class="|-info">
+        <section class="card-info">
             <h2>Stoned Green Tea</h2>
             <p>Lorem ipsum dolor sit amet</p>
-
             <img src="Images/greentea.jpg" alt="Tea picture"></img>
+            
+            <div class="former-price">NOK 379kr</div>
+            <div class="card-pricing">NOK 289kr </div>
             <button class="Add-To-Cart">ADD TO CART</button>
+            <div class="stars">
+                <div>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+
+                <div class="ins-dec-button">
+                   <button class="decrement-button">-</button>
+                   <input type="tel" pattern="\d" maxlength="3" value="1" class="amount-of-product-button">
+                   <button class="increment-button">+</button>
+                </div>
+            </div>
+            <div class="amount-on-storage">
+                <div>
+                    <span class="circle"></span>
+                    <span class="amount-of-product">170</span>+ on storage.
+                </div>
+            </div>
+            
 
             <div class="drop-down-meny">
                 <div class="dropdown">
                     Description
-                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow" width="24px"></object>
+                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow logo"></object>
                 </div>
 
                 <div class="dropdown">  
                     <span>Ingredients</span>
-                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow" width="24px"></object>
+                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow logo"></object>
                 </div>
 
                 <div class="dropdown last">
                     <span>Proudct reviews</span>
-                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow" width="24px"></object>
+                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow logo"></object>
                 </div>
             </div>
 
@@ -176,7 +130,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -196,7 +150,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -216,7 +170,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -236,7 +190,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -244,7 +198,7 @@
                 <div class="card-body">
                     <div class="former-price">NOK 379kr</div>
                     <div class="card-pricing">NOK 289kr </div>
-                    <div class="reviews-stars">
+                    <div class="review-stars">
                         <span class="star"></span>
                         <span class="star"></span>
                         <span class="star"></span>

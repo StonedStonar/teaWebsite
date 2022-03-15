@@ -5,107 +5,37 @@
         <title>Product information</title>
 
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/menu.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/contactUs.css" rel = "stylesheet" type="text/css">
         <link href= "CSS/product-card.css" rel="stylesheet" type="text/css">
-        
-        <style>
-
-            .card-info {
-                font-weight: 600;
-                font-family: 'Roboto', sans-serif;
-            }
-
-            h2 {
-                font-size: 2rem;
-                margin-top: 2rem;
-            }
-
-            p {
-                font-size: 1.4rem;
-                color: rgb(58, 56, 56);
-                opacity: 95%;
-            }
-
-            .Add-To-Cart {
-                width: 100%;
-                height: 45px;
-                background-color: #267f29;
-                border-radius: 0.5rem;
-                margin: 2rem 0 1rem 0;
-                color: white;
-                font-size: 16px;
-            }
-
-            .Add-To-Cart:hover {
-                cursor: pointer;
-            }
-
-            .drop-down-meny li {
-                list-style-type: none;
-                font-size: 24px;
-                font-weight: 600;
-            }
-
-            hr {
-                margin-top: 1rem;
-            }
-
-            h3 {
-                text-align: center;
-                margin-top: 2rem;
-                font-size: 20px;
-            }
-
-            img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 75%;
-                margin-top: 1rem;
-            }
-
-            .dropdown {
-                display: flex;
-                justify-content: space-between;
-                border-top: 1px solid black;
-                padding: 1rem 0 1rem 0;
-            }
-
-            .last {
-                border-bottom: 1px solid black;
-            }
-
-
-        </style>
+        <link href= "CSS/footer.css" rel="stylesheet" type="text/css">
+    
     
     </head>
     <body>
         <header id = "menu">
             <a class = "logoContainer mobileElement" id = "hamburgerMenu" onclick = "openMenu()">
-                <object type="image/svg+xml" data="svg/Menu.svg" class="logo">
+                <object type = "image/svg+xml" data = "svg/Menu.svg" class = "logo" alt = "A hambuger menu">
                 </object>
                 <span>
                     Menu
                 </span>
             </a>
-            <a class = "logoContainer mobileElement" id = "search">
-                <object type="image/svg+xml" data="svg/search.svg" class="logo">
+            <a class = "logoContainer" id = "search" onclick = "openSearch()">
+                <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
                 </object> 
                 <span>
                     Search
                 </span>
             </a>
-            <a href = "index.html">
+            <a href = "index.html" id = "companyHeader">
                 <h1>
                     NORTE
                 </h1>
             </a>
             <nav id = "sideMenu">
-                <a href = "#" id = "exit" class = "mobileElement" onclick = "closeMenu()">
-                    <object type="image/svg+xml" data="svg/cross.svg" class="logo">
+                <span id = "exit" class = "mobileElement" onclick = "closeMenu()">
+                    <object type="image/svg+xml" data="svg/cross.svg" class="logo" alt="A cross logo">
                     </object>
-                </a>
+                </span>
                 <a href = "products.html" class = "menuOption">
                     Products
                 </a>
@@ -120,49 +50,75 @@
                 </a> 
             </nav>
             <form id = "searchForm">
-                <object type="image/svg+xml" data="svg/search.svg" class="logo">
+                <label for = "productSearch">
+                    Search
+                </label>
+                <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
                 </object>
-                <input type = "text" id = "productSearch" name="productSearch">
+                <input type = "search" id = "productSearch" name="productSearch" onsearch="search()">
             </form>
-            <a class = "logoContainer">
-                <object type="image/svg+xml" data="svg/shoppingcart.svg" class="logo">
+            <a href = "cart.html" class = "logoContainer" id = "cartMenu">
+                <object type="image/svg+xml" data="svg/shoppingcart.svg" class="logo" alt = "An cart logo">
                     Cart
                 </object>
                 <span>
                     Cart
                 </span>
             </a>
-            <a class = "logoContainer" href = "profile.html">
-                <object type="image/svg+xml" data="svg/profile.svg" class="logo">
-                    Cart
+            <a class = "logoContainer" href = "profile.html" id = "profileMenu">
+                <object type="image/svg+xml" data="svg/profile.svg" class="logo" alt = "A profile logo">
+                    Profile
                 </object>
                 <span>
                     Profile
                 </span>
             </a>         
         </header>
-
         <section class="card-info">
             <h2>Stoned Green Tea</h2>
             <p>Lorem ipsum dolor sit amet</p>
-
             <img src="Images/greentea.jpg" alt="Tea picture"></img>
+            
+            <div class="former-price">NOK 379kr</div>
+            <div class="card-pricing">NOK 289kr </div>
             <button class="Add-To-Cart">ADD TO CART</button>
+            <div class="stars">
+                <div>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div>
+
+                <div class="ins-dec-button">
+                   <button class="decrement-button">-</button>
+                   <input type="tel" pattern="\d" maxlength="3" value="1" class="amount-of-product-button">
+                   <button class="increment-button">+</button>
+                </div>
+            </div>
+            <div class="amount-on-storage">
+                <div>
+                    <span class="circle"></span>
+                    <span class="amount-of-product">170</span>+ on storage.
+                </div>
+            </div>
+            
 
             <div class="drop-down-meny">
                 <div class="dropdown">
                     Description
-                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow" width="24px"></object>
+                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow logo"></object>
                 </div>
 
                 <div class="dropdown">  
                     <span>Ingredients</span>
-                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow" width="24px"></object>
+                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow logo"></object>
                 </div>
 
                 <div class="dropdown last">
                     <span>Proudct reviews</span>
-                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow" width="24px"></object>
+                    <object type="image/svg+xml" data="svg/Arrow-for-dropdown-meny.svg" class="dropdown-arrow logo"></object>
                 </div>
             </div>
 
@@ -174,9 +130,9 @@
 
         <section class="card-container">
 
-            <div class="card">
+            <a href="product-info.html" class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -192,11 +148,11 @@
                         <span class="star"></span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="product-info.html" class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -212,11 +168,11 @@
                         <span class="star"></span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="product-info.html" class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -232,11 +188,11 @@
                         <span class="star"></span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="product-info.html" class="card">
                 <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture" style="width: 150px;"></img>
+                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
                     <div class="card-title">Blackberry Leaf Tea</div>
                     <div class="card-description">Tea ingredients from the <br>nature of norway</div>
                 </div>
@@ -244,7 +200,7 @@
                 <div class="card-body">
                     <div class="former-price">NOK 379kr</div>
                     <div class="card-pricing">NOK 289kr </div>
-                    <div class="reviews-stars">
+                    <div class="review-stars">
                         <span class="star"></span>
                         <span class="star"></span>
                         <span class="star"></span>
@@ -252,8 +208,93 @@
                         <span class="star"></span>
                     </div>
                 </div>
-            </div>
-    
+            </a>
         </section>
+
+        <footer id= "footer">
+            <div>
+                <a href = "index.html">
+                    <span>
+                        NORTE
+                    </span>
+                </a>
+                <span>
+                    For tea lovers
+                </span>
+    
+                <a href = "contactInformation.html">
+                    Contact Information
+                </a>
+                    <span>
+                        NORTE AS, LegitAddress 69, 6015 Ålesund
+                    </span>
+                <a href="tel:82097082">
+                    <span>
+                        820 97 082
+                    </span>
+                <a href = "mailto: norte@professionalemail.com">
+                    <span>
+                        norte@professionalemail.com
+                    </span>
+                </a>
+            </div>
+            <div>
+                <a href="aboutUs.html">
+                    <span>
+                        About us
+                    </span>
+                </a>
+                <a href="login.html">
+                    <span>
+                        Log in
+                    </span>
+                </a>
+            </div>
+            <div>
+                <a href="https://twitter.com/">
+                    <img src="Images/twitterLogoBlack.png" alt="twitter logo" class = "logoSocials">
+                </a>
+                <a href="https://instagram.com/">
+                    <img src="Images/instagramLogo.png" alt="Instagram logo" class = "logoSocials">
+                </a>
+                <a href="https://facebook.com/">
+                    <img src="Images/facebookLogo.png" alt="Facebook logo" class = "logoSocials">
+                </a>
+                <span>
+                    We cooperate with:
+                </span>
+                <a href="https://www.yogitea.com/nb/">
+                    <span>
+                        Yogi Tea
+                    </span>
+                </a>
+                <a href="https://www.ahmadtea.com/">
+                    <span>
+                        Ahmad Tea
+                    </span>
+                </a>
+                <a href="https://www.clipper-teas.com/">
+                    <span>
+                        Clipper Tea
+                    </span>
+                </a>
+                <a href="https://www.pukkaherbs.com/no/no">
+                    <span>
+                        Pukka Tea
+                    </span>
+                </a>
+                <span>
+                    Feel free to support
+                </span>
+                <a href="https://www.fairtrade.no/">
+                    <img src="Images/FairtradeLogo.jpg" alt="Fairtrade link" class="logoSupport">
+                </a>
+                <a href="https://amnesty.no/">
+                    <img src="Images/Amnesty_logo_RGB_yellow.png" alt="Amnesty link" class="logoSupport">
+                </a>
+            
+            </div>
+    
+        </footer>
     </body>
 </html>

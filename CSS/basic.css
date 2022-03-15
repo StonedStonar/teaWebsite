@@ -1,7 +1,7 @@
 body{
     background-color: #FDF7EE;
     max-width: 1200px;
-    padding: 0.5em 1em;
+    padding: 0 1em;
     margin: 0 auto;
     font-size: 1rem;
 }
@@ -17,4 +17,176 @@ body{
 
 .closeText{
     margin: 0.25em 0;
+}
+
+/*Menu styling under*/
+svg, object{
+    pointer-events:none;
+}
+
+#menu>a>h1{
+    margin: 0;
+}
+
+#menu{
+    position:sticky;
+    padding-top: 0.5em;
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid black;
+}
+
+/*The logos on the top*/
+.logoContainer{
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2em;
+}
+
+.logoContainer>span{
+    font-size: 12px;
+}
+.logo{
+    height: 30px;
+}
+
+#menu>nav{
+    display: flex;
+    height: 100%;
+}
+
+.menuOption, .logoContainer, #menu>a{
+    text-decoration: none;
+    color: black;
+}
+
+.menuOption{
+    font-size: 1.2em;
+    padding: 0.25em 0.5em;
+}
+
+.menuOption:hover, .logoContainer:hover, #exit:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 0px 3px #564125;
+    border-radius: 5px;
+    /*box-shadow: 0px 2px 3px #564125;*/
+}
+
+#searchForm>input{
+    border: none;
+    height: 100%;
+    background-color: inherit;
+    font-size: 1.5em;
+}
+
+#searchForm>*{
+    /*display: inline-block;*/
+    height: 1.5em;
+}
+
+/*For the search*/
+#searchForm{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    margin-top: 0.5em;
+}
+#searchForm>label{
+    display: none;
+}
+
+#searchForm{
+    height: 0;
+    background-color: #eee2d1;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 0 0.5em;
+    transition: 0.5s height, 0.5s padding, ease 0.5s;
+}
+
+#searchForm>input:focus{
+    background-color: white;
+}
+
+#searchForm>input{
+    width: 100%;
+}
+
+#search{
+    order: 1;
+}
+
+#cartMenu{
+    order: 2;
+}
+
+#profileMenu{
+    order: 3;
+}
+
+@media only screen and (min-width:800px){
+    #menu>nav {
+        max-width: 50%;
+        width: 100%;
+    }
+
+    #menu>nav{
+        transition: none;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-content:space-around;
+    }
+
+    .mobileElement{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #exit{
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        z-index: 1;
+        cursor: pointer;
+        padding: 0.25em;
+    }
+
+    
+
+    #menu>nav {
+        order: 1;
+        width: 0; 
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        /*Egentlige fargen #F2ECE3*/
+        background-color: #eee2d1;
+        overflow-x: hidden;
+        padding-top: 60px;;
+        flex-flow: column nowrap;
+        text-align: right;
+    }
+
+    .menuOption{
+        padding: 0.5em;
+        margin: 0.5em 0 0.5em 0.5em;
+        border-bottom: solid 1px #564125;
+    }
+
+    #search{
+        order: 0;
+    }
 }

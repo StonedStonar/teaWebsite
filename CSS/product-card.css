@@ -1,4 +1,4 @@
-/*All Css done for the product card section under here: */ 
+
 
 * {
     margin: 0;
@@ -10,10 +10,11 @@
     background-color: white;
     max-width: 300px;
     height: 400px;
-    margin: 2rem 0rem 0 1.8rem;
+    margin: 2rem 0rem 0 1rem;
     border-radius: 1rem;
-    box-shadow: 0 0.2rem 0.5rem 0 rgb(121, 118, 118);
+    box-shadow: 0 0.2rem 0.2rem 0 rgb(121, 118, 118);
     text-align: center;
+    text-decoration: none;
 }
 
 .card:hover {
@@ -66,8 +67,8 @@
     border-bottom: 0.7em  solid rgb(177, 176, 174);
     border-left:   0.3em solid transparent;
 
-    /* Controlls the size of the stars. */
-    font-size: 1.2rem;
+    
+    font-size: 1rem;
 }
 
     .star:before, .star:after {
@@ -93,7 +94,7 @@
 }
 
 .card-container {
-    margin: 2rem 0 0 0;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -112,7 +113,7 @@
     font-size: 200%;
 }
 
-/*CSS used on the product info section */
+
 
 .card-info {
     font-weight: 600;
@@ -170,7 +171,6 @@ img {
 
 .dropdown {
     display: flex;
-    justify-content: space-between;
     border-top: 1px solid black;
     padding: 1rem 0 1rem 0;
 }

@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Products</title>
+        <title>Register user page</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href="CSS/product-card.css" rel="stylesheet" type="text/css">
+        <link href="CSS/login.css" rel="stylesheet" type="text/css">
+        <link href="CSS/registerAccount.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <header id = "menu">
@@ -72,49 +73,29 @@
                 </span>
             </a>         
         </header>
-    
 
-            <section class="card-container">
-
-                <a href="product-info.html" class="card">
-                    <div class="card-header">
-                        <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
-                        <div class="card-title">Blackberry Leaf Tea</div>
-                        <div class="card-description">Tea ingredients from the <br>nature of norway</div>
-                    </div>
-        
-                    <div class="card-body">
-                        <div class="former-price">NOK 379kr</div>
-                        <div class="card-pricing">NOK 289kr </div>
-                        <div class="reviews-stars">
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                    </div>
+        <section class="mainSection">
+            <h2>
+                Create Account
+            </h2>
+            <div class="enter-details">
+                <from class="enter-account-details">
+                    <label for="fullName" class="fullName">Full name</label>
+                    <input type="text" id="fullName" placeholder="Enter full name">
+                    <label for="email" class="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter email adress">
+                    <label for="password" class="password">Password</label>
+                    <input type="text" id="password" placeholder="Enter at least 6 characters">
+                    <label for="Re-enter password" class="re-enter-password">Re enter password</label>
+                    <input type="text" id="re-enter-password" placeholder="Re enter the same password">
+                    <input type="submit" value="Register user" id="sign-in" class="button">
+                </from>
+                
+                <span>Already have an account?</span>
+                <a class="signIn" href="login.html"> 
+                    Sign in here
                 </a>
-    
-                <a href="product-info.html" class="card">
-                    <div class="card-header">
-                        <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
-                        <div class="card-title">Blackberry Leaf Tea</div>
-                        <div class="card-description">Tea ingredients from the <br>nature of norway</div>
-                    </div>
-        
-                    <div class="card-body">
-                        <div class="former-price">NOK 379kr</div>
-                        <div class="card-pricing">NOK 289kr </div>
-                        <div class="reviews-stars">
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                    </div>
-                </a>
-            </section>
+            </div>
+        </section>
     </body>
 </html>

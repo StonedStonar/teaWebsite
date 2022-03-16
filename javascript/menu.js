@@ -5,11 +5,12 @@ function openSearch(){
         search.style.height = "1.5em";
         search.style.paddingTop = "0.5em";
         search.style.paddingBottom = "0.5em";
-        search.style.border = "black"
-        search.style.borderBottom = "1px solid black"
-        search.style.borderTop = "1px solid black"
-        document.getElementById("productSearch").focus()
+        search.style.visibility = "visible";
+        search.style.border = "black";
+        search.style.borderBottom = "1px solid black";
+        search.style.borderTop = "1px solid black";
         window.addEventListener("click", listenForCloseSearch)
+        document.getElementById("productSearch").focus()
     }else{
         closeSearch();
     }
@@ -21,7 +22,7 @@ function listenForCloseSearch(click){
     let search = document.getElementById("search");
     if(searchMenu.style.height != "" && target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement){
         closeSearch();
-        window.removeEventListener("click", listenForCloseSearch)
+        window.removeEventListener("click", listenForCloseSearch);
     }
 }
 
@@ -47,6 +48,7 @@ function search(){
 
 function openMenu(){
     let sideMenu = document.getElementById("sideMenu")
+    sideMenu.style.visibility = "visible"
     sideMenu.style.width = "200px";
     sideMenu.style.transition = "1s";
     window.addEventListener("click", listenForCloseMenu)

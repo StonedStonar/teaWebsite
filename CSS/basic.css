@@ -105,13 +105,14 @@ body{
 }
 
 #searchForm{
+    visibility: hidden;
     height: 0;
     background-color: #eee2d1;
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
     padding: 0 0.5em;
-    transition: 0.5s height, 0.5s padding, ease 0.5s;
+    transition: visibility 0s,0.5s height, 0.5s padding, ease 0.5s;
 }
 
 #searchForm>input:focus{
@@ -221,6 +222,7 @@ body{
         order: 1;
         width: 0; 
         position: fixed;
+        visibility: hidden;
         z-index: 1;
         top: 0;
         left: 0;

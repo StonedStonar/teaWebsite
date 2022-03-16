@@ -99,6 +99,7 @@
     flex-wrap: wrap;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
+    padding-bottom: 3rem;
 }
 
 .card-header> img {
@@ -143,6 +144,7 @@ p {
 
 .Add-To-Cart:hover {
     cursor: pointer;
+    background-color: #0f4911;
 }
 
 .drop-down-meny li {
@@ -226,5 +228,6 @@ img {
     margin-top: 1.5rem;
     height: 2.2rem;
 }
+
 
 

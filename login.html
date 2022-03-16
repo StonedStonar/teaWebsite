@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login Page</title>
+        <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
+        <link href="CSS/login.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header id = "menu">
+            <a class = "logoContainer mobileElement" id = "hamburgerMenu" onclick = "openMenu()">
+                <object type = "image/svg+xml" data = "svg/Menu.svg" class = "logo" alt = "A hambuger menu">
+                </object>
+                <span>
+                    Menu
+                </span>
+            </a>
+            <a class = "logoContainer" id = "search" onclick = "openSearch()">
+                <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
+                </object> 
+                <span>
+                    Search
+                </span>
+            </a>
+            <a href = "index.html" id = "companyHeader">
+                <h1>
+                    NORTE
+                </h1>
+            </a>
+            <nav id = "sideMenu">
+                <span id = "exit" class = "mobileElement" onclick = "closeMenu()">
+                    <object type="image/svg+xml" data="svg/cross.svg" class="logo" alt="A cross logo">
+                    </object>
+                </span>
+                <a href = "products.html" class = "menuOption">
+                    Products
+                </a>
+                <a href = "products.html" class = "menuOption">
+                    Sale
+                </a>
+                <a href = "contactUs.html" class = "menuOption">
+                    Contact us
+                </a>
+                <a href = "aboutUs.html" class = "menuOption">
+                     About us
+                </a> 
+            </nav>
+            <form id = "searchForm">
+                <label for = "productSearch">
+                    Search
+                </label>
+                <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
+                </object>
+                <input type = "search" id = "productSearch" name="productSearch" onsearch="search()">
+            </form>
+            <a href = "cart.html" class = "logoContainer" id = "cartMenu">
+                <object type="image/svg+xml" data="svg/shoppingcart.svg" class="logo" alt = "An cart logo">
+                    Cart
+                </object>
+                <span>
+                    Cart
+                </span>
+            </a>
+            <a class = "logoContainer" href = "profile.html" id = "profileMenu">
+                <object type="image/svg+xml" data="svg/profile.svg" class="logo" alt = "A profile logo">
+                    Profile
+                </object>
+                <span>
+                    Profile
+                </span>
+            </a>         
+        </header>
+
+        <section class="mainSection">
+            <h2>
+                Log in
+            </h2>
+            <div class = "enter-details">
+                <form class="enter-account-details">
+                    <label for="email" class="email">Email</label>
+                    <input type="text" id = "email" placeholder="Enter email adress">
+                    <label for="password" class="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                    <span>
+                        Password must be at least 6 characters long
+                    </span>
+                    
+                    <a href="forgotPassword.html">
+                        Forgot Password?
+                    </a>
+                    <input type="submit" value="Sign in" id="sign-in" class="button">
+                </form>
+                <h3>Not a member yet?</h3>
+                <a href="registerPage.html">
+                    Register here
+                </a>
+            </div>
+
+        </section>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+
+
+.enter-account-details {
+    display: flex;
+    flex-flow: column;
+}
+
+.email, .password, .fullName, .re-enter-password{
+    font-size: 1.4rem;
+}
+
+.mainSection> h2 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.enter-account-details> input {
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 1rem;
+    height: 34px;
+    font-size: 1.2rem;
+}
+
+.enter-details{
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.enter-details>a {
+    text-align: right;
+}
+
+.enter-details>a  {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1080BF;
+    align-self: center;
+}
+
+
+.enter-details{
+    display: flex;
+    flex-direction: column;
+}
+
+form>a  {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1080BF;
+    text-align: right;
+}
+
+form>span {
+    font-weight: 600;
+
+}
+
+.enter-details>span {
+    font-weight: bold;
+    align-self: center;
+    margin-top: 1em;
+}
+
+.enter-details>h3 {
+    width: fit-content;
+    margin: 2rem auto 0 auto;
+}
+
+#sign-in {
+    border: none;
+    background-color: #267F29;
+    color: white;
+    height: 40px;
+    font-weight: 600;
+    margin: 1em 0 0.5em;
+    cursor: pointer;
+}
+
+#sign-in:hover {
+    background-color: #0f4911;
+}
+
+

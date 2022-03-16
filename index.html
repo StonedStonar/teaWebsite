@@ -9,20 +9,24 @@
     </head>
     <body>
         <header id = "menu">
-            <a class = "logoContainer mobileElement" id = "hamburgerMenu" onclick = "openMenu()">
-                <object type = "image/svg+xml" data = "svg/Menu.svg" class = "logo" alt = "A hambuger menu">
-                </object>
-                <span>
-                    Menu
-                </span>
-            </a>
-            <a class = "logoContainer" id = "search" onclick = "openSearch()">
-                <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
-                </object> 
-                <span>
-                    Search
-                </span>
-            </a>
+            <div id = "hamburgerMenu" onclick = "openMenu()">
+                <a class = "logoContainer mobileElement">
+                    <object type = "image/svg+xml" data = "svg/Menu.svg" class = "logo" alt = "A hambuger menu">
+                    </object>
+                    <span>
+                        Menu
+                    </span>
+                </a>
+            </div>
+            <div id = "search" onclick = "openSearch()">
+                <a class = "logoContainer">
+                    <object type="image/svg+xml" data="svg/search.svg" class="logo" alt = "A looking glass logo">
+                    </object> 
+                    <span>
+                        Search
+                    </span>
+                </a>
+            </div>
             <a href = "index.html" id = "companyHeader">
                 <h1>
                     NORTE
@@ -54,22 +58,57 @@
                 </object>
                 <input type = "search" id = "productSearch" name="productSearch" onsearch="search()">
             </form>
-            <a href = "cart.html" class = "logoContainer" id = "cartMenu">
-                <object type="image/svg+xml" data="svg/shoppingcart.svg" class="logo" alt = "An cart logo">
-                    Cart
-                </object>
-                <span>
-                    Cart
-                </span>
-            </a>
-            <a class = "logoContainer" href = "profile.html" id = "profileMenu">
-                <object type="image/svg+xml" data="svg/profile.svg" class="logo" alt = "A profile logo">
-                    Profile
-                </object>
-                <span>
-                    Profile
-                </span>
-            </a>         
+            <div id = "cartMenu">
+                <a href = "cart.html" class = "logoContainer">
+                    <object type="image/svg+xml" data="svg/shoppingcart.svg" class="logo" alt = "An cart logo">
+                        Cart
+                    </object>
+                    <span>
+                        Cart
+                    </span>
+                </a>
+            </div>
+            <div id = "profileMenu">
+                <a class = "logoContainer" href = "profile.html" >
+                    <object type="image/svg+xml" data="svg/profile.svg" class="logo" alt = "A profile logo">
+                        Profile
+                    </object>
+                    <span>
+                        Profile
+                    </span>
+                </a>
+                <div id = "profileMenuOptions">
+                    <div id = "profileTriangle">
+                    </div>
+                    <div class = "profileOption">
+                        <span>
+                            Login
+                        </span>
+                    </div>
+                    <div class = "profileOption">
+                        <span>
+                            Logout
+                        </span>
+                    </div>
+                    <div class = "profileOption">
+                        <span>
+                            My profile
+                        </span>
+                    </div>
+                    <div class = "profileOption">
+                        <span>
+                            My orders
+                        </span>
+                    </div>
+    
+                    <div class = "profileOption">
+                        <span>
+                            Login
+                        </span>
+                    </div>
+                </div>   
+            </div>
+                  
         </header>
         <script src = "javascript/menu.js">   
         </script>

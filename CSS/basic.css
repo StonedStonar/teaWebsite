@@ -130,6 +130,37 @@ svg, object{
 
 #profileMenu{
     order: 3;
+    position: relative;
+}
+
+/*For profile menu*/
+#profileMenuOptions{
+    position:absolute;
+    display: flex;
+    right: -0.7em;
+    width: 150%;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.profileOption{
+    background-color: #eee2d1;
+    border-top: 1px solid black;
+}
+
+.profileOption:hover{
+    background-color: gray;
+    font-weight: bold;
+}
+
+#profileTriangle{
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    align-self: center;
+
 }
 
 @media only screen and (min-width:800px){
@@ -139,7 +170,6 @@ svg, object{
     }
 
     #menu>nav{
-        transition: none;
         justify-content: space-evenly;
         align-items: center;
         justify-content:space-around;

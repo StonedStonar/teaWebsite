@@ -3,7 +3,7 @@ body{
     max-width: 1200px;
     padding: 0 1em;
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .mainSection{
@@ -20,7 +20,7 @@ body{
 }
 
 /*Menu styling under*/
-svg, object{
+.svg, .logoContainer>span{
     pointer-events:none;
 }
 
@@ -98,6 +98,7 @@ svg, object{
     top: 60px;
     margin-top: 0.5em;
 }
+
 #searchForm>label{
     display: none;
 }
@@ -136,21 +137,40 @@ svg, object{
 /*For profile menu*/
 #profileMenuOptions{
     position:absolute;
-    display: flex;
-    right: -0.7em;
-    width: 150%;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    left: -3em;
+    width: 300%;
     flex-direction: column;
+    max-height: auto;
+}
+#profileMenuOptions{
+    transition: 0s visibility, 0.25s opacity linear;
+}
+
+
+
+#profileMenuOptions, #profileMenuOptions>*:first-child{
     border-bottom: 1px solid black;
+    margin: 0 auto;
 }
 
 .profileOption{
     background-color: #eee2d1;
     border-top: 1px solid black;
+    padding: 0.25em;
+}
+
+.profileOption>a{
+    text-decoration: none;
+    color: black;
+    display: block;
 }
 
 .profileOption:hover{
-    background-color: gray;
-    font-weight: bold;
+    background-color: white;
+    font-weight: 600;
 }
 
 #profileTriangle{
@@ -159,8 +179,9 @@ svg, object{
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-bottom: 5px solid black;
-    align-self: center;
-
+    margin: 0 auto;
+    position: relative;
+    top: 1px;
 }
 
 @media only screen and (min-width:800px){
@@ -170,9 +191,11 @@ svg, object{
     }
 
     #menu>nav{
+        transition: none;
         justify-content: space-evenly;
         align-items: center;
         justify-content:space-around;
+        flex-flow: row nowrap;
     }
 
     .mobileElement{
@@ -192,8 +215,6 @@ svg, object{
         cursor: pointer;
         padding: 0.25em;
     }
-
-    
 
     #menu>nav {
         order: 1;

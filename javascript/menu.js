@@ -1,14 +1,8 @@
 function openSearch(){
     let search = document.getElementById("searchForm");
     search.addEventListener("click", search)
-    if(search.style.height != "1.5em"){
-        search.style.height = "1.5em";
-        search.style.paddingTop = "0.5em";
-        search.style.paddingBottom = "0.5em";
-        search.style.visibility = "visible";
-        search.style.border = "black";
-        search.style.borderBottom = "1px solid black";
-        search.style.borderTop = "1px solid black";
+    if(!search.classList.contains("openSearch")){
+        search.classList.add("openSearch")
         window.addEventListener("click", listenForCloseSearch)
         document.getElementById("productSearch").focus()
     }else{
@@ -20,14 +14,14 @@ function listenForCloseSearch(click){
     let searchMenu = document.getElementById("searchForm");
     let target = click.target;
     let search = document.getElementById("search");
-    if(searchMenu.style.height != "" && target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement){
+    if(search.classList.contains("openSearch") && target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement){
         closeSearch();
         window.removeEventListener("click", listenForCloseSearch);
     }
 }
 
 function closeSearch(){
-    document.getElementById("searchForm").style = null;
+    document.getElementById("searchForm").classList.remove("openSearch");
 }
 
 function search(){
@@ -36,21 +30,12 @@ function search(){
     alert("You just tried to search you little sh****** \nAnd you wrote:\n" + written)
     alert("Ever watched porn?")
     let popup = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '','width=,height=,resizable=no').blur();
-    let result = window.confirm("Are you happy with this?")
-    if(result){
-        alert("Good for you")
-        alert("But yeeaah you have to suffer")
-    }else{
-        alert("Well, it always can...")
-    }
     window.location = "https://www.nyan.cat";
 }
 
 function openMenu(){
     let sideMenu = document.getElementById("sideMenu")
-    sideMenu.style.visibility = "visible"
-    sideMenu.style.width = "200px";
-    sideMenu.style.transition = "1s";
+    sideMenu.classList.add("openMenu")
     window.addEventListener("click", listenForCloseMenu)
 }
 
@@ -58,7 +43,7 @@ function listenForCloseMenu(click){
     let sideMenu = document.getElementById("sideMenu")
     let hambuger = document.getElementById("hamburgerMenu")
     let target = click.target
-    if((sideMenu.style.width != "") && (target.parentElement != hambuger && target != hambuger && target != sideMenu)){
+    if(sideMenu.classList.contains("openMenu") && (target.parentElement != hambuger && target != hambuger && target != sideMenu)){
         console.log("closing")
         closeMenu();
         window.removeEventListener("click", listenForCloseMenu);
@@ -66,16 +51,15 @@ function listenForCloseMenu(click){
 }
 
 function closeMenu(){
-    document.getElementById("sideMenu").style = null;
+    document.getElementById("sideMenu").classList.remove("openMenu");
 }
 
 function openProfileMenu(){
     let profileMenu = document.getElementById("profileMenuOptions");
-    if(profileMenu.style.opacity == ""){
-        profileMenu.style.visibility = "visible";
-        profileMenu.style.opacity = 1;
+    if(!profileMenu.classList.contains("openProfileMenu")){
+        profileMenu.classList.add("openProfileMenu")
     }else{
-        profileMenu.style = "null";
+        closeProfileMenu();
     }
     window.addEventListener("click", listenForProfileClose)
 }
@@ -83,7 +67,7 @@ function openProfileMenu(){
 function listenForProfileClose(click){
     let profileMenu = document.getElementById("profileMenuOptions")
     let target = click.target
-    if((profileMenu.style.opacity != "") && (target.parentElement != profileMenu.parentElement && target.parentElement != profileMenu)){
+    if(profileMenu.classList.contains("openProfileMenu") && (target.parentElement != profileMenu.parentElement && target.parentElement != profileMenu)){
         closeProfileMenu();
         window.removeEventListener("click", listenForProfileClose)
     }
@@ -91,5 +75,5 @@ function listenForProfileClose(click){
 
 function closeProfileMenu(){
     let profileMenu = document.getElementById("profileMenuOptions")
-    profileMenu.style = null
+    profileMenu.classList.remove("openProfileMenu")
 }

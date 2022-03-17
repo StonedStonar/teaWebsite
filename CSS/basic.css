@@ -147,11 +147,10 @@ body{
     flex-direction: column;
     max-height: auto;
 }
+
 #profileMenuOptions{
     transition: 0s visibility, 0.25s opacity linear;
 }
-
-
 
 #profileMenuOptions, #profileMenuOptions>*:first-child{
     border-bottom: 1px solid black;
@@ -244,3 +243,25 @@ body{
         order: 0;
     }
 }
+
+/*The animations of the menus.*/
+.openSearch{
+    height: 1.5em !important;
+    padding: 0.5em 0 !important;
+    visibility: visible !important;
+    border-color: black !important;
+    border-bottom: 1px solid black !important;
+    border-top: 1px solid black !important;
+}
+
+.openMenu{
+    transition: 1s !important;
+    visibility: visible !important;
+    width: 200px !important;
+}
+
+.openProfileMenu{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+

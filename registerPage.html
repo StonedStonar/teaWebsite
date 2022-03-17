@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Account</title>
+        <title>Register user page</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/profile.css" rel = "stylesheet" type = "text/css">
-        <link href = "CSS/profileMenu.css" rel = "stylesheet" type = "text/css">
+        <link href="CSS/login.css" rel="stylesheet" type="text/css">
+        <link href="CSS/registerAccount.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <header id = "menu">
@@ -102,109 +102,29 @@
         </header>
         <script src = "javascript/menu.js">   
         </script>
-        <section class = "mainSection">
-            <div id = "profileIntro">
-                <h2>
-                    Your profile page
-                </h2>
-                <figure>
-                    <img src = "Images/handsWithTea.jpg" id = "profileStandardPicture" alt = "Two people toasting with metal cups.">
-                    <figcaption>Picture taken from Nathan Dumalo on Nosplash</figcaption>
-                </figure>
-            </div>
-            
-            <div class = "personalInformation">
-                <h3 id = "aboutYouHeader">
-                    About you
-                </h3>
-                <p class = "closeText">
-                    First name
-                </p class = "closeText">
-                <p class = "closeText">
-                    Test 
-                </p>
-                <p class = "closeText">
-                    Last name
-                </p>
-                <p class = "closeText">
-                    Testesen
-                </p>
-                <p class = "closeText">
-                    Email
-                </p>
-                <p class = "closeText">
-                    Test@Testesen.com
-                </p>
-                <p class = "closeText">
-                    Phonenumber
-                </p>
-                <p class = "closeText">
-                    44609832
-                </p>
-                <p>
-                    Main address
-                </p>
-                <p>
-                    Testvegen 12
-                    6015
-                    Ålesund
-                    Norge
-                </p>
-                <a class = "button" id = "editProfile" href = "editProfile.html">
-                    <span>
-                        Edit profile
-                    </span>
+
+        <section class="mainSection">
+            <h2>
+                Create Account
+            </h2>
+            <div class="enter-details">
+                <from class="enter-account-details">
+                    <label for="fullName" class="fullName">Full name</label>
+                    <input type="text" id="fullName" placeholder="Enter full name">
+                    <label for="email" class="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter email adress">
+                    <label for="password" class="password">Password</label>
+                    <input type="text" id="password" placeholder="Enter at least 6 characters">
+                    <label for="Re-enter password" class="re-enter-password">Re enter password</label>
+                    <input type="text" id="re-enter-password" placeholder="Re enter the same password">
+                    <input type="submit" value="Register user" id="sign-in" class="button">
+                </from>
+                
+                <span>Already have an account?</span>
+                <a class="signIn" href="login.html"> 
+                    Sign in here
                 </a>
             </div>
-            <div id = "optionsForUser">
-                <div class = "profileOption">
-                    <a href = "formerOrder.html">
-                        <span>
-                            Your orders
-                        </span>
-                        <span>
-                            Overview of orders and returns.
-                        </span>
-                    </a>
-                </div>
-                <div class = "profileOption">
-                    <a>
-                        <span>
-                            Security
-                        </span>
-                        <span>
-                            Manage your password.
-                        </span>
-                    </a>
-                </div>
-                <div class = "profileOption">
-                    <a href = "contactUs.html">
-                        <span>
-                            Help and contact
-                        </span>
-                        <span>
-                            Contact information & help for the website
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div id = "deleteProfile">
-                <h3>
-                    Delete profile
-                </h3>
-                <p>
-                    If you want to delete your profile you can do it here. All former orders will be deleted from your profile and should be saved if you need them. These receipts are also needed for return or to use the warranty of a product.
-                </p>
-                <p>
-                    After the deletion you cannot login to your account again.
-                </p>
-                <button class = "button" id = "deleteProfileButton">
-                    Delete my profile
-                </button>
-            </div>
-
         </section>
-
-        <script src = "javascript/profile.js"></script>
     </body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login Page</title>
+        <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
+        <link href="CSS/login.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header id = "menu">
+            <div id = "hamburgerMenu" class = "mobileElement" onclick = "openMenu()">
+                <span class = "logoContainer">
+                    <img src = "#" srcset = "svg/Menu.svg" alt = "Hamburger menu" class = "svg logo">
+                    <span>
+                        Menu
+                    </span>
+                </span>
+            </div>
+            <div id = "search" onclick = "openSearch()">
+                <span class = "logoContainer">
+                    <img src = "#" srcset = "svg/search.svg" alt = "Looking glass logo" class = "svg logo">
+                    <span>
+                        Search
+                    </span>
+                </span>
+            </div>
+            <a href = "index.html" id = "companyHeader">
+                <h1>
+                    NORTE
+                </h1>
+            </a>
+            <nav id = "sideMenu">
+                <span id = "exit" class = "mobileElement" onclick = "closeMenu()">
+                    <img src = "#" srcset = "svg/cross.svg" alt = "Image of a cross logo" class = "svg logo">
+                </span>
+                <a href = "products.html" class = "menuOption">
+                    Products
+                </a>
+                <a href = "products.html" class = "menuOption">
+                    Sale
+                </a>
+                <a href = "contactUs.html" class = "menuOption">
+                    Contact us
+                </a>
+                <a href = "aboutUs.html" class = "menuOption">
+                     About us
+                </a> 
+            </nav>
+            <form id = "searchForm">
+                <label for = "productSearch">
+                    Search
+                </label>
+                <img src = "#" srcset = "svg/search.svg" alt = "Search button" class = "svg logo">
+                <input type = "search" id = "productSearch" name="productSearch" onsearch="search()">
+            </form>
+            <div id = "cartMenu">
+                <a href = "cart.html" class = "logoContainer">
+                    <img src = "#" srcset = "svg/shoppingcart.svg" alt = "A shoppingcart" class = "svg logo">
+                    <span>
+                        Cart
+                    </span>
+                </a>
+            </div>
+            <div id = "profileMenu" onmousedown = "openProfileMenu" >
+                <span class = "logoContainer" onclick = "openProfileMenu()">
+                    <img src = "#" srcset = "svg/profile.svg" alt = "A human looking logo" class = "svg logo">
+                    <span>
+                        Profile
+                    </span>
+                </span>
+                <div id = "profileMenuOptions">
+                    <div >
+                        <div id = "profileTriangle">
+
+                        </div>
+                    </div>
+                    <div class = "profileOption">
+                        <a href = "Login.html">
+                            Login
+                        </a>
+                    </div>
+                    <div class = "profileOption">
+                        <a href = "profile.html">
+                            My profile
+                        </a>
+                    </div>
+                    <div class = "profileOption">
+                        <a href = "formerOrder.html">
+                            My orders
+                        </a>
+                    </div>
+                    <div class = "profileOption">
+                        <a href="index.html">
+                            Logout
+                        </a>
+                    </div>
+                </div>   
+            </div>   
+        </header>
+        <script src = "javascript/menu.js">   
+        </script>
+
+        <section class="mainSection">
+            <h2>
+                Log in
+            </h2>
+            <div class = "enter-details">
+                <form class="enter-account-details">
+                    <label for="email" class="email">Email</label>
+                    <input type="text" id = "email" placeholder="Enter email adress">
+                    <label for="password" class="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                    <span>
+                        Password must be at least 6 characters long
+                    </span>
+                    
+                    <a href="forgotPassword.html">
+                        Forgot Password?
+                    </a>
+                    <input type="submit" value="Sign in" id="sign-in" class="button">
+                </form>
+                <h3>Not a member yet?</h3>
+                <a href="registerPage.html">
+                    Register here
+                </a>
+            </div>
+
+        </section>
+    </body>
+</html>

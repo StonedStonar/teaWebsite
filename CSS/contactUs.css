@@ -29,10 +29,11 @@ figcaption{
     color: gray;
 }
 
-img{
+figure>img{
     width: 100%;
 }
 
+/*Fiks denne så den er mer presis*/
 div{
     background-color: white;
 }
@@ -52,3 +53,5 @@ div{
 .mainSection>div:last-child:hover{
     background-color: white;
 }
+
+

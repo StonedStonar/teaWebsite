@@ -1,14 +1,9 @@
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .card {
     background-color: white;
-    max-width: 300px;
+    max-width: 280px;
     height: 400px;
     margin: 2rem 0rem 0 1rem;
     border-radius: 1rem;
@@ -71,7 +66,7 @@
     font-size: 1rem;
 }
 
-    .star:before, .star:after {
+.star:before, .star:after {
     content: '';
     
     display: block;
@@ -121,15 +116,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
-h2 {
+.card-info>h2 {
     font-size: 2rem;
-    margin-top: 2rem;
 }
 
-p {
+.card-info>p {
     font-size: 1.4rem;
     color: rgb(58, 56, 56);
     opacity: 95%;
+    margin: -1.5em 0 0 0;
 }
 
 .Add-To-Cart {
@@ -153,22 +148,23 @@ p {
     font-weight: 600;
 }
 
-hr {
-    margin-top: 1rem;
-}
 
-h3 {
+.card-info> h3 {
     text-align: center;
     margin-top: 2rem;
     font-size: 20px;
 }
 
-img {
+.linebreak {
+    display: block;
+}
+
+.card-info>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
-    margin-top: 1rem;
+    margin-top: 2em;
 }
 
 .dropdown {

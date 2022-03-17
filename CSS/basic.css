@@ -244,6 +244,150 @@ body{
     }
 }
 
+/* Footer styling under */
+#footer {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 1em;
+}
+
+#addressFooter, #contactInformation, #companies, .sectionFooter {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.sectionFooter{
+    justify-content: space-evenly;
+}
+
+#pressButton{
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonFooter {
+    background-color: red;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #FDF7EE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 1em;
+    color: black;
+    font-weight: 700;
+}
+
+
+.buttonFooter:hover {
+    background-color: #eee2d1;
+}
+
+.sectionFooter {
+    width: 30%;
+}
+
+.logoSocials {
+    width: 40px;
+}
+
+.rightFooterDiv>a {
+    text-decoration: none;
+}
+
+.socialLogoContainer>a>img{
+    width: 100%;
+}
+ 
+
+/*Donators*/
+#fairtradeLogo>a>img,#amnestyLogo>a>img {
+    width: 100%;
+}
+
+#donators {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#amnestyLogo {
+    width: 70%;
+}
+
+#donators>span:first-of-type {
+    width: 100%;
+    font-weight: 600;
+}
+
+#fairtradeLogo {
+    width: 25%;
+}
+
+/*Companies section */
+
+#companies>a {
+    text-decoration: none;
+    color: black;
+}
+
+#companies>span:first-of-type {
+    font-weight: 600;
+}
+
+/* Norte Logo */
+
+#footerLogo {
+    display: flex;
+    flex-flow: column nowrap;
+    text-decoration: none;
+    color: black;
+    width: 10em;
+
+}
+
+#footerLogo>span:last-of-type {
+    align-self: flex-end;
+}
+
+#addressFooter>span:first-of-type, #footerLogo>span:first-of-type {
+    font-weight: 600;
+}
+
+#footerLogo>span:first-of-type{
+    font-size: 2em;
+}
+
+#contactInformation>a{
+    color: black;
+}
+
+@media screen and (max-width:900px){
+    #footer {
+        flex-flow: column nowrap;
+        height: auto;
+        align-items: center;
+    }    
+    .sectionFooter {
+        width: 80%;
+        padding-top: 1.5em;
+    }
+    .buttonFooter {
+        width: 100%;
+    }
+
+    .sectionFooter> * {
+        margin: 0.5em 0;
+    }
+
+}
+
 /*The animations of the menus.*/
 .openSearch{
     height: 1.5em !important;
@@ -264,4 +408,3 @@ body{
     visibility: visible !important;
     opacity: 1 !important;
 }
-

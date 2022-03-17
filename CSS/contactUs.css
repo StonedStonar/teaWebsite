@@ -29,7 +29,7 @@ figcaption{
     color: gray;
 }
 
-img{
+figure>img{
     width: 100%;
 }
 

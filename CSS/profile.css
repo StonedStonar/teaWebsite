@@ -26,7 +26,7 @@ figure>img{
     margin-bottom: 0;
 }
 
-h3{
+.personalInformation>h3{
     border-bottom: 1px solid black;
 }
 
@@ -64,7 +64,7 @@ h3{
     padding: 0 1em;
 }
 
-figcaption{
+#profileIntro>figure>figcaption{
     color: gray;
 }
 

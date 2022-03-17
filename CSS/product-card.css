@@ -113,7 +113,6 @@
 
 .card-info {
     font-weight: 600;
-    font-family: 'Roboto', sans-serif;
 }
 
 .card-info>h2 {
@@ -169,6 +168,7 @@
 
 .dropdown {
     display: flex;
+    justify-content: space-between;
     border-top: 1px solid black;
     padding: 1rem 0 1rem 0;
 }

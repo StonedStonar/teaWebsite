@@ -1,4 +1,4 @@
-.profileOption{
+.profileMenuOptions{
     margin: 0.5em 0;
     box-sizing: border-box;
     padding: 0.25em;
@@ -9,17 +9,17 @@
     border: 0.1px solid rgba(0, 0, 0, 0.6);
 }
 
-.profileOption>a{
+.profileMenuOptions>a{
     display: flex;
     flex-flow: column nowrap;
     text-decoration: none;
     color: black;
 }
 
-.profileOption:hover{
+.profileMenuOptions:hover{
     background-color: #c0c0c0;
 }
 
-.profileOption>a>span:first-child{
+.profileMenuOptions>a>span:first-child{
     font-weight: bold;
 }

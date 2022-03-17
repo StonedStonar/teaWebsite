@@ -45,7 +45,7 @@
     width: 100%;
 }
 
-p{
+.orderContainer>p{
     font-size: 14px;
     margin: 0.7em 0;
 }
@@ -84,7 +84,7 @@ p{
 }
 
 
-img{
+.productPicture>img{
     width: 100px;
     height: 100px;
 }

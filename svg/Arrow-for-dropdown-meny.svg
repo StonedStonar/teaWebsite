@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 48 48" xml:space="preserve">
+<desc>Created with Fabric.js 4.6.0</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 300 200)" id="KuS9OjnQQRXY89ElCIxIw"  >
+<path style="stroke: rgb(83,2,30); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(193,192,191); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-20, -20)" d="M 20 0 C 31.04 0 40 8.96 40 20 C 40 31.04 31.04 40 20 40 C 8.96 40 0 31.04 0 20 C 0 8.96 8.96 0 20 0 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 394.35 94.49)" id="H4wMaNAOT_KcUdDdEBnTk"  >
+<path style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M 0 0" stroke-linecap="round" />
+</g>
+<g transform="matrix(0.71 -0.71 0.71 0.71 300 194.85)" id="-vilpHvbkN99_pZLoxUUl"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(35,152,35); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -10 -10 L 10 10 L -10 10 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 24 24)" id="lkl8Oc9CHPMqh2gWmCLbw"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(54,44,30); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -15.92045 -7.9602 L -11.79962 -7.9602 L 0 3.8393800000000002 L 11.79962 -7.9602 L 15.92045 -7.9602 L 0 7.9602 z" stroke-linecap="round" />
+</g>
+</svg>

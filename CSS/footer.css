@@ -1,6 +1,10 @@
 #footer {
     display: flex;
     height: 300px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 1em;
 }
 
 .sectionFooter{
@@ -25,7 +29,7 @@
     background: #FDF7EE;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    width: 190px;
+    width: 70%;
     margin-bottom: 1em;
     color: black;
     font-weight: 700;
@@ -98,8 +102,51 @@
 #footerLogo {
     display: flex;
     flex-flow: column nowrap;
+    text-decoration: none;
+    color: black;
+    width: 10em;
+
 }
 
 #footerLogo>span:last-of-type {
     align-self: flex-end;
+}
+
+#footerLogo>span:first-of-type {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#addressFooter, #contactInformation {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#addressFooter>span:first-of-type {
+    font-weight: 600;
+}
+
+#contactInformation>a{
+    color: black;
+}
+
+@media screen and (max-width:900px){
+    #footer {
+        flex-flow: column nowrap;
+        height: auto;
+        align-items: center;
+    }    
+    .sectionFooter {
+        width: 80%;
+        padding-top: 1.5em;
+    }
+    .buttonFooter {
+        width: 100%;
+    }
+
+    .sectionFooter> * {
+        margin: 0.5em 0;
+    }
+
+
 }

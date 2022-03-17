@@ -1,11 +1,16 @@
 #footer {
     display: flex;
+    height: 300px;
+}
 
+.sectionFooter{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    
 }
 
 #pressButton{
-    display: flex;
-    flex-flow: column;
     align-items: center;
     justify-content: center;
 }
@@ -26,6 +31,7 @@
     font-weight: 700;
 }
 
+
 .buttonFooter:hover {
     background-color: #eee2d1;
 }
@@ -38,22 +44,62 @@
     width: 40px;
 }
 
+.rightFooterDiv>a {
+    text-decoration: none;
+}
+
 .socialLogoContainer>a>img{
     width: 100%;
 }
+ 
 
-
-
-#footerLogo {
-    background-color: red;
-}
-
-#donators>a>img {
-    width: 10px;
-}
-
-#donators>a>img{
+/*Donators*/
+#fairtradeLogo>a>img,#amnestyLogo>a>img {
     width: 100%;
 }
 
+#donators {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#amnestyLogo {
+    width: 70%;
+}
 
+#donators>span:first-of-type {
+    width: 100%;
+    font-weight: 600;
+}
+
+#fairtradeLogo {
+    width: 25%;
+}
+
+/*Companies section */
+
+#companies {
+    display: flex;
+    flex-flow: column;
+}
+
+#companies>a {
+    text-decoration: none;
+    color: black;
+}
+
+#companies>span:first-of-type {
+    font-weight: 600;
+}
+
+/* Norte Logo */
+
+#footerLogo {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#footerLogo>span:last-of-type {
+    align-self: flex-end;
+}

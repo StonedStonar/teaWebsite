@@ -2,14 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Product information</title>
-
-        <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href= "CSS/product-card.css" rel="stylesheet" type="text/css">
-        <link href= "CSS/footer.css" rel="stylesheet" type="text/css">
-    
-    
+        <title>Information for one product</title>
+        <link href = "CSS/basic.css" rel="stylesheet" type="text/css">
+        <link href = "CSS/product-card.css" rel="stylesheet" type="text/css">
     </head>
+
     <body>
         <header id = "menu">
             <div id = "hamburgerMenu" class = "mobileElement" onclick = "openMenu()">
@@ -101,66 +98,103 @@
                 </div>   
             </div> 
         </header>
+        <script src = "javascript/menu.js"></script>
 
-        <script src = "javascript/menu.js">   
-        </script>
         <section class = "mainSection">
-            <section class="card-info">
-                <h2>Stoned Green Tea</h2>
-                <p>Lorem ipsum dolor sit amet</p>
-                <img src="Images/greentea.jpg" alt="Tea picture"></img>
+            <div id= "product-info">
+                <h2>
+                    Troll Green Tea
+                </h2>
+                <figure>
+                    <img src = "Images/greentea.jpg" id = "pictureOfTeaType" alt="Troll Green Tea Picture">
+                    <figcaption>Picture taken from Nosplash</figcaption>
+                </figure>
                 
-                <div class="former-price">NOK 379kr</div>
-                <div class="card-pricing">NOK 289kr </div>
+            </div>
+
+            <div class="card-prices">
+                <div class="price-and-review">
+                    <div class="price">
+                        <p class = "former-price">199kr</p>
+                        <p class = "now-price">169kr</p>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="amount-of-reviews">(23)</span>
+                    </div>
+                </div>
+            
                 <button class="Add-To-Cart">ADD TO CART</button>
-                <div class="stars">
-                    <div>
-                        <span class="star"></span>
-                        <span class="star"></span>
-                        <span class="star"></span>
-                        <span class="star"></span>
-                        <span class="star"></span>
-                    </div>
-    
-                    <div class="ins-dec-button">
-                       <button class="decrement-button">-</button>
-                       <input type="tel" pattern="\d" maxlength="3" value="1" class="amount-of-product-button">
-                       <button class="increment-button">+</button>
-                    </div>
-                </div>
-                <div class="amount-on-storage">
-                    <div>
-                        <span class="circle"></span>
-                        <span class="amount-of-product">170</span>+ on storage.
-                    </div>
-                </div>
                 
-    
-                <div class="drop-down-meny">
-                    <div class="dropdown">
+                <div class="amount">
+                    <div class="amount-to-add">
+                        <button id = "decrement-button">-</button>
+                        <input type="tel" pattern="\d" maxlength="3" value="1" class="amount-of-product-button">
+                        <button id ="increment-button">+</button>
+                    </div>
+                    <div class="amount-on-storage">
+                        <div>
+                            <span class="circle"></span>
+                            <span class="amount-of-product">170</span>+ on storage.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drop-down-meny">
+                <div class="dropdown">
+                    <div id = "descriptionContainer">
                         Description
                         <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
                     </div>
-    
-                    <div class="dropdown">  
-                        <span>Ingredients</span>
-                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
-                    </div>
-    
-                    <div class="dropdown last">
-                        <span>Proudct reviews</span>
-                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
+                    <div id = "description">
+                        <h4>
+                            Chuck Norris doesn’t wear a watch. He decides what time it is.
+                        </h4>
+                        <p>
+                            Chuck Norris’ roundhouse kick is so powerful, it can be seen from outer space by the naked eye.
+                        </p>
+
                     </div>
                 </div>
     
-                <h3>Customers who viewed this product,<span class="linebreak"> also viewed:</span></h3>
-            </section>
+                <div class="dropdown"> 
+                    <div id = "ingredientsContainer">
+                        <span>Ingredients</span>
+                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
+                    </div> 
+                    <div id = "ingredients">
+                        <h4>
+                            Hmmm Chuck you say? hmmm
+                        </h5>
+                        <p>
+                            Chuck Norris once went skydiving, but promised never to do it again. One Grand Canyon is enough.
+                        </p>
+                    </div>
+                </div>
     
-    
+                <div class="dropdown last">
+                    <div id = "productReviewsContainer">
+                        <span>Proudct reviews</span>
+                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
+                    </div>
+                    <div id = "productReviews">
+                        <h4>
+                            Chuck Chuck Chuck and more Chuck, but not Chuck Norris!
+                        </h6>
+                        <p>
+                            It takes Chuck Norris 20 minutes to watch 60 Minutes. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="card-container">
             
-    
-            <section class="card-container">
-    
                 <a href="product-info.html" class="card">
                     <div class="card-header">
                         <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
@@ -169,8 +203,8 @@
                     </div>
         
                     <div class="card-body">
-                        <div class="former-price">NOK 379kr</div>
-                        <div class="card-pricing">NOK 289kr </div>
+                        <p class="former-price">NOK 379kr</p>
+                        <p class="now-price">NOK 289kr </p>
                         <div class="reviews-stars">
                             <span class="star"></span>
                             <span class="star"></span>
@@ -189,8 +223,8 @@
                     </div>
         
                     <div class="card-body">
-                        <div class="former-price">NOK 379kr</div>
-                        <div class="card-pricing">NOK 289kr </div>
+                        <p class="former-price">NOK 379kr</p>
+                        <p class="now-price">NOK 289kr </p>
                         <div class="reviews-stars">
                             <span class="star"></span>
                             <span class="star"></span>
@@ -209,8 +243,8 @@
                     </div>
         
                     <div class="card-body">
-                        <div class="former-price">NOK 379kr</div>
-                        <div class="card-pricing">NOK 289kr </div>
+                        <p class="former-price">NOK 379kr</p>
+                        <p class="now-price">NOK 289kr </p>
                         <div class="reviews-stars">
                             <span class="star"></span>
                             <span class="star"></span>
@@ -229,9 +263,9 @@
                     </div>
         
                     <div class="card-body">
-                        <div class="former-price">NOK 379kr</div>
-                        <div class="card-pricing">NOK 289kr </div>
-                        <div class="review-stars">
+                        <p class="former-price">NOK 379kr</p>
+                        <p class="now-price">NOK 289kr </p>
+                        <div class="reviews-stars">
                             <span class="star"></span>
                             <span class="star"></span>
                             <span class="star"></span>
@@ -240,123 +274,124 @@
                         </div>
                     </div>
                 </a>
-            </section>
-        </section>
-        
+            </div>
 
-        <footer id= "footer">
-            <div class="sectionFooter">
-                <a href = "index.html" id="footerLogo">
-                    <span>
-                        NORTE
-                    </span>
-                    <span>
-                        For tea lovers
-                    </span>
-                </a>
+        </section>
     
-                
-                <div id="addressFooter">
-                    <span>
-                        Contact Information
-                    </span>
-                    <span>
-                        NORTE AS,
-                    </span>
-                    <span>
-                        LegitAddress 69,
-                    </span> 
-                    <span>
-                        6015 Ålesund
-                    </span>
-                </div>
-                <div id="contactInformation">
-                    <a href="tel:82097082">
-                        <span>
-                            820 97 082
-                        </span>
-                     </a>   
-                    <a href = "mailto: norte@professionalemail.com">
-                        <span>
-                            norte@professionalemail.com
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="sectionFooter" id = "pressButton">
-                <a href="contactUs.html" class="buttonFooter">
-                    <span>
-                        Home
-                    </span>
-                </a>
-                <a href="aboutUs.html" class="buttonFooter">
-                    <span>
-                        About us
-                    </span>
-                </a>
-                <a href="login.html" class="buttonFooter">
-                    <span>
-                        Log in
-                    </span>
-                </a>
-                
-            </div>
-            <div class="sectionFooter">
-                <div class="rightFooterDiv">
-                    <a href="https://twitter.com/">
-                        <img src="Images/twitterLogoBlack.png" alt="twitter logo" class = "logoSocials">
-                    </a>
-                    <a href="https://instagram.com/">
-                        <img src="Images/instagramLogo.png" alt="Instagram logo" class = "logoSocials">
-                    </a>
-                    <a href="https://facebook.com/">
-                        <img src="Images/facebookLogo.png" alt="Facebook logo" class = "logoSocials">
-                    </a>
-                </div>
-                <div class="rightFooterDiv" id="companies">
-                    <span>
-                        We cooperate with:
-                    </span>
-                    <a href="https://www.yogitea.com/nb/">
-                        <span>
-                            Yogi Tea
-                        </span>
-                    </a>
-                    <a href="https://www.ahmadtea.com/">
-                        <span>
-                            Ahmad Tea
-                        </span>
-                    </a>
-                    <a href="https://www.clipper-teas.com/">
-                        <span>
-                            Clipper Tea
-                        </span>
-                    </a>
-                    <a href="https://www.pukkaherbs.com/no/no">
-                        <span>
-                            Pukka Tea
-                        </span>
-                    </a>
-                </div>
-                <div class="rightFooterDiv" id="donators">
-                    <span>
-                        Feel free to support
-                    </span>
-                    <div id="fairtradeLogo">
-                        <a href="https://www.fairtrade.no/">
-                            <img src="Images/FairtradeLogo.jpg" alt="Fairtrade link" class="logoSupport">
-                        </a>
-                    </div>
-                    <div id="amnestyLogo">
-                        <a href="https://amnesty.no/">
-                            <img src="Images/Amnesty_logo_RGB_yellow.png" alt="Amnesty link" class="logoSupport">
-                        </a>
-                    </div>
-                </div>
+    <script src = "javascript/product-info.js"></script>
+    <footer id= "footer">
+        <div class="sectionFooter">
+            <a href = "index.html" id="footerLogo">
+                <span>
+                    NORTE
+                </span>
+                <span>
+                    For tea lovers
+                </span>
+            </a>
+
             
+            <div id="addressFooter">
+                <span>
+                    Contact Information
+                </span>
+                <span>
+                    NORTE AS,
+                </span>
+                <span>
+                    LegitAddress 69,
+                </span> 
+                <span>
+                    6015 Ålesund
+                </span>
             </div>
-    
-        </footer>
+            <div id="contactInformation">
+                <a href="tel:82097082">
+                    <span>
+                        820 97 082
+                    </span>
+                 </a>   
+                <a href = "mailto: norte@professionalemail.com">
+                    <span>
+                        norte@professionalemail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="sectionFooter" id = "pressButton">
+            <a href="contactUs.html" class="buttonFooter">
+                <span>
+                    Home
+                </span>
+            </a>
+            <a href="aboutUs.html" class="buttonFooter">
+                <span>
+                    About us
+                </span>
+            </a>
+            <a href="login.html" class="buttonFooter">
+                <span>
+                    Log in
+                </span>
+            </a>
+            
+        </div>
+        <div class="sectionFooter">
+            <div class="rightFooterDiv">
+                <a href="https://twitter.com/">
+                    <img src="Images/twitterLogoBlack.png" alt="twitter logo" class = "logoSocials">
+                </a>
+                <a href="https://instagram.com/">
+                    <img src="Images/instagramLogo.png" alt="Instagram logo" class = "logoSocials">
+                </a>
+                <a href="https://facebook.com/">
+                    <img src="Images/facebookLogo.png" alt="Facebook logo" class = "logoSocials">
+                </a>
+            </div>
+            <div class="rightFooterDiv" id="companies">
+                <span>
+                    We cooperate with:
+                </span>
+                <a href="https://www.yogitea.com/nb/">
+                    <span>
+                        Yogi Tea
+                    </span>
+                </a>
+                <a href="https://www.ahmadtea.com/">
+                    <span>
+                        Ahmad Tea
+                    </span>
+                </a>
+                <a href="https://www.clipper-teas.com/">
+                    <span>
+                        Clipper Tea
+                    </span>
+                </a>
+                <a href="https://www.pukkaherbs.com/no/no">
+                    <span>
+                        Pukka Tea
+                    </span>
+                </a>
+            </div>
+            <div class="rightFooterDiv" id="donators">
+                <span>
+                    Feel free to support
+                </span>
+                <div id="fairtradeLogo">
+                    <a href="https://www.fairtrade.no/">
+                        <img src="Images/FairtradeLogo.jpg" alt="Fairtrade link" class="logoSupport">
+                    </a>
+                </div>
+                <div id="amnestyLogo">
+                    <a href="https://amnesty.no/">
+                        <img src="Images/Amnesty_logo_RGB_yellow.png" alt="Amnesty link" class="logoSupport">
+                    </a>
+                </div>
+            </div>
+        
+        </div>
+
+    </footer>
 
     </body>
 </html>

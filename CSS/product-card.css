@@ -26,9 +26,11 @@ figure {
     text-decoration: line-through;
     font-size: 18px;
     font-weight: bold;
-    opacity: 70%;
-    margin-bottom: -28px;
+/*  opacity: 70%; Dropp denne for man får et annet z-level. Dette vil si at den blir mer "synlig" på andre layers */
+/*  margin-bottom: -28px; Dropp også denne. Vi kan heller sette den til 0 og sette den andre sin også til 0.*/
+    margin-bottom: 0;
 }
+
 
 .card-prices {
     max-width: 350px;
@@ -37,6 +39,8 @@ figure {
 
 .now-price {
     font-size: 22px;
+    /*Vi setter heller top marginen til 0 så slipper vi -28px på marginen når det gjelder "former price".*/
+    margin-top: 0;
     color: red;
     font-weight: bold;
 }
@@ -81,20 +85,33 @@ figure {
 
 .amount-to-add {
     height: 2rem;
-    margin-bottom: 1rem;
+    /*Added this to get the buttons in the center.*/
+    display: flex;
+    align-items: center;
+
+}
+
+.amount-on-storage, .amount-to-add {
+    /*Added this so that they are the same height. Much easier to style when they are beside eachother and the same height.*/
+    /*Change it and the storage will be a little taller up than the other one.*/
+    height: 1em;
 }
 
 .amount-on-storage {
-    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .dropdown {
     display: flex;
     flex-flow: column;
     width: 100%;
-    height: 2ems;
+    height: 2em;
     width: 100%;
     border-top: 1px solid black;
+}
+
+.dropdown>div{
+    align-items: center;
 }
 
 .dropdown>div:first-of-type{
@@ -109,6 +126,7 @@ figure {
     height: 0;
     transition: visibility 0s, height 1s;
 }
+
 
 
 .dropdown>img {
@@ -126,13 +144,13 @@ figure {
     font-weight: 600;
 }
 
-.drop-down-meny{
+.drop-down-meny {
     width: 100%;
     display: flex;
     flex-flow: column;
 }
 
-#description{
+#description {
     visibility: hidden;
     overflow: hidden;
     height: 0;
@@ -160,7 +178,6 @@ figure {
 .star {
     position: relative;
     display: inline-block;
-
     
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -216,9 +233,12 @@ figure {
 
 .card {
     background-color: white;
+    min-width: 150px;
     max-width: 280px;
+    /*400 er litt mye. Hva med 350? Eller bare 0? Kanskje padding top og bunn istedet. 1em? */
     height: 400px;
-    margin: 2rem 0rem 0 1rem;
+    /*Removes this "margin: 2rem 0rem 0 1rem;" om vi skal ha plass mellom elementer gjør vi som under.*/
+    margin: 1em;
     border-radius: 1rem;
     box-shadow: 0 0.1rem 0.1rem 0 rgb(121, 118, 118);
     text-align: center;
@@ -234,22 +254,22 @@ figure {
 .card-title {
     color: black;
     margin: 1rem 1rem 0 1rem;
-    font-size: 1.6rem;
+    font-size: 1.5em;
     font-weight: 600;
 }
 
 .card-description {
-    font-size: 1.2rem;
+    font-size: 1.25em;
     font-weight: 600;
     color: #464343;
 }
 
 .card-container {
     display: flex;
-    flex-wrap: row wrap;
+    /*This shit didnt work cuz it said "flex-wrap: row wrap;" and not flex-flow like under. */
+    flex-flow: row wrap;
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    padding-bottom: 3rem;
+    width: 100%;
 }
 
 
@@ -264,11 +284,15 @@ figure {
         width: 100%;
     }
     
+    .card-prices, #product-info{
+        /*Added this so that the price covers the whole screen. And also the image does it.*/
+        max-width: none;
+        width: 100%;
+    }
 }
 
 
 .containerAnimation{
     visibility: visible !important;
     height: 100px !important;
-    transition: visibility 2s !important;
 }

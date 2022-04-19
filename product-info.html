@@ -119,16 +119,24 @@
                         <p class = "now-price">169kr</p>
                     </div>
                     <div class="star-rating">
+                        <!--Tror vi heller burde bruke svg. Dette siden disse bruker position og en stjerne er fort gjort å lage.-->
                         <span class="star"></span>
                         <span class="star"></span>
                         <span class="star"></span>
                         <span class="star"></span>
                         <span class="star"></span>
-                        <span class="amount-of-reviews">(23)</span>
+                        <!--Satte inn en span i spannen. Dette er fordi da endrer vi bare tallet 23 og ikke "()" rundt-->
+                        <span>
+                            (
+                            <span class="amount-of-reviews">23</span>
+                            )
+                        </span>
                     </div>
                 </div>
             
-                <button class="Add-To-Cart">ADD TO CART</button>
+                <button class="Add-To-Cart">
+                    ADD TO CART
+                </button>
                 
                 <div class="amount">
                     <div class="amount-to-add">
@@ -137,10 +145,10 @@
                         <button id ="increment-button">+</button>
                     </div>
                     <div class="amount-on-storage">
-                        <div>
-                            <span class="circle"></span>
-                            <span class="amount-of-product">170</span>+ on storage.
-                        </div>
+                        <span class="circle"></span>
+                        <span class="amount-of-product">170</span>
+                        <span id = "storageStatus">+</span>
+                        <span> on storage</span>
                     </div>
                 </div>
             </div>
@@ -148,7 +156,9 @@
             <div class="drop-down-meny">
                 <div class="dropdown">
                     <div id = "descriptionContainer">
-                        Description
+                        <span>
+                            Description
+                        </span>
                         <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
                     </div>
                     <div id = "description">
@@ -194,7 +204,9 @@
             </div>
            
             <div class="card-container">
-            
+                <h3>
+
+                </h3>
                 <a href="product-info.html" class="card">
                     <div class="card-header">
                         <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>

@@ -1,14 +1,14 @@
-.mainSection{
+#profileWrapper{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
-.mainSection>div{
+#profileWrapper>div{
     width: 48%;
 }
 
-.mainSection>div:first-child{
+#profileWrapper>div:first-child{
     width: 100%;
 }
 

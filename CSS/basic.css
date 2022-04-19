@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body{
     background-color: #FDF7EE;
     max-width: 1200px;
@@ -155,7 +156,7 @@ body{
 }
 
 #profileMenuOptions{
-    transition: 0s visibility, 0.25s opacity linear;
+    transition: 0s visibility, 0.25s, opacity linear;
 }
 
 #profileMenuOptions, #profileMenuOptions>*:first-child{
@@ -249,6 +250,8 @@ body{
         order: 0;
     }
 }
+
+
 
 /* Footer styling under */
 #footer {

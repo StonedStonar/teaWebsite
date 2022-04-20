@@ -1,9 +1,11 @@
 .contactUsOption{
     box-sizing: border-box;
-    padding: 0.25em;
+    /*Litt mer space enn 0.25. Dette får den til å føle seg mindre cramped.*/
+    padding: 1em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    background-color: white;
+    /*Nye hvit fargen*/
+    background-color: var(--main-secbg-color);
     border: 0.1px solid rgba(0, 0, 0, 0.6);
 }
 
@@ -35,7 +37,7 @@ figure{
 }
 
 #contactUsOption{
-    background-color: white;
+    background-color: var(--main-secbg-color);
 }
 
 
@@ -51,7 +53,33 @@ figure{
 }
 
 .mainSection>div:last-child:hover{
-    background-color: white;
+    background-color: var(--main-secbg-color);
+}
+
+.faq{
+    margin: 0.5em 0;
+    padding: 0.25em;
+    margin: 1.5em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border: 0.1px solid rgba(0, 0, 0, 0.6);
+    
+}
+.faq>a{
+    text-decoration: none;
+    color: black;
+}
+
+.faq:hover {
+    background-color: #c0c0c0;
+}
+
+.faq>a>span:first-child{
+    display: flex;
+    flex-flow: column nowrap;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 

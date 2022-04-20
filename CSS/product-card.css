@@ -26,8 +26,6 @@ figure {
     text-decoration: line-through;
     font-size: 18px;
     font-weight: bold;
-/*  opacity: 70%; Dropp denne for man får et annet z-level. Dette vil si at den blir mer "synlig" på andre layers */
-/*  margin-bottom: -28px; Dropp også denne. Vi kan heller sette den til 0 og sette den andre sin også til 0.*/
     margin-bottom: 0;
 }
 
@@ -39,7 +37,6 @@ figure {
 
 .now-price {
     font-size: 22px;
-    /*Vi setter heller top marginen til 0 så slipper vi -28px på marginen når det gjelder "former price".*/
     margin-top: 0;
     color: red;
     font-weight: bold;
@@ -60,41 +57,45 @@ figure {
     background-color: #0f4911;
 }
 
-.increment-button, .decrement-button {
-    width: 1.2rem;
-    background-color: white;
-    font-weight: 400;
-    font-size: 20px;
-    border: none;
-}
-
-.amount-of-product-button {
-    width: 3rem;
-    background-color: white;
-    font-size: 20px;
-    border: none;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    text-align: center;
-}
-
 .star-rating {
+    user-select: none;
     margin-top: 1.6rem;
 }
 
-
-.amount-to-add {
-    height: 2rem;
-    /*Added this to get the buttons in the center.*/
-    display: flex;
-    align-items: center;
-
+.star {
+    width: 1.4rem;
+    font-size: 2rem;
+    color: rgb(240, 197, 8);
+    background-color: unset;
+    border: none;
 }
 
-.amount-on-storage, .amount-to-add {
-    /*Added this so that they are the same height. Much easier to style when they are beside eachother and the same height.*/
-    /*Change it and the storage will be a little taller up than the other one.*/
-    height: 1em;
+.star:hover {
+    cursor: pointer;
+}
+
+.amount-to-add {
+    height: 30px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+}
+.amount-to-add>span {
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.amount-to-add>span.num-to-change {
+   border-right: 2px solid rgba(0,0,0,0.1); 
+   border-left: 2px solid rgba(0,0,0,0.1); 
+   pointer-events: none;
 }
 
 .amount-on-storage {
@@ -175,39 +176,7 @@ figure {
     border-bottom: 1px solid black;
 }
 
-.star {
-    position: relative;
-    display: inline-block;
-    
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    
-    border-right:  0.3em solid transparent;
-    border-bottom: 0.7em  solid rgb(177, 176, 174);
-    border-left:   0.3em solid transparent;
 
-    
-    font-size: 0.7rem;
-}
-
-.star:before, .star:after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0.6em;
-    left: -1em;
-
-    border-right:  1em solid transparent;
-    border-bottom: 0.7em  solid rgb(177, 176, 174);
-    border-left:   1em solid transparent;
-
-    transform: rotate(-35deg);
-}
-
-.star:after {  
-    transform: rotate(35deg);
-}
 
 .price-and-review {
     display: flex;
@@ -228,17 +197,15 @@ figure {
 }
 
 .card-header>img {
-    width: 60%;
+    width: 50%;
 }
 
 .card {
     background-color: white;
     min-width: 150px;
-    max-width: 280px;
-    /*400 er litt mye. Hva med 350? Eller bare 0? Kanskje padding top og bunn istedet. 1em? */
-    height: 400px;
-    /*Removes this "margin: 2rem 0rem 0 1rem;" om vi skal ha plass mellom elementer gjør vi som under.*/
-    margin: 1em;
+    max-width: 250px;
+    padding-bottom: 1em;
+    margin: 0.2em;
     border-radius: 1rem;
     box-shadow: 0 0.1rem 0.1rem 0 rgb(121, 118, 118);
     text-align: center;
@@ -254,19 +221,18 @@ figure {
 .card-title {
     color: black;
     margin: 1rem 1rem 0 1rem;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 600;
 }
 
 .card-description {
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-weight: 600;
     color: #464343;
 }
 
 .card-container {
     display: flex;
-    /*This shit didnt work cuz it said "flex-wrap: row wrap;" and not flex-flow like under. */
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
@@ -285,7 +251,6 @@ figure {
     }
     
     .card-prices, #product-info{
-        /*Added this so that the price covers the whole screen. And also the image does it.*/
         max-width: none;
         width: 100%;
     }
@@ -295,4 +260,5 @@ figure {
 .containerAnimation{
     visibility: visible !important;
     height: 100px !important;
+    transition: visibility 2s !important;
 }

@@ -8,6 +8,7 @@
 #product-info, .card-prices {
     width: 48%;
     align-self: center;
+    justify-self: center;
 }
 
 #product-info{
@@ -105,7 +106,6 @@ figure {
     display: flex;
     flex-flow: column;
     width: 100%;
-    height: 2em;
     width: 100%;
     border-top: 1px solid black;
 }
@@ -294,5 +294,6 @@ figure {
 
 .containerAnimation{
     visibility: visible !important;
-    height: 100px !important;
+    height: 500px !important;
+    background-color: yellow;
 }

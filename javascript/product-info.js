@@ -44,10 +44,7 @@ async function makeReview(){
     openProductReviews();
     openProductReviews();
     reviews.classList.remove("instantAnimation")
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    filterStars();
 }
 
 
@@ -79,21 +76,30 @@ function decButton() {
     }
 }
 
-const stars = document.querySelectorAll(".star");
+var stars = [];
 
-stars.forEach((star, i) => {
-    star.onclick = function () {
-        let current_star = i + 1;
+function filterStars(){
+    let containerOfStars = document.getElementById("reviewStars");
+    stars = containerOfStars.querySelectorAll(".star");
+}
 
-        stars.forEach((star, j) => {
-            if (current_star >= j + 1) {
-                star.innerHTML = "&#9733";
-            } else {
-                star.innerHTML = "&#9734";
-            }
-        })
-    }
-})
+filterStars();
+
+function giveStars(){
+    stars.forEach((star, i) => {
+        star.onclick = function () {
+            let current_star = i + 1;
+    
+            stars.forEach((star, j) => {
+                if (current_star >= j + 1) {
+                    star.innerHTML = "&#9733";
+                } else {
+                    star.innerHTML = "&#9734";
+                }
+            })
+        }
+    })
+}
 
 
 

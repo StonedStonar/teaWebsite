@@ -21,7 +21,7 @@
 }
 
 figcaption{
-    color: gray;
+    color: var(--figcap-color);
 }
 
 figure>img{
@@ -56,25 +56,25 @@ figure{
     margin: 0.5em 0;
     padding: 0.25em;
     margin: 1.5em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 2px var(--main-shadow-color);
     border-radius: 5px;
-    border: 0.1px solid rgba(0, 0, 0, 0.6);
+    border: 0.1px solid var(--main-border-color);
     
 }
 .faq>a{
     text-decoration: none;
-    color: black;
+    color: var(--main-font-color);
 }
 
 .faq:hover {
-    background-color: #c0c0c0;
+    background-color: var(--hover-container-color);
 }
 
 .faq>a>span:first-child{
     display: flex;
     flex-flow: column nowrap;
     text-decoration: none;
-    color: black;
+    color: var(--main-font-color);
     font-weight: bold;
 }
 

@@ -24,11 +24,38 @@ document.getElementById("productReviewsContainer").addEventListener("click", ope
 document.querySelector(".star-rating").addEventListener("click", openProductReviews)
 
 function openProductReviews() {
-    let reviews = document.getElementById("productReviews");
+    let reviews = document.getElementById("hiddenReview");
     if (!reviews.classList.contains("containerAnimation")) {
+        console.log("opens reviews")
         reviews.classList.add("containerAnimation");
     } else {
+        console.log("closesReiews")
         reviews.classList.remove("containerAnimation");
+    }
+}
+
+document.getElementById("reviewButton").addEventListener("click", makeReview)
+
+async function makeReview(){
+    let makeReviewContainer = document.getElementById("productReviews")
+    let reviews = document.getElementById("hiddenReview");
+    reviews.classList.add("instantAnimation");
+    makeContainerAppear(makeReviewContainer);
+    openProductReviews();
+    openProductReviews();
+    reviews.classList.remove("instantAnimation")
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+function makeContainerAppear(node){
+    if (!node.classList.contains("containerAnimation")) {
+        node.classList.add("containerAnimation");
+    } else {
+        node.classList.remove("containerAnimation");
     }
 }
 

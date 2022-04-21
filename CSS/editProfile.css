@@ -8,13 +8,13 @@
     min-width: 48%;
 }
 
-label{
+.editForm>label{
     font-size: 1.1em;
     font-weight: 500;
 }
 
-h3{
-    border-bottom: 1px solid black;
+.editProfileContainer>div>h3{
+    border-bottom: 1px solid var(--main-border-color);
 }
 
 .editForm>input{
@@ -26,21 +26,6 @@ h3{
 
 .editForm>input:last-of-type{
     height: 40px;
-}
-
-.button{
-    border: none;
-    background-color: #267F29;
-    color: white;
-    font-weight: bold;
-}
-
-.button:hover{
-    background-color: #0f4911;
-}
-
-.button:active{
-    background-color: #34ac38;
 }
 
 .editProfileContainer{

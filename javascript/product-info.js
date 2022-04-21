@@ -1,6 +1,6 @@
 document.getElementById("descriptionContainer").addEventListener("click", openDescription)
 
-function openDescription () {
+function openDescription() {
     let description = document.getElementById("description");
     if(!description.classList.contains("containerAnimation")){
         description.classList.add("containerAnimation");
@@ -11,17 +11,17 @@ function openDescription () {
 
 document.getElementById("ingredientsContainer").addEventListener("click", openIngredients)
 
-function openIngredients() {
+function openIngredients(){
     let ingredients = document.getElementById("ingredients");
     if (!ingredients.classList.contains("containerAnimation")) {
         ingredients.classList.add("containerAnimation");
     } else {
         ingredients.classList.remove("containerAnimation");
     }
-
 }
 
 document.getElementById("productReviewsContainer").addEventListener("click", openProductReviews)
+document.querySelector(".star-rating").addEventListener("click", openProductReviews)
 
 function openProductReviews() {
     let reviews = document.getElementById("productReviews");

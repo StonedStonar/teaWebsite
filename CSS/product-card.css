@@ -46,27 +46,42 @@ figure {
 .Add-To-Cart {
     width: 100%;
     height: 45px;
-    background-color: #267f29;
+    background-color: var(--main-button-color);
     border-radius: 0.5rem;
-    margin: 0 0 2rem 0;
-    color: white;
+    margin: 0 0 2em 0;
+    color: var(--main-secondfont-color);
     font-size: 16px;
 }
 
 .Add-To-Cart:hover {
     cursor: pointer;
-    background-color: #0f4911;
+    background-color: var(--main-hoverbutton-color);
 }
 
 .star-rating {
     user-select: none;
-    margin-top: 1.6rem;
+    /*Removed this, since there is another way*/
+    /*margin-top: 1.6rem;*/
+}
+
+
+.price-and-review>.star-rating{
+    /*La til denne så stjerna og reveiws havner på samme plass istedet for å bruke margin.*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*50% basert på objektet den er*/
+    width: 55%;
+}
+
+.inStock{
+    height: fit-content;
 }
 
 .star {
     width: 1.4rem;
     font-size: 2rem;
-    color: rgb(240, 197, 8);
+    color: #f0c508;
     background-color: unset;
     border: none;
 }
@@ -108,7 +123,7 @@ figure {
     flex-flow: column;
     width: 100%;
     width: 100%;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--main-border-color);
 }
 
 .dropdown>div{
@@ -191,7 +206,7 @@ figure {
 .circle {
     height: 16px;
     width: 16px;
-    background-color: #267f29;
+    background-color: var(--main-button-color);
     border-radius: 50%;
     display: inline-block;
 }
@@ -207,14 +222,14 @@ figure {
     padding-bottom: 1em;
     margin: 0.2em;
     border-radius: 1rem;
-    box-shadow: 0 0.1rem 0.1rem 0 rgb(121, 118, 118);
+    box-shadow: 0 0.1em 0.1em 0 var(--main-shadow-color);
     text-align: center;
     text-decoration: none;
 }
 
 .card:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 0.4rem 0 rgb(121, 118, 118);
+    box-shadow: 0 0.4rem 0.4rem 0 var(--main-shadow-color);
 }
 
 
@@ -228,13 +243,18 @@ figure {
 .card-description {
     font-size: 1.1em;
     font-weight: 600;
-    color: #464343;
+    color: var(--main-border-color);
 }
 
 .card-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    width: 100%;
+}
+
+#relatedProducts{
+    border-bottom: 1px solid var(--main-border-color);
     width: 100%;
 }
 

@@ -20,6 +20,10 @@ align-items: flex-start;
     width: 100%;
     height: 100%;
 }
+#herbsInField {
+    width: 100%;
+    height: 100%;
+}
 
 .frontpageButton {
     background-color: yellow;
@@ -40,3 +44,24 @@ align-items: flex-start;
 .frontpageButton:hover {
     background-color: #eee2d1;
 }
+
+.whiteBackground {
+    background-color: white;
+    position: absolute;
+    padding: 20px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.infoAndAboutUs {
+    position: relative;
+    background-color: yellow;
+}
+
+
+

@@ -49,7 +49,7 @@ figure {
     background-color: var(--main-button-color);
     border-radius: 0.5rem;
     margin: 0 0 2em 0;
-    color: white;
+    color: var(--main-secondfont-color);
     font-size: 16px;
 }
 
@@ -81,7 +81,7 @@ figure {
 .star {
     width: 1.4rem;
     font-size: 2rem;
-    color: rgb(240, 197, 8);
+    color: #f0c508;
     background-color: unset;
     border: none;
 }

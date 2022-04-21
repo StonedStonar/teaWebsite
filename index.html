@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Frontpage</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
+        <link href = "CSS/index.css" rel = "stylesheet" type="text/css">
     </head>
     <body>
         <header id = "menu">
@@ -101,25 +102,39 @@
         <script src = "javascript/menu.js">   
         </script>
         <section class = "mainSection">
-            <a href = "https://www.youtube.com/watch?v=Zjx56Pc4PDY">
-                <h1>
-                    Frontpage magic
-                </h1>
+            <h2 class = "WelcomeText">
+                Welcome to NORTE - for tea lovers
+            </h2>
+            <div class = "allProductsAndSale">
+                <a href="products.html" class="frontpageButton">
+                    <span>
+                        All products
+                    </span>
+                </a>
+                <a href="products.html" class="frontpageButton"> <!--Change to link to sales instead of products-->
+                    <span>
+                        Sale
+                    </span>
+                </a>
+                <figure id ="teaCupFrontPage">
+                    <img src="Images/cupAndPlant.jpg" id="teacupImage"
+                        alt="SOMETHING">
+                    <figcaption> Picture downloaded from unsplash.com, by Massimo Rinaldi </figcaption>
+                </figure>
+                
+            </div>
+            <div class ="productsByOccation">
                 <h2>
-                    Since this is a prototype the menu can differ in links from page to page
+                    We can offer tea for every occasion!
                 </h2>
-            </a>
-            <p>
-                This website is also made for mobile first. So some of the pages are made only for desktop or mobile for now. 
-            </p>
-            <p>
-                There are also some hidden memes and clicking stuff can lead to certian memes
-            </p>
-            <p>
-                Click stuff at your own risk
-            </p>
-            
-        </section>
+                <figure id ="teaCup">
+                    <img src="Images/teaLightsBook.jpg" id="teacupImage"
+                        alt="SOMETHING">
+                    <figcaption> Picture downloaded from unsplash.com, by SVITLANA </figcaption>
+                </figure>
+            </div>
+        
+
         <footer id= "footer">
             <div class="sectionFooter">
                 <a href = "index.html" id="footerLogo">

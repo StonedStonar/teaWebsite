@@ -2,6 +2,11 @@
     width: 100%;
 }
 
+.card {
+display: flex;
+align-items: flex-start;
+}
+
 #teaCup>img {
     width: 100%;
     height: 100%;

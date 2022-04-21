@@ -4,25 +4,10 @@
     box-sizing: border-box;
     padding: 0.25em;
     margin: 1.5em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
     border-radius: 5px;
-    background-color: white;
-    border: 0.1px solid rgba(0, 0, 0, 0.6);
-}
-
-.contactUsOption>a{
-    display: flex;
-    flex-flow: column nowrap;
-    text-decoration: none;
-    color: black;
-}
-
-.contactUsOption:hover{
-    background-color: #c0c0c0;
-}
-
-.contactUsOption>a>span:first-child{
-    font-weight: bold;
+    background-color: var(--main-background-color);
+    border: 0.1px solid var(--main-border-color);
 }
 
 #mainContent>figure>figcaption{

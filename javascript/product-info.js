@@ -26,19 +26,30 @@ document.querySelector(".star-rating").addEventListener("click", openProductRevi
 function openProductReviews() {
     let reviews = document.getElementById("hiddenReview");
     if (!reviews.classList.contains("containerAnimation")) {
+        console.log("opens reviews")
         reviews.classList.add("containerAnimation");
     } else {
+        console.log("closesReiews")
         reviews.classList.remove("containerAnimation");
     }
 }
 
 document.getElementById("reviewButton").addEventListener("click", makeReview)
 
-function makeReview(){
+async function makeReview(){
     let makeReviewContainer = document.getElementById("productReviews")
-    makeContainerAppear(makeReviewContainer)
-    makeReviewContainer.parentElement.update
+    let reviews = document.getElementById("hiddenReview");
+    reviews.classList.add("instantAnimation");
+    makeContainerAppear(makeReviewContainer);
+    openProductReviews();
+    openProductReviews();
+    reviews.classList.remove("instantAnimation")
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 function makeContainerAppear(node){
     if (!node.classList.contains("containerAnimation")) {

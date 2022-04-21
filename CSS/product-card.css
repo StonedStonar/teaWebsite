@@ -168,15 +168,15 @@ figure {
 #description {
     visibility: hidden;
     overflow: hidden;
-    height: 0;
-    transition: visibility 0.05s, height 0.20s;
+    max-height: 0;
+    transition: visibility 0.05s, max-height 0.20s;
 }
 
 #ingredients {
     visibility: hidden;
     overflow: hidden;
-    height: 0;
-    transition: visibility 0.05s, height 0.20s;  
+    max-height: 0;
+    transition: visibility 0.05s, max-height 0.20s;  
 }
 
 #productReviews, #hiddenReview {
@@ -193,6 +193,10 @@ figure {
     border-radius: 10px;
     color: var(--main-secondfont-color);
     font-size: 1em;
+}
+
+#productReviews{
+    margin-bottom: 1em;
 }
 
 .last {
@@ -245,8 +249,10 @@ figure {
 
 .containerAnimation{
     visibility: visible !important;
-    height: 100px !important;
-    transition: visibility 2s !important;
     max-height: 9999px !important;
-    height: 550px !important;
+}
+
+.instantAnimation {
+    transition: visibility 0s, max-height 0s !important; 
+    max-height: 9999px !important;
 }

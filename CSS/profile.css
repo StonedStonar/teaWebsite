@@ -50,10 +50,16 @@ figure>img{
 
 .button{
     font-weight: bold;
-    background-color: #c0c0c0;
+    background-color: var(--main-button-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.button>span{
+    color: white;
 }
 
 #deleteProfile{

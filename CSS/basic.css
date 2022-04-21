@@ -7,6 +7,8 @@
     --main-hoverbutton-color: #0f4911;
     --main-font-color: black;
     --main-shadow-color: #797676;
+    --hover-container-color: #c0c0c0;
+    --figcap-color: gray;
 }
 
 body{

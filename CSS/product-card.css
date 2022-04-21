@@ -84,6 +84,7 @@ figure {
     color: #f0c508;
     background-color: unset;
     border: none;
+    text-decoration: none;
 }
 
 .star:hover {
@@ -136,15 +137,6 @@ figure {
     justify-content: space-between;
 }
 
-#description{
-    visibility: hidden;
-    overflow: hidden;
-    height: 0;
-    transition: visibility 0s, height 1s;
-}
-
-
-
 .dropdown>img {
     width: 24px;
     height: 24px;
@@ -166,6 +158,39 @@ figure {
     flex-flow: column;
 }
 
+#productReviews>h4 {
+    font-size: 1.4em;
+}
+
+.review-form {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.review-form>span, #productReviews {
+    font-weight: 600;
+    margin-left: 0.2em;
+}
+
+.review-form> button {
+    width: 20%;
+    height: 40px;
+    background-color:  var(--main-button-color);
+    border-radius: 10px;
+    color: var(--main-secondfont-color);
+    font-size: 1em;
+}
+
+.review-form> input, .review-form> textarea {
+    display: flex;
+    width: 85%;
+    padding: 6px;
+    margin: 5px 0;
+    outline: none;
+    font-size: large;
+}
+
 #description {
     visibility: hidden;
     overflow: hidden;
@@ -180,11 +205,11 @@ figure {
     transition: visibility 0.05s, height 0.20s;  
 }
 
-#productReviews {
+#productReviews, #hiddenReview {
     visibility: hidden;
     overflow: hidden;
-    height: 0;
-    transition: visibility 0.05s, height 0.20s;
+    max-height: 0;
+    transition: visibility 0.05s, max-height 0.20s;
 }
 
 .last {
@@ -281,5 +306,6 @@ figure {
     visibility: visible !important;
     height: 100px !important;
     transition: visibility 2s !important;
-    height: 500px !important;
+    max-height: 9999px !important;
+    height: 600px !important;
 }

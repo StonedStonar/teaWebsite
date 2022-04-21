@@ -24,11 +24,27 @@ document.getElementById("productReviewsContainer").addEventListener("click", ope
 document.querySelector(".star-rating").addEventListener("click", openProductReviews)
 
 function openProductReviews() {
-    let reviews = document.getElementById("productReviews");
+    let reviews = document.getElementById("hiddenReview");
     if (!reviews.classList.contains("containerAnimation")) {
         reviews.classList.add("containerAnimation");
     } else {
         reviews.classList.remove("containerAnimation");
+    }
+}
+
+document.getElementById("reviewButton").addEventListener("click", makeReview)
+
+function makeReview(){
+    let makeReviewContainer = document.getElementById("productReviews")
+    makeContainerAppear(makeReviewContainer)
+    makeReviewContainer.parentElement.update
+}
+
+function makeContainerAppear(node){
+    if (!node.classList.contains("containerAnimation")) {
+        node.classList.add("containerAnimation");
+    } else {
+        node.classList.remove("containerAnimation");
     }
 }
 

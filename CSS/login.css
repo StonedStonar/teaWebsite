@@ -34,7 +34,7 @@
 .enter-details>a  {
     text-decoration: none;
     font-weight: 600;
-    color: #1080BF;
+    color: var(--main-link-color);
     align-self: center;
 }
 
@@ -47,7 +47,7 @@
 form>a  {
     text-decoration: none;
     font-weight: 600;
-    color: #1080BF;
+    color: var(--main-link-color);
     text-align: right;
 }
 
@@ -69,7 +69,7 @@ form>span {
 
 #sign-in {
     border: none;
-    background-color: #267F29;
+    background-color: var(--main-button-color);
     color: white;
     height: 40px;
     font-weight: 600;
@@ -78,7 +78,7 @@ form>span {
 }
 
 #sign-in:hover {
-    background-color: #0f4911;
+    background-color: var(--main-hoverbutton-color);
 }
 
 

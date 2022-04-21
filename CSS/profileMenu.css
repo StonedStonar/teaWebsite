@@ -3,10 +3,10 @@
     box-sizing: border-box;
     padding: 0.25em;
     margin: 1.5em 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
     border-radius: 5px;
-    background-color: white;
-    border: 0.1px solid rgba(0, 0, 0, 0.6);
+    background-color: var(--main-secbg-color);
+    border: 0.1px solid var(--main-border-color);
 }
 
 .profileMenuOptions>a{
@@ -17,7 +17,7 @@
 }
 
 .profileMenuOptions:hover{
-    background-color: #c0c0c0;
+    background-color: var(--hover-container-color);
 }
 
 .profileMenuOptions>a>span:first-child{

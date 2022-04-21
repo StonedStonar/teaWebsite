@@ -21,6 +21,7 @@ function openIngredients(){
 }
 
 document.getElementById("productReviewsContainer").addEventListener("click", openProductReviews)
+document.querySelector(".star-rating").addEventListener("click", openProductReviews)
 
 function openProductReviews() {
     let reviews = document.getElementById("productReviews");

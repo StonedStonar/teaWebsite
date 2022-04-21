@@ -1,14 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root{
+    /*Figcaption color*/
+    --figcap-color: gray;
+    
+    /*Backgrounds*/
     --main-bg-color: #FDF7EE;
     --main-secbg-color: white;
+
+    /*Background container*/
+    --hover-container-color: #c0c0c0;
+
+    /*Shadow color*/
+    --main-shadow-color: #797676;
+
+    /*Border*/
     --main-border-color: #464343;
+
+    /*Font color*/
+    --main-font-color: black;
+    --main-secondfont-color: white;
+
+    /*Buttton*/
     --main-button-color: #267f29;
     --main-hoverbutton-color: #0f4911;
-    --main-font-color: black;
-    --main-shadow-color: #797676;
-    --hover-container-color: #c0c0c0;
-    --figcap-color: gray;
+    --active-button-color: #34ac38;
+
+    /*Login colors*/
+    --main-link-color: #1080BF;
+
+    /*Product color*/
+    --main-star-color: #f0c508;
+
+    /*Menu colors*/
+    --main-menubg-color: #eee2d1;
 }
 
 body{
@@ -27,11 +51,11 @@ body{
 }
 
 #headerWrapper{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--main-border-color);
 }
 
 #footerWrapper{
-    border-top: 1px solid black;
+    border-top: 1px solid var(--main-border-color);
 }
 
 .mainSection, #menu, #footer{
@@ -100,7 +124,7 @@ body{
 
 .menuOption, .logoContainer, #menu>a{
     text-decoration: none;
-    color: black;
+    color: var(--main-font-color);
 }
 
 .menuOption{
@@ -111,7 +135,7 @@ body{
 .menuOption:hover, .logoContainer:hover, #exit:hover{
     cursor: pointer;
     transition: 0.2s;
-    box-shadow: 0 0px 3px #564125;
+    box-shadow: 0 0px 3px var(--main-shadow-color);
     border-radius: 5px;
     /*box-shadow: 0px 2px 3px #564125;*/
 }
@@ -143,7 +167,7 @@ body{
 #searchForm{
     visibility: hidden;
     height: 0;
-    background-color: #eee2d1;
+    background-color: var(--main-menubg-color);
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -189,18 +213,18 @@ body{
 }
 
 #profileMenuOptions, #profileMenuOptions>*:first-child{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--main-border-color);
     margin: 0 auto;
 }
 
 .profileOption{
-    background-color: #eee2d1;
+    background-color: var(--main-menubg-color);
     padding: 0.25em;
 }
 
 .profileOption>a{
     text-decoration: none;
-    color: black;
+    color: var(--main-font-color);
     display: block;
 }
 
@@ -214,7 +238,7 @@ body{
     height: 0; 
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--main-border-color);
     margin: 0 auto;
     position: relative;
     top: 1px;
@@ -261,7 +285,7 @@ body{
         top: 0;
         left: 0;
         /*Egentlige fargen #F2ECE3*/
-        background-color: #eee2d1;
+        background-color: var(--main-menubg-color);
         overflow-x: hidden;
         padding-top: 60px;;
         flex-flow: column nowrap;
@@ -271,7 +295,7 @@ body{
     .menuOption{
         padding: 0.5em;
         margin: 0.5em 0 0.5em 0.5em;
-        border-bottom: solid 1px #564125;
+        border-bottom: solid 1px var(--main-border-color);
     }
 
     #search{
@@ -305,24 +329,23 @@ body{
 }
 
 .buttonFooter {
-    background-color: red;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     background: #FDF7EE;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
     border-radius: 5px;
     width: 70%;
     margin-bottom: 1em;
-    color: black;
+    color: var(--main-font-color);
     font-weight: 700;
 }
 
 
 .buttonFooter:hover {
-    background-color: #eee2d1;
+    background-color: var(--main-menubg-color);
 }
 
 .sectionFooter {
@@ -383,7 +406,7 @@ body{
     display: flex;
     flex-flow: column nowrap;
     text-decoration: none;
-    color: black;
+    color: var(--main-font-color);
     width: 10em;
 
 }
@@ -401,7 +424,7 @@ body{
 }
 
 #contactInformation>a{
-    color: black;
+    color: var(--main-font-color);
 }
 
 @media screen and (max-width:900px){
@@ -414,6 +437,7 @@ body{
         width: 80%;
         padding-top: 1.5em;
     }
+    
     .buttonFooter {
         width: 100%;
     }
@@ -429,9 +453,9 @@ body{
     height: 1.5em !important;
     padding: 0.5em 0 !important;
     visibility: visible !important;
-    border-color: black !important;
-    border-bottom: 1px solid black !important;
-    border-top: 1px solid black !important;
+    border-color: var(--main-border-color) !important;
+    border-bottom: 1px solid var(--main-border-color) !important;
+    border-top: 1px solid var(--main-border-color) !important;
 }
 
 .openMenu{

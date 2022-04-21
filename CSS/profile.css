@@ -27,7 +27,7 @@ figure>img{
 }
 
 .personalInformation>h3{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--main-secondfont-color);
 }
 
 
@@ -45,7 +45,11 @@ figure>img{
 }
 
 .button:hover{
-    background-color: gray;
+    background-color: var(--main-hoverbutton-color);
+}
+
+.button:active{
+    background-color: var(--active-button-color);
 }
 
 .button{
@@ -54,12 +58,13 @@ figure>img{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--main-secondfont-color);
     font-weight: bold;
+    border: none;
 }
 
 .button>span{
-    color: white;
+    color: var(--main-secondfont-color);
 }
 
 #deleteProfile{
@@ -71,7 +76,7 @@ figure>img{
 }
 
 #profileIntro>figure>figcaption{
-    color: gray;
+    color:var(--figcap-color);
 }
 
 @media screen and (max-width:900px) {

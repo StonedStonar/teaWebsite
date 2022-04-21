@@ -123,12 +123,16 @@
                         <p class = "now-price">169kr</p>
                     </div>
                     <div class="star-rating">
-                        <button class="star">&#9734;</button>
-                        <button class="star">&#9734;</button>
-                        <button class="star">&#9734;</button>
-                        <button class="star">&#9734;</button>
-                        <button class="star">&#9734;</button>
-                        <span>(
+                        <div>
+                            <!--Var button men endra det til "span" så det ikke tar plass.-->
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                        <!--La til en class så vi kan endre akkurat denne.-->
+                        <span class = "inStock">(
                             <span class="amount-of-reviews">23</span>
                             )
                         </span>
@@ -205,10 +209,10 @@
                 </div>
             </div>
            
+            <h3 id = "relatedProducts">
+                Related products   
+            </h3>
             <div class="card-container">
-                <h3>
-
-                </h3>
                 <a href="product-info.html" class="card">
                     <div class="card-header">
                         <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>

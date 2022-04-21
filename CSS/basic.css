@@ -2,6 +2,11 @@
 :root{
     --main-bg-color: #FDF7EE;
     --main-secbg-color: white;
+    --main-border-color: #464343;
+    --main-button-color: #267f29;
+    --main-hoverbutton-color: #0f4911;
+    --main-font-color: black;
+    --main-shadow-color: #797676;
 }
 
 body{

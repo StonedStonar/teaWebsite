@@ -6,18 +6,14 @@
     border-radius: 5px;
     /*Nye hvit fargen*/
     background-color: var(--main-secbg-color);
-    border: 0.1px solid rgba(0, 0, 0, 0.6);
+    border: 0.1px solid var(--main-border-color);
 }
 
 .contactUsOption>a{
     display: flex;
     flex-flow: column nowrap;
     text-decoration: none;
-    color: black;
-}
-
-.contactUsOption:hover{
-    background-color: #c0c0c0;
+    color: var(--main-font-color);
 }
 
 .contactUsOption>a>span:first-child{

@@ -23,24 +23,9 @@ figure {
     width: 100%;
 }
 
-.former-price {
-    text-decoration: line-through;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-
 .card-prices {
     max-width: 350px;
     height: 200px;;
-}
-
-.now-price {
-    font-size: 22px;
-    margin-top: 0;
-    color: red;
-    font-weight: bold;
 }
 
 .Add-To-Cart {
@@ -60,6 +45,7 @@ figure {
 
 .star-rating {
     user-select: none;
+    text-decoration: none;
     /*Removed this, since there is another way*/
     /*margin-top: 1.6rem;*/
 }
@@ -78,18 +64,6 @@ figure {
     height: fit-content;
 }
 
-.star {
-    width: 1.4rem;
-    font-size: 2rem;
-    color: #f0c508;
-    background-color: unset;
-    border: none;
-    text-decoration: none;
-}
-
-.star:hover {
-    cursor: pointer;
-}
 
 .amount-to-add {
     height: 30px;
@@ -212,6 +186,15 @@ figure {
     transition: visibility 0.05s, max-height 0.20s;
 }
 
+#reviewButton {
+    height: 40px;
+    margin-bottom: 20px;
+    background-color:  var(--main-button-color);
+    border-radius: 10px;
+    color: var(--main-secondfont-color);
+    font-size: 1em;
+}
+
 .last {
     border-bottom: 1px solid black;
 }
@@ -234,48 +217,6 @@ figure {
     background-color: var(--main-button-color);
     border-radius: 50%;
     display: inline-block;
-}
-
-.card-header>img {
-    width: 50%;
-}
-
-.card {
-    background-color: white;
-    min-width: 150px;
-    max-width: 250px;
-    padding-bottom: 1em;
-    margin: 0.2em;
-    border-radius: 1rem;
-    box-shadow: 0 0.1em 0.1em 0 var(--main-shadow-color);
-    text-align: center;
-    text-decoration: none;
-}
-
-.card:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 0.4rem 0 var(--main-shadow-color);
-}
-
-
-.card-title {
-    color: black;
-    margin: 1rem 1rem 0 1rem;
-    font-size: 1.4em;
-    font-weight: 600;
-}
-
-.card-description {
-    font-size: 1.1em;
-    font-weight: 600;
-    color: var(--main-border-color);
-}
-
-.card-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 100%;
 }
 
 #relatedProducts{
@@ -307,5 +248,5 @@ figure {
     height: 100px !important;
     transition: visibility 2s !important;
     max-height: 9999px !important;
-    height: 600px !important;
+    height: 550px !important;
 }

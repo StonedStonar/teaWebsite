@@ -15,6 +15,7 @@
 
     /*Border*/
     --main-border-color: #464343;
+    --second-border-color: #a39c9c;
 
     /*Font color*/
     --main-font-color: black;
@@ -33,8 +34,6 @@
 
     /*Menu colors*/
     --main-menubg-color: #eee2d1;
-
-    
 }
 
 body{
@@ -43,9 +42,6 @@ body{
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     margin: 0;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
 }
 
 #footerWrapper, #headerWrapper{
@@ -53,11 +49,11 @@ body{
 }
 
 #headerWrapper{
-    border-bottom: 1px solid var(--main-border-color);
+    box-shadow: 0 0px 3px var(--main-shadow-color);
 }
 
 #footerWrapper{
-    border-top: 1px solid var(--main-border-color);
+    box-shadow: 0 0px 3px var(--main-shadow-color);
 }
 
 .mainSection, #menu, #footer{
@@ -66,11 +62,15 @@ body{
 }
 
 .mainSection, #footer{
-    padding: 0.5em 1em;
+    padding: 1em;
 }
 
 .mainSection{
     padding: 0 initial;
+    box-shadow: 0 0px 3px var(--main-shadow-color);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-height: 70vh;
 }
 
 .mainHeaderText{
@@ -292,7 +292,6 @@ body{
         z-index: 1;
         top: 0;
         left: 0;
-        /*Egentlige fargen #F2ECE3*/
         background-color: var(--main-menubg-color);
         overflow-x: hidden;
         padding-top: 60px;;
@@ -303,7 +302,7 @@ body{
     .menuOption{
         padding: 0.5em;
         margin: 0.5em 0 0.5em 0.5em;
-        border-bottom: solid 1px var(--main-border-color);
+        border-bottom: solid 2px var(--second-border-color);
     }
 
     #search{
@@ -464,6 +463,7 @@ body{
     border-color: var(--main-border-color) !important;
     border-bottom: 1px solid var(--main-border-color) !important;
     border-top: 1px solid var(--main-border-color) !important;
+    box-shadow: 0 1px 3px var(--main-shadow-color);
 }
 
 .openMenu{

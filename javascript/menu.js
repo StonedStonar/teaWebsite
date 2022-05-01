@@ -14,7 +14,10 @@ function listenForCloseSearch(click){
     let searchMenu = document.getElementById("searchForm");
     let target = click.target;
     let search = document.getElementById("search");
-    if(search.classList.contains("openSearch") && target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement){
+    console.log("Trying if")
+    console.log(target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement)
+    if(target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement){
+        console.log("Closing search")
         closeSearch();
         window.removeEventListener("click", listenForCloseSearch);
     }

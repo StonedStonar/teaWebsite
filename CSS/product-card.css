@@ -230,7 +230,7 @@ figure {
 
 
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:800px) {
    
     .mainSection{
         justify-content: none;
@@ -244,6 +244,12 @@ figure {
         max-width: none;
         width: 100%;
     }
+
+    .price-and-review>.star-rating{
+        /*La til denne for at det ikke skulle bli rart med stjernene*/
+        width: auto;
+    }
+    
 }
 
 

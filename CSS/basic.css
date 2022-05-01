@@ -63,6 +63,9 @@ body{
 .mainSection, #menu, #footer{
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.mainSection, #footer{
     padding: 0.5em 1em;
 }
 
@@ -132,13 +135,16 @@ body{
 .menuOption{
     font-size: 1.2em;
     padding: 0.25em 0.5em;
+    border-bottom: 1px solid transparent;
 }
 
 .menuOption:hover, .logoContainer:hover, #exit:hover{
     cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 0 0px 3px var(--main-shadow-color);
-    border-radius: 5px;
+    transition: border-color 0.6s linear;
+    border-color: var(--main-border-color);
+    /*box-shadow: 0 0 2px var(--main-border-color);*/
+    /*box-shadow: 2px 2px var(--main-shadow-color);
+    /*border-radius: 5px;*/
     /*box-shadow: 0px 2px 3px #564125;*/
 }
 

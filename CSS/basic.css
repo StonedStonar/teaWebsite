@@ -476,3 +476,11 @@ body{
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+.rotatableLogo{
+    transition: 0.5s;
+}
+
+.rotateLogo{
+    transform: rotate(180deg) !important;
+}

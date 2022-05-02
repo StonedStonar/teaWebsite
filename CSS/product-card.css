@@ -169,7 +169,7 @@ figure {
     visibility: hidden;
     overflow: hidden;
     max-height: 0;
-    transition: visibility 0.05s, max-height 0.20s;
+    transition: visibility 0.05s, max-height 0.25s;
 }
 
 #ingredients {
@@ -262,3 +262,5 @@ figure {
     transition: visibility 0s, max-height 0s !important; 
     max-height: 9999px !important;
 }
+
+

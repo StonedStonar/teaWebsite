@@ -4,8 +4,9 @@
     --figcap-color: gray;
     
     /*Backgrounds*/
-    --main-bg-color: #FDF7EE;
-    --main-secbg-color: white;
+    --main-bg-color: #e9e2d8; /*Orginal #FDF7EE*/
+    --main-secbg-color: #fdf6ee; /*Orginal white*/
+    --third-background-color: #fdf6ee; /*Not original but this was set first #FDF7EE*/
 
     /*Background container*/
     --hover-container-color: #c0c0c0;
@@ -15,6 +16,7 @@
 
     /*Border*/
     --main-border-color: #464343;
+    --second-border-color: #a39c9c;
 
     /*Font color*/
     --main-font-color: black;
@@ -41,9 +43,6 @@ body{
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     margin: 0;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
 }
 
 #footerWrapper, #headerWrapper{
@@ -51,21 +50,29 @@ body{
 }
 
 #headerWrapper{
-    border-bottom: 1px solid var(--main-border-color);
+    box-shadow: 0 0px 3px var(--main-shadow-color);
 }
 
 #footerWrapper{
-    border-top: 1px solid var(--main-border-color);
+    box-shadow: 0 0px 3px var(--main-shadow-color);
 }
 
 .mainSection, #menu, #footer{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.5em 1em;
+}
+
+.mainSection, #footer{
+    padding: 1em;
 }
 
 .mainSection{
     padding: 0 initial;
+    box-shadow: 0 0px 3px var(--main-shadow-color);
+    background-color: var(--third-background-color);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-height: 70vh;
 }
 
 .mainHeaderText{
@@ -73,8 +80,18 @@ body{
 }
 
 .button{
+    border-radius: 0.5em;
     height: 40px;
-    border-radius: 10px;
+}
+
+.greenButton{
+    background-color: var(--main-button-color);
+    color: var(--main-secondfont-color);
+}
+
+.greenButton:hover{
+    cursor: pointer;
+    background-color: var(--main-hoverbutton-color);
 }
 
 .closeText{
@@ -130,13 +147,16 @@ body{
 .menuOption{
     font-size: 1.2em;
     padding: 0.25em 0.5em;
+    border-bottom: 1px solid transparent;
 }
 
 .menuOption:hover, .logoContainer:hover, #exit:hover{
     cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 0 0px 3px var(--main-shadow-color);
-    border-radius: 5px;
+    transition: border-color 0.6s linear;
+    border-color: var(--main-border-color);
+    /*box-shadow: 0 0 2px var(--main-border-color);*/
+    /*box-shadow: 2px 2px var(--main-shadow-color);
+    /*border-radius: 5px;*/
     /*box-shadow: 0px 2px 3px #564125;*/
 }
 
@@ -284,7 +304,6 @@ body{
         z-index: 1;
         top: 0;
         left: 0;
-        /*Egentlige fargen #F2ECE3*/
         background-color: var(--main-menubg-color);
         overflow-x: hidden;
         padding-top: 60px;;
@@ -295,7 +314,7 @@ body{
     .menuOption{
         padding: 0.5em;
         margin: 0.5em 0 0.5em 0.5em;
-        border-bottom: solid 1px var(--main-border-color);
+        border-bottom: solid 2px var(--second-border-color);
     }
 
     #search{
@@ -456,6 +475,7 @@ body{
     border-color: var(--main-border-color) !important;
     border-bottom: 1px solid var(--main-border-color) !important;
     border-top: 1px solid var(--main-border-color) !important;
+    box-shadow: 0 1px 3px var(--main-shadow-color);
 }
 
 .openMenu{
@@ -467,4 +487,12 @@ body{
 .openProfileMenu{
     visibility: visible !important;
     opacity: 1 !important;
+}
+
+.rotatableLogo{
+    transition: 0.5s;
+}
+
+.rotateLogo{
+    transform: rotate(180deg) !important;
 }

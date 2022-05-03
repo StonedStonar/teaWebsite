@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Information for one product</title>
         <link href = "CSS/basic.css" rel="stylesheet" type="text/css">
+        <link href = "CSS/card.css" rel="stylesheet" type="text/css">
         <link href = "CSS/product-card.css" rel="stylesheet" type="text/css">
     </head>
 
@@ -137,7 +138,7 @@
                     </a>
                 </div>
             
-                <button class="Add-To-Cart">
+                <button class="Add-To-Cart greenButton button">
                     ADD TO CART
                 </button>
                 
@@ -163,7 +164,7 @@
                         <span>
                             Description
                         </span>
-                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
+                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo rotatableLogo">
                     </div>
                     <div id = "description">
                         <h4>
@@ -179,7 +180,7 @@
                 <div class="dropdown"> 
                     <div id = "ingredientsContainer">
                         <span>Ingredients</span>
-                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
+                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo rotatableLogo">
                     </div> 
                     <div id = "ingredients">
                         <h4>
@@ -194,25 +195,24 @@
                 <div class="dropdown last">
                     <div id = "productReviewsContainer">
                         <span>Proudct reviews</span>
-                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo">
+                        <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo rotatableLogo">
                     </div>
                     <div id = "hiddenReview">
-                        <button id = "reviewButton">Make new review</button>
+                        <button id = "reviewButton" class = "button greenButton">Write your review</button>
                         <div id = "productReviews">
-                            <h4>Write you're review</h4>
                             <form class="review-form">
                                 <span>Title of review</span>
                                 <input type="text" placeholder="Title for review">
                                 <span>Reviewer</span>
                                 <input type="text" placeholder="Name or Username">
                                 
-                                <div class="star-rating">
+                                <div class="star-rating" id = "reviewStars">
                                     <span>Set rating:</span>
-                                    <button class="star">&#9734;</button>
-                                    <button class="star">&#9734;</button>
-                                    <button class="star">&#9734;</button>
-                                    <button class="star">&#9734;</button>
-                                    <button class="star">&#9734;</button>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
                                 </div>
                                 <textarea rows="8" placeholder="write you're review here"></textarea>
                                 <button type="submit">Submit review</button>
@@ -240,11 +240,11 @@
                             <p class="now-price">169kr</p>
                         </div>
                         <div class="star-rating">
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
                         </div>
                     </div>
                 </a>
@@ -262,11 +262,11 @@
                             <p class = "now-price">169kr</p>
                         </div>
                         <div class="star-rating">
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
                         </div>
                     </div>
                 </a>
@@ -284,11 +284,11 @@
                             <p class = "now-price">169kr</p>
                         </div>
                         <div class="star-rating">
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
                         </div>
                     </div>
                 </a>
@@ -306,11 +306,11 @@
                             <p class = "now-price">169kr</p>
                         </div>
                         <div class="star-rating">
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
-                            <button class="star">&#9734;</button>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
                         </div>
                     </div>
                 </a>

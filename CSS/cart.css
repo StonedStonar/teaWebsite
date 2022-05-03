@@ -1,0 +1,151 @@
+#orderedProductContainer, .orderedProduct, .productInfo, .priceAndAmount, .price{
+    display: grid;
+}
+
+/*Ordered product container*/
+#orderedProductContainer{
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 0.5fr;
+}
+
+.orderedProduct{
+    grid-template-columns: 4fr 3.5fr;
+}
+
+.productInfo{
+    grid-template-columns: 1fr 3fr;
+}
+
+.price{
+    grid-template-columns: 1fr 1fr;
+}
+
+.priceAndAmount{
+    grid-template-columns: 1fr 2fr 0.5fr;
+    height: 100%;
+    width: 100%;
+}
+
+.priceAndAmount>*{
+    align-self: center;
+}
+
+.mobileText{
+    display: none;
+}
+
+/*Menu items*/
+.topItem{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#headerCart{
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerCart>button{
+    min-width: 2em;
+    padding: 0 1em;
+}
+
+/*Ordered product*/
+.orderedProduct{
+    grid-column: 1/7;
+    width: 100%;
+    padding: 1em 0;
+    border-bottom: 1px solid black;
+}
+
+.productImage{
+    width: 90%;
+}
+
+.productName{
+    font-weight: bold;
+}
+
+.orderedProduct>*{
+    align-self: center;
+}
+
+/*Amount knappen*/
+.amount-to-add {
+    height: 30px;
+    min-width: 60px;
+    max-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.amount-to-add>span {
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.amount-to-add>span.num-to-change {
+   border-right: 2px solid rgba(0,0,0,0.1); 
+   border-left: 2px solid rgba(0,0,0,0.1); 
+   pointer-events: none;
+}
+
+@media screen and (max-width:700px) {
+    .topItem{
+        display: none;
+    }
+
+    .orderedProduct{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+        
+    }
+
+    .priceAndAmount>img{
+        justify-self: right;
+        margin-right: 1em;
+    }
+
+    .priceAndAmount{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .price{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 40%;
+    }
+
+    .price>p{
+        margin: 0.5em 0;
+    }
+
+    .mobileText{
+        display: flex;
+        visibility: visible;
+    }
+
+    #orderedProductContainer>p:first-of-type{
+        grid-column: 1/7;
+        align-self: center;
+    }
+
+    .productImage{
+        width: 10em;
+    }
+}

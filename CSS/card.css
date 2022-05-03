@@ -1,0 +1,93 @@
+.card-header>img {
+    width: 50%;
+}
+
+.card {
+    background-color: white;
+    min-width: 150px;
+    max-width: 400px;
+    padding: 1em;
+    margin: 0.2em;
+    /*Vi burde vudere om vi skal ha så mye runde kanter. Prøv denne av og se*/
+    border-radius: 10px;
+    box-shadow: 0 0.1em 0.1em 0 var(--main-shadow-color);
+    text-align: center;
+    text-decoration: none;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4em 0.4em 0 var(--main-shadow-color);
+}
+
+
+.card-title {
+    color: black;
+    margin: 1em 1em 0 1em;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.card-description {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--main-border-color);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 100%;
+}
+
+.card-container>*{
+    margin: 0 auto;
+}
+
+.star {
+    width: 1.4em;
+    font-size: 2em;
+    color: #f0c508;
+    background-color: unset;
+    border: none;
+    text-decoration: none;
+}
+
+.star:hover {
+    cursor: pointer;
+}
+
+.now-price {
+    font-size: 22px;
+    margin-top: 0;
+    color: red;
+    font-weight: bold;
+}
+
+.former-price {
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: black;
+}
+
+@media screen and (max-width:1000px){
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:600px){
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+

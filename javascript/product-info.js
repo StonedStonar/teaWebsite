@@ -1,66 +1,84 @@
-document.getElementById("descriptionContainer").addEventListener("click", openDescription)
+document.getElementById("descriptionContainer").addEventListener("click", event => openDescription(event))
 
-function openDescription() {
-    let description = document.getElementById("description");
-    if(!description.classList.contains("containerAnimation")){
-        description.classList.add("containerAnimation");
-    } else {
-        description.classList.remove("containerAnimation");
+function getParentContainer(target) {
+    let container = null;
+    if (!target.classList.contains("dropdown")) {
+        let collection = document.getElementsByClassName("dropdown");
+        let i = 0;
+        while (container == null && i < collection.length) {
+            let item = collection[i]
+            if (item.contains(target)) {
+                container = item;
+            }
+            i++;
+        }
+    }else{
+        container = target;
     }
+    return container;
 }
 
-document.getElementById("ingredientsContainer").addEventListener("click", openIngredients)
+function openDescription(event) {
+    let parent = getParentContainer(event.target);
+    let description = document.getElementById("description");
+    makeContainerAppear(description, parent)
+}
 
-function openIngredients(){
+document.getElementById("ingredientsContainer").addEventListener("click", event => openIngredients(event));
+
+function openIngredients(event) {
+    let parent = getParentContainer(event.target);
     let ingredients = document.getElementById("ingredients");
-    if (!ingredients.classList.contains("containerAnimation")) {
-        ingredients.classList.add("containerAnimation");
-    } else {
-        ingredients.classList.remove("containerAnimation");
-    }
+    makeContainerAppear(ingredients, parent)
 }
 
 document.getElementById("productReviewsContainer").addEventListener("click", openProductReviews)
 document.querySelector(".star-rating").addEventListener("click", openProductReviews)
 
-function openProductReviews() {
+function openProductReviews(event){
+    let parent = getParentContainer(event.target);
     let reviews = document.getElementById("hiddenReview");
-    if (!reviews.classList.contains("containerAnimation")) {
-        console.log("opens reviews")
-        reviews.classList.add("containerAnimation");
-    } else {
-        console.log("closesReiews")
-        reviews.classList.remove("containerAnimation");
-    }
+    makeContainerAppear(reviews, parent)
 }
 
-document.getElementById("reviewButton").addEventListener("click", makeReview)
+document.getElementById("reviewButton").addEventListener("click", event => makeReview(event))
 
-async function makeReview(){
+async function makeReview(event) {
+    let parent = getParentContainer(event.target);
     let makeReviewContainer = document.getElementById("productReviews")
     let reviews = document.getElementById("hiddenReview");
     reviews.classList.add("instantAnimation");
-    makeContainerAppear(makeReviewContainer);
-    openProductReviews();
-    openProductReviews();
+    let logo = parent.querySelector(".logo");
+    logo.classList.add("instantAnimation");
+    makeContainerAppear(makeReviewContainer, null);
+    openProductReviews(event);
+    openProductReviews(event);
     reviews.classList.remove("instantAnimation")
+    logo.classList.remove("instantAnimation");
+    filterStars();
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
-
-function makeContainerAppear(node){
+function makeContainerAppear(node, parentNode) {
+    let logo;
+    if(parentNode != null){
+        logo = parentNode.querySelector(".logo");
+    }
     if (!node.classList.contains("containerAnimation")) {
         node.classList.add("containerAnimation");
+        if(logo != null){
+            logo.classList.add("rotateLogo");
+        }
     } else {
         node.classList.remove("containerAnimation");
+        if(logo != null){
+            logo.classList.remove("rotateLogo");
+        }
     }
 }
 
-document.querySelector(".plus-button", "num-to-change").addEventListener("click", incButton)
-document.querySelector(".minus-button").addEventListener("click", decButton)
+document.querySelector(".plus-button", "num-to-change").addEventListener("click", event => incButton(event));
+document.querySelector(".minus-button").addEventListener("click", event => decButton(event));
 
 num = document.querySelector(".num-to-change");
 let a = 1;
@@ -72,28 +90,37 @@ function incButton() {
 }
 
 function decButton() {
-    if(a > 1) {
+    if (a > 1) {
         a--;
         num.innerText = a;
         console.log(a);
     }
 }
 
-const stars = document.querySelectorAll(".star");
+var stars = [];
 
-stars.forEach((star, i) => {
-    star.onclick = function () {
-        let current_star = i + 1;
+function filterStars() {
+    let containerOfStars = document.getElementById("reviewStars");
+    stars = containerOfStars.querySelectorAll(".star");
+}
 
-        stars.forEach((star, j) => {
-            if (current_star >= j + 1) {
-                star.innerHTML = "&#9733";
-            } else {
-                star.innerHTML = "&#9734";
-            }
-        })
-    }
-})
+filterStars();
+
+function giveStars() {
+    stars.forEach((star, i) => {
+        star.onclick = function () {
+            let current_star = i + 1;
+
+            stars.forEach((star, j) => {
+                if (current_star >= j + 1) {
+                    star.innerHTML = "&#9733";
+                } else {
+                    star.innerHTML = "&#9734";
+                }
+            })
+        }
+    })
+}
 
 
 

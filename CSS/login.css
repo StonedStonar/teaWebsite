@@ -9,9 +9,14 @@
     font-size: 1.4rem;
 }
 
+.mainSection{
+    width: 100%;
+}
+
 .mainSection> h2 {
     text-align: center;
     font-size: 1.8rem;
+    width: 100%;
 }
 
 .enter-account-details> input {

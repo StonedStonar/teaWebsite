@@ -104,21 +104,23 @@
         <script src = "javascript/menu.js">   
         </script>
         <section class = "mainSection">
-            <h2 class = "WelcomeText">
-                Welcome to NORTE - for tea lovers
+            <h2 class = "WelcomeText mainHeaderText">
+                Welcome to NORTE - for tea lovers 
             </h2>
             <div class = "allProductsAndSale">
-                <a href="products.html" class="frontpageButton">
-                    <span>
-                        All products
-                    </span>
-                </a>
-                <a href="products.html" class="frontpageButton"> <!--Change to link to sales instead of products-->
-                    <span>
-                        Sale
-                    </span>
-                </a>
-                <figure id ="teaCupFrontPage">
+                <figure class ="teaCupFrontPage" id = "topButtonsPicture">
+                    <div class = "topButtonsWrapper">
+                        <a href="products.html" class="frontpageButton">
+                            <span>
+                                All products
+                            </span>
+                        </a>
+                        <a href="products.html" class="frontpageButton"> <!--Change to link to sales instead of products-->
+                            <span>
+                                Sale
+                            </span>
+                        </a>
+                    </div>
                     <img src="Images/cupAndPlant.jpg" id="teacupImage"
                         alt="SOMETHING">
                     <figcaption> Picture downloaded from unsplash.com, by Massimo Rinaldi </figcaption>
@@ -131,7 +133,7 @@
                         We can offer tea for every occasion!
                     </span>
                 </h2>
-                <figure id ="teaCup">
+                <figure class ="teaCupFrontPage">
                     <img src="Images/teaLightsBook.jpg" id="teacupImage"
                         alt="SOMETHING">
                     <figcaption> Picture downloaded from unsplash.com, by SVITLANA </figcaption>
@@ -506,17 +508,20 @@
                         Scroll through our products here:
                     </p>
                     <div class = "allProductsAndSale">
-                        <a href="products.html" class="frontpageButton">
-                            <span>
-                                All products
-                            </span>
-                        </a>
-                        <a href="products.html" class="frontpageButton"> <!--Change to link to sales instead of products-->
-                            <span>
-                                Sale
-                            </span>
-                        </a>
-                        <figure id ="teaCupFrontPage">
+                    
+                        <figure class ="teaCupFrontPage" id = "allProductsAndSaleImage">
+                            <div class = "topButtonsWrapper">
+                                <a href="products.html" class="frontpageButton">
+                                    <span>
+                                        All products
+                                    </span>
+                                </a>
+                                <a href="products.html" class="frontpageButton"> <!--Change to link to sales instead of products-->
+                                    <span>
+                                        Sale
+                                    </span>
+                                </a>
+                            </div>
                             <img src="Images/cupAndPlant.jpg" id="teacupImage"
                                 alt="SOMETHING">
                             <figcaption> Picture downloaded from unsplash.com, by Massimo Rinaldi </figcaption>
@@ -525,19 +530,22 @@
                 </div>
             </div>
             <div class ="infoAndAboutUs">
-                <div class ="whiteBackground">
-                    <p>
-                        Humans have been enjoying herbal teas for millennia. We are passionate for natural teas, nurtured by
-                        our ancestors. Our experts have carefully selected teas from all regions of the planet, of course through Fairtraded guidelines, and eco-friendly transport. 
-                        Read more about us and our values her:
-                    </p>
-                    <a href="aboutUs.html" class="frontpageButton">
-                        <span>
-                            About Us
-                        </span>
-                    </a>
-                </div>
-                <figure id ="teaCupFrontPage">
+                
+                <figure class ="teaCupFrontPage" id = "grassFigure">
+                    <div id = "whiteBackgroundWrapper">
+                        <div id ="whiteBackground">
+                            <p>
+                                Humans have been enjoying herbal teas for millennia. We are passionate for natural teas, nurtured by
+                                our ancestors. Our experts have carefully selected teas from all regions of the planet, of course through Fairtraded guidelines, and eco-friendly transport. 
+                                Read more about us and our values her:
+                            </p>
+                            <a href="aboutUs.html" class="frontpageButton">
+                                <span>
+                                    About Us
+                                </span>
+                            </a>
+                        </div>
+                    </div>
                     <img src="Images/herbsInFIeld.jpg" id="teacupImage"
                         alt="SOMETHING">
                     <figcaption> Picture downloaded from unsplash.com, by Massimo Rinaldi </figcaption>

@@ -31,17 +31,11 @@ figure {
 .Add-To-Cart {
     width: 100%;
     height: 45px;
-    background-color: var(--main-button-color);
-    border-radius: 0.5rem;
+    /*What if this is one?*/
     margin: 0 0 2em 0;
-    color: var(--main-secondfont-color);
     font-size: 16px;
 }
 
-.Add-To-Cart:hover {
-    cursor: pointer;
-    background-color: var(--main-hoverbutton-color);
-}
 
 .star-rating {
     user-select: none;
@@ -187,11 +181,7 @@ figure {
 }
 
 #reviewButton {
-    height: 40px;
     margin-bottom: 20px;
-    background-color:  var(--main-button-color);
-    border-radius: 10px;
-    color: var(--main-secondfont-color);
     font-size: 1em;
 }
 

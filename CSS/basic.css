@@ -4,8 +4,9 @@
     --figcap-color: gray;
     
     /*Backgrounds*/
-    --main-bg-color: #FDF7EE;
-    --main-secbg-color: white;
+    --main-bg-color: #e9e2d8; /*Orginal #FDF7EE*/
+    --main-secbg-color: #fdf6ee; /*Orginal white*/
+    --third-background-color: #fdf6ee; /*Not original but this was set first #FDF7EE*/
 
     /*Background container*/
     --hover-container-color: #c0c0c0;
@@ -68,6 +69,7 @@ body{
 .mainSection{
     padding: 0 initial;
     box-shadow: 0 0px 3px var(--main-shadow-color);
+    background-color: var(--third-background-color);
     margin-top: 1em;
     margin-bottom: 1em;
     min-height: 70vh;
@@ -78,8 +80,18 @@ body{
 }
 
 .button{
+    border-radius: 0.5em;
     height: 40px;
-    border-radius: 10px;
+}
+
+.greenButton{
+    background-color: var(--main-button-color);
+    color: var(--main-secondfont-color);
+}
+
+.greenButton:hover{
+    cursor: pointer;
+    background-color: var(--main-hoverbutton-color);
 }
 
 .closeText{

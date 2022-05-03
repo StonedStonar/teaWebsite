@@ -37,16 +37,26 @@
 }
 
 
+
+
 .product{
     display: flex;
     flex-flow: row wrap;
-    border-top: 1px solid var(--main-border-color);
     border-bottom: 1px solid var(--main-border-color);
+    padding: 1em 0;
 }
+
+.order>div:nth-child(3) {
+    border-top: 1px solid var(--main-border-color);
+}
+
+
 
 .product>*{
     width: 50%;
 }
+
+
 
 .productSummation, .product{
     width: 100%;

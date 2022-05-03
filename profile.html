@@ -152,11 +152,11 @@
                         Ålesund
                         Norge
                     </p>
-                    <a class = "button" id = "editProfile" href = "editProfile.html">
+                    <button class = "button greenButton" id = "editProfile">
                         <span>
                             Edit profile
                         </span>
-                    </a>
+                    </button>
                 </div>
                 <div id = "optionsForUser">
                     <div class = "profileMenuOptions">
@@ -170,11 +170,11 @@
                         </a>
                     </div>
                     <div class = "profileMenuOptions">
-                        <a>
-                            <span>
+                        <a href = "#" class = "editPassword" id = "editPassword">
+                            <span class = "editPassword">
                                 Security
                             </span>
-                            <span>
+                            <span class = "editPassword">
                                 Manage your password.
                             </span>
                         </a>
@@ -203,6 +203,66 @@
                     <button class = "button" id = "deleteProfileButton">
                         Delete my profile
                     </button>
+                </div>
+            </div>
+
+            <div class = "editContainer" id = "editProfileContainer">
+                <div>
+                    <div>
+                        <div class = "headerOverlay">
+                            <h3>Profile details</h3>
+                            <img src="svg/cross.svg" alt = "Exit edit window logo" class = "logo exitOverlay">
+                        </div>
+                        <form class = "editForm">
+                            <label for="firstName" ho>First name</label>
+                            <input type = "text" id = "firstName" placeholder = "Enter first name" class = "input">
+                            <label value = "lastName">Last name</label>
+                            <input type = "text" id = "lastName" placeholder = "Enter last name">
+                            <label for = "email">E-mail</label>
+                            <input type = "email" id = "email" placeholder = "Enter email address">
+                            <label for = "mobileNumber">Mobile number</label>
+                            <input type = "number" id = "mobileNumber" placeholder = "Enter mobile number">
+                            <input type = "submit" value = "Change details" id = "submit" class = "button greenButton">
+                        </form>
+                    </div>
+                    <div>
+                        <h3>
+                            Address
+                        </h3>
+                        <form class = "editForm">
+                            <label for = "streetName">Street name</label>
+                            <input type = "text" id = "streetName" placeholder = "Enter street name">
+                            <label for = "houseNumber">House number</label>
+                            <input type = "text" id = "houseNumber" placeholder = "Enter house number">
+                            <label for = "postalCode">Postal code</label>
+                            <input type = "number" id = "postalCode" placeholder = "Enter postal code">
+                            <label for = "city">City</label>
+                            <input type = "text" id = "city"  placeholder = "Enter city">
+                            <label for = "country">Country</label>
+                            <input type = "text" id = "country" placeholder = "Enter country">
+                            <input type = "submit" value = "Update address" class = "button greenButton">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "editContainer" id = "editPasswordContainer">
+                <div>
+                    <div>
+                        <div class = "headerOverlay">
+                            <h3>Edit password</h3>
+                            <img src="svg/cross.svg" alt = "Exit edit window logo" class = "logo exitOverlay">
+                        </div>
+                        <form class = "editForm">
+                            <label for = "oldPassword">Old password</label>
+                            <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "input">
+                            <label for = "newPassword">New password</label>
+                            <input type = "password" id = "newPassword" placeholder = "Enter new password">
+                            <label for = "twicePassword">Confirm new password</label>
+                            <input type = "password" id = "twicePassword" placeholder = "Enter the new password again">
+                            <input type = "submit" value = "Change password" id = "submit" class = "button greenButton">
+                        </form>
+                    </div>
                 </div>
             </div>
 

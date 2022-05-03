@@ -38,33 +38,42 @@ document.querySelector(".star-rating").addEventListener("click", openProductRevi
 function openProductReviews(event){
     let parent = getParentContainer(event.target);
     let reviews = document.getElementById("hiddenReview");
-    openContainer(reviews, parent)
+    makeContainerAppear(reviews, parent)
 }
 
-document.getElementById("reviewButton").addEventListener("click", makeReview)
+document.getElementById("reviewButton").addEventListener("click", event => makeReview(event))
 
-async function makeReview() {
-    getParentContainer();
+async function makeReview(event) {
+    let parent = getParentContainer(event.target);
     let makeReviewContainer = document.getElementById("productReviews")
     let reviews = document.getElementById("hiddenReview");
     reviews.classList.add("instantAnimation");
-    makeContainerAppear(makeReviewContainer);
-    openProductReviews();
-    openProductReviews();
+    let logo = parent.querySelector(".logo");
+    logo.classList.add("instantAnimation");
+    makeContainerAppear(makeReviewContainer, null);
+    openProductReviews(event);
+    openProductReviews(event);
     reviews.classList.remove("instantAnimation")
+    logo.classList.remove("instantAnimation");
     filterStars();
 }
 
 
 function makeContainerAppear(node, parentNode) {
-    let logo = parentNode.querySelector(".logo");
-    console.log(logo)
+    let logo;
+    if(parentNode != null){
+        logo = parentNode.querySelector(".logo");
+    }
     if (!node.classList.contains("containerAnimation")) {
         node.classList.add("containerAnimation");
-        logo.classList.add("rotateLogo");
+        if(logo != null){
+            logo.classList.add("rotateLogo");
+        }
     } else {
         node.classList.remove("containerAnimation");
-        logo.classList.remove("rotateLogo");
+        if(logo != null){
+            logo.classList.remove("rotateLogo");
+        }
     }
 }
 

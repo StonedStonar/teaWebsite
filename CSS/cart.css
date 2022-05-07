@@ -46,6 +46,7 @@
 #headerCart{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #headerCart>button{
@@ -99,6 +100,42 @@
    border-left: 2px solid rgba(0,0,0,0.1); 
    pointer-events: none;
 }
+
+#buttonAndSumContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5em 0;
+}
+
+#summary{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    margin: 0.5em 0;
+}
+
+#checkOutButton{
+    width: 100%;
+}
+
+#totalDiscount, #totalSum{
+    text-align: center;
+}
+
+#clearCartButton{
+    width: 10em;
+}
+
+#clearCartButton:hover{
+    background-color: var(--hover-container-color);
+}
+
+.productID{
+    font-size: 0.75em;
+    color: var(--main-font-color);
+}
+
+
 
 @media screen and (max-width:700px) {
     .topItem{

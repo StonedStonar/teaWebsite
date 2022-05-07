@@ -50,13 +50,15 @@
                          About us
                     </a> 
                 </nav>
-                <form id = "searchForm">
-                    <label for = "productSearch">
-                        Search
-                    </label>
-                    <img src = "#" srcset = "svg/search.svg" alt = "Search button" class = "svg logo">
-                    <input type = "search" id = "productSearch" name="productSearch" onsearch="search()">
-                </form>
+                <div id = "searchForm">
+                    <form>
+                        <label for = "productSearch">
+                            Search
+                        </label>
+                        <img src = "#" srcset = "svg/search.svg" alt = "Search button" class = "svg logo">
+                        <input type = "search" id = "productSearch" name="productSearch" onsearch="search()">
+                    </form>
+                </div>
                 <div id = "cartMenu">
                     <a href = "cart.html" class = "logoContainer">
                         <img src = "#" srcset = "svg/shoppingcart.svg" alt = "A shoppingcart" class = "svg logo">
@@ -108,7 +110,7 @@
 
         <section class = "mainSection">
             <div id= "product-info">
-                <h2>
+                <h2  class="mainHeaderText">
                     Troll Green Tea
                 </h2>
                 <figure>

@@ -63,21 +63,19 @@ body{
     margin: 0 auto;
 }
 
-.mainSection, #footer{
-    padding: 1em;
-}
 
 .mainSection{
-    padding: 0 initial;
     box-shadow: 0 0px 3px var(--main-shadow-color);
     background-color: var(--third-background-color);
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em auto;
     min-height: 70vh;
+    padding: 0 1em 1em 1em;
 }
 
 .mainHeaderText{
-    margin-top: 0em;
+    padding-top: 0.5em;
+    margin: 0;
+    margin-bottom: 0.5em;
 }
 
 .button{
@@ -109,7 +107,6 @@ body{
 }
 
 #menu{
-    position:sticky;
     padding-top: 0.5em;
     width: 100%;
     justify-content: space-evenly;
@@ -161,14 +158,14 @@ body{
     /*box-shadow: 0px 2px 3px #564125;*/
 }
 
-#searchForm>input{
+#searchForm>form>input{
     border: none;
     height: 100%;
     background-color: inherit;
     font-size: 1.5em;
 }
 
-#searchForm>*{
+#searchForm>form>*{
     /*display: inline-block;*/
     height: 1.5em;
 }
@@ -176,32 +173,39 @@ body{
 /*For the search*/
 #searchForm{
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 60px;
     margin-top: 0.5em;
 }
 
-#searchForm>label{
+#searchForm>form>label{
     display: none;
+}
+
+#searchForm>form{
+    max-width: 1200px;
+    width: 100%;
 }
 
 #searchForm{
     visibility: hidden;
-    height: 0;
+    max-height: 0;
     background-color: var(--main-menubg-color);
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
     padding: 0 0.5em;
-    transition: visibility 0s,0.5s height, 0.5s padding, ease 0.5s;
+    transition: visibility 0s,0.5s max-height, ease 0.5s;
 }
 
-#searchForm>input:focus{
+#searchForm>form>input:focus{
     background-color: var(--main-secbg-color);
 }
 
-#searchForm>input{
-    width: 100%;
+#searchForm>form>input{
+    width: 95%;
 }
 
 #search{
@@ -470,7 +474,7 @@ body{
 
 /*The animations of the menus.*/
 .openSearch{
-    height: 1.5em !important;
+    max-height: 9999px !important;
     padding: 0.5em 0 !important;
     visibility: visible !important;
     border-color: var(--main-border-color) !important;
@@ -478,6 +482,8 @@ body{
     border-top: 1px solid var(--main-border-color) !important;
     box-shadow: 0 1px 3px var(--main-shadow-color);
 }
+
+
 
 .openMenu{
     transition: 1s !important;

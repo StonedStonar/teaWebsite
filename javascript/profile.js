@@ -23,6 +23,7 @@ function deleteProfile(){
 
 function openOverlay(event){
     let overlay = event.target;
+    let body = document.body;
     if(overlay.classList.contains("logo")){
         overlay = getOverlayForCross(overlay);
     }else if(overlay.classList.contains("button")){

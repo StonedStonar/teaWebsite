@@ -1,32 +1,42 @@
+
+/**
+ * Opens the search menu.
+ */
 function openSearch(){
     let search = document.getElementById("searchForm");
     search.addEventListener("click", search)
     if(!search.classList.contains("openSearch")){
         search.classList.add("openSearch")
-        window.addEventListener("click", listenForCloseSearch)
+        window.addEventListener("click", event => listenForCloseSearch(event))
         document.getElementById("productSearch").focus()
     }else{
         closeSearch();
     }
 }
 
+/**
+ * Listens along and checks if a mouseevent was outside the opened search field.
+ * @param {*} click the click location.
+ */
 function listenForCloseSearch(click){
     let searchMenu = document.getElementById("searchForm");
     let target = click.target;
-    let search = document.getElementById("search");
-    console.log("Trying if")
-    console.log(target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement)
-    if(target != searchMenu && target.parentElement != searchMenu && target.parentElement != search && target.parentElement != search.parentElement){
-        console.log("Closing search")
+    if(target != searchMenu && !searchMenu.contains(target) && target != searchMenu.parentElement && !searchMenu.parentElement.contains(target)){
         closeSearch();
         window.removeEventListener("click", listenForCloseSearch);
     }
 }
 
+/**
+ * Closes the search menu.
+ */
 function closeSearch(){
     document.getElementById("searchForm").classList.remove("openSearch");
 }
 
+/**
+ * The action of searching.
+ */
 function search(){
     let written = document.getElementById("productSearch");
     console.log(written.value)
@@ -36,12 +46,19 @@ function search(){
     window.location = "https://www.nyan.cat";
 }
 
+/**
+ * Opens the mobile menu.
+ */
 function openMenu(){
     let sideMenu = document.getElementById("sideMenu")
     sideMenu.classList.add("openMenu")
     window.addEventListener("click", listenForCloseMenu)
 }
 
+/**
+ * Listens along if the click was outside of the mobile menu.
+ * @param {*} click the click.
+ */
 function listenForCloseMenu(click){
     let sideMenu = document.getElementById("sideMenu")
     let hambuger = document.getElementById("hamburgerMenu")
@@ -53,10 +70,16 @@ function listenForCloseMenu(click){
     }
 }
 
+/**
+ * Closes the mobile menu.
+ */
 function closeMenu(){
     document.getElementById("sideMenu").classList.remove("openMenu");
 }
 
+/**
+ * Opens the profile menu.
+ */
 function openProfileMenu(){
     let profileMenu = document.getElementById("profileMenuOptions");
     if(!profileMenu.classList.contains("openProfileMenu")){
@@ -67,6 +90,10 @@ function openProfileMenu(){
     window.addEventListener("click", listenForProfileClose)
 }
 
+/**
+ * Listens in case the profile menu is not clicked on.
+ * @param {*} click the click.
+ */
 function listenForProfileClose(click){
     let profileMenu = document.getElementById("profileMenuOptions")
     let target = click.target
@@ -76,6 +103,9 @@ function listenForProfileClose(click){
     }
 }
 
+/**
+ * Closes the profile menu.
+ */
 function closeProfileMenu(){
     let profileMenu = document.getElementById("profileMenuOptions")
     profileMenu.classList.remove("openProfileMenu")

@@ -68,6 +68,18 @@
     border-top: 1px solid var(--main-border-color);
 }
 
+.info {
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0s visibility, 0.25s max-height;
+}
+
+.infoAnimation {
+    max-height: 9999px !important;
+    visibility: visible !important;
+}
+
 
 
 

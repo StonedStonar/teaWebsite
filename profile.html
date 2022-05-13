@@ -255,11 +255,14 @@
                         </div>
                         <form class = "editForm">
                             <label for = "oldPassword">Old password</label>
+                            <span id = "invalidPassword" class = "formHelpText"></span>
                             <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "input">
                             <label for = "newPassword">New password</label>
                             <input type = "password" id = "newPassword" placeholder = "Enter new password">
+                            <span id = "newPasswordHelp">The password must be 8 letters in length</span>
                             <label for = "twicePassword">Confirm new password</label>
                             <input type = "password" id = "twicePassword" placeholder = "Enter the new password again">
+                            <span id = "passwordMismatch">The passwords does not match</span>
                             <input type = "submit" value = "Change password" id = "submit" class = "button greenButton">
                         </form>
                     </div>

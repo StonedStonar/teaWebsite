@@ -1,0 +1,26 @@
+.review-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.name-reviewer {
+    font-weight: bold;
+}
+
+.reviews-container {
+    border-top: 1px solid var(--main-border-color); 
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 100%;
+}
+
+.review-body {
+    min-width: 300px;
+}
+
+.review-star-rating {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+

@@ -73,9 +73,9 @@ body{
 }
 
 .mainHeaderText{
-    padding-top: 0.5em;
+    padding-top: 1em;
     margin: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .button{
@@ -348,12 +348,18 @@ body{
     width: 30%;
 }
 
+.shortcutFooter:hover, #companies>a:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
 
 
 .shortcutFooter {
     text-decoration: none;
     color: var(--main-font-color);
     margin-top: 0.3em;
+    width: fit-content;
 }
 
 #shortcutContainer> h3 {
@@ -412,7 +418,10 @@ body{
 #companies>a {
     text-decoration: none;
     color: black;
+    width: fit-content;
 }
+
+
 
 #companies>span:first-of-type {
     font-weight: 600;

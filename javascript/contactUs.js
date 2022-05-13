@@ -13,13 +13,18 @@ function openContainer(event) {
     for(FAQ of collection) {
         if(FAQ.contains(target)) {
             let info = FAQ.querySelector(".info");
+            let arrow = target.querySelector(".logo");
+            
             if(!info.classList.contains("infoAnimation")){
                 info.classList.add("infoAnimation");
+                arrow.classList.add("rotateLogo");
             } else {
                 info.classList.remove("infoAnimation");
+                arrow.classList.remove("rotateLogo");
             }
 
-            let arrow = target.querySelector(".logo");
+            
+            
         }
     }
 }

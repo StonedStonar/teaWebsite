@@ -31,7 +31,6 @@ figure {
 .Add-To-Cart {
     width: 100%;
     height: 45px;
-    /*What if this is one?*/
     margin: 0 0 1.5em 0;
     font-size: 16px;
 }
@@ -40,17 +39,14 @@ figure {
 .star-rating {
     user-select: none;
     text-decoration: none;
-    /*Removed this, since there is another way*/
-    /*margin-top: 1.6rem;*/
 }
 
 
+
 .price-and-review>.star-rating{
-    /*La til denne så stjerna og reveiws havner på samme plass istedet for å bruke margin.*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*50% basert på objektet den er*/
     width: 55%;
 }
 
@@ -236,7 +232,6 @@ figure {
     }
 
     .price-and-review>.star-rating{
-        /*La til denne for at det ikke skulle bli rart med stjernene*/
         width: auto;
     }
     

@@ -127,7 +127,7 @@
                         <p class = "now-price">169kr</p>
                     </div>
                     <a class="star-rating" href = "#productReviews">
-                            <div>
+                            <div class="rating">
                                 <span class="star">&#9734;</span>
                                 <span class="star">&#9734;</span>
                                 <span class="star">&#9734;</span>
@@ -135,7 +135,7 @@
                                 <span class="star">&#9734;</span>
                             </div>
                             <span class = "inStock">(
-                                <span class="amount-of-reviews">23</span>
+                                <span id="amount-of-reviews"></span>
                                 )
                             </span>
                     </a>
@@ -201,8 +201,30 @@
                         <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo rotatableLogo">
                     </div>
                     <div id = "hiddenReview">
+
+                        <div id = "productReviews">
+                            <form class="review-form">
+                                <span>Title of review</span>
+                                <input type="text" placeholder="Title for review">
+                                <span>Reviewer</span>
+                                <input type="text" placeholder="Name or Username">
+                                
+                                <div class="set-star-rating" id = "reviewStars">
+                                    <span>Set rating:</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                </div>
+                                <textarea rows="8" placeholder="write you're review here"></textarea>
+                                <button type="submit">Submit review</button>
+                            </form>
+    
+                        </div>
                         
                         <section class="review-content">
+                            <button id = "reviewButton" class = "button greenButton">Write your review</button>
                             <div class="reviews-container">
                                 <div class="review-body">
                                     <div class="name-reviewer">Per Ivar Johansen</div>
@@ -212,7 +234,7 @@
                                         <span class="star">&#9734;</span>
                                         <span class="star">&#9734;</span>
                                         <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
+                                        <span class="star">&#9734;</span> 
                                     </div>
                                     <div class="description-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -259,10 +281,11 @@
                             </div>
 
                             <div class="reviews-container">
+                                
                                 <div class="review-body">
                                     <div class="name-reviewer">Chuck Norris</div>
                                     <div class="country-review">01.01.1998</div>
-                                    <div class="review-star-rating">
+                                    <div id="review-star-rating">
                                         <span class="star">&#9734;</span>
                                         <span class="star">&#9734;</span>
                                         <span class="star">&#9734;</span>
@@ -274,28 +297,6 @@
                                 </div>
                             </div>
                         </section>
-
-                        <button id = "reviewButton" class = "button greenButton">Write your review</button>
-                        <div id = "productReviews">
-                            <form class="review-form">
-                                <span>Title of review</span>
-                                <input type="text" placeholder="Title for review">
-                                <span>Reviewer</span>
-                                <input type="text" placeholder="Name or Username">
-                                
-                                <div class="star-rating" id = "reviewStars">
-                                    <span>Set rating:</span>
-                                    <span class="star">&#9734;</span>
-                                    <span class="star">&#9734;</span>
-                                    <span class="star">&#9734;</span>
-                                    <span class="star">&#9734;</span>
-                                    <span class="star">&#9734;</span>
-                                </div>
-                                <textarea rows="8" placeholder="write you're review here"></textarea>
-                                <button type="submit">Submit review</button>
-                            </form>
-    
-                        </div>
                     </div>
                 </div>
             </div>
@@ -316,7 +317,7 @@
                             <p class="former-price">199kr</p>
                             <p class="now-price">169kr</p>
                         </div>
-                        <div class="star-rating">
+                        <div class="rating-on-cards">
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
@@ -338,7 +339,7 @@
                             <p class = "former-price">199kr</p>
                             <p class = "now-price">169kr</p>
                         </div>
-                        <div class="star-rating">
+                        <div class="rating-on-cards">
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
@@ -360,7 +361,7 @@
                             <p class = "former-price">199kr</p>
                             <p class = "now-price">169kr</p>
                         </div>
-                        <div class="star-rating">
+                        <div class="rating-on-cards">
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
@@ -382,7 +383,7 @@
                             <p class = "former-price">199kr</p>
                             <p class = "now-price">169kr</p>
                         </div>
-                        <div class="star-rating">
+                        <div class="rating-on-cards">
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>

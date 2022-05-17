@@ -32,6 +32,7 @@ function openIngredients(event) {
     makeContainerAppear(ingredients, parent)
 }
 
+
 document.getElementById("productReviewsContainer").addEventListener("click", openProductReviews)
 document.querySelector(".star-rating").addEventListener("click", openProductReviews)
 
@@ -121,6 +122,36 @@ function giveStars() {
         }
     })
 }
+
+document.getElementById("reviewButton").addEventListener("click", () => {
+    changeReivewButton();
+});
+
+function changeReivewButton(){
+    reviewButton.innerText = "Close review";
+    let productReviewsContainer = document.getElementById("productReviews");
+    if (productReviewsContainer.classList.contains("containerAnimation")) {
+        reviewButton.innerText = "Close review"; 
+    } else {
+        reviewButton.innerText = "Write your review";
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", addListener())
+
+function countReviews() {
+    let allReviews = document.getElementsByClassName("reviews-container");
+    let amountOfReviews = document.getElementById("amount-of-reviews");
+    amountOfReviews.innerText = allReviews.length;
+}
+
+function addListener() {
+    countReviews();
+}
+
+
+
 
 
 

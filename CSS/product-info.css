@@ -87,7 +87,6 @@ figure {
     display: flex;
     flex-flow: column;
     width: 100%;
-    width: 100%;
     border-top: 1px solid var(--main-border-color);
 }
 
@@ -213,8 +212,6 @@ figure {
     border-bottom: 1px solid var(--main-border-color);
     width: 100%;
 }
-
-
 
 @media screen and (max-width:800px) {
    

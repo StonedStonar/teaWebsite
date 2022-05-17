@@ -8,6 +8,7 @@
     <title>Products</title>
     <link href="CSS/basic.css" rel="stylesheet" type="text/css">
     <link href="CSS/card.css" rel="stylesheet" type="text/css">
+    <link href="CSS/products.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -103,98 +104,127 @@
     </header>
     <script src="javascript/menu.js">
     </script>
+
+
     <section class="mainSection">
         <h2 class= "mainHeaderText">
-            Products
+            All Products
         </h2>
-        <div class="card-container">
-            <a href="product-info.html" class="card">
-                <div class="card-header">
-                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
-                    <div class="card-title">Blackberry Leaf Tea</div>
-                    <div class="card-description">Tea ingredients from the nature of norway</div>
-                </div>
-    
-                <div class="card-body">
-                    <div class="price">
-                        <p class="former-price">199kr</p>
-                        <p class="now-price">169kr</p>
-                    </div>
-                    <div class="star-rating">
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                    </div>
-                </div>
-            </a>
-            <a href="product-info.html" class="card">
-                <div class="card-header">
-                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
-                    <div class="card-title">Blackberry Leaf Tea</div>
-                    <div class="card-description">Tea ingredients from the nature of norway</div>
-                </div>
-    
-                <div class="card-body">
-                    <div class="price">
-                        <p class="former-price">199kr</p>
-                        <p class="now-price">169kr</p>
-                    </div>
-                    <div class="star-rating">
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                    </div>
-                </div>
-            </a>
-            <a href="product-info.html" class="card">
-                <div class="card-header">
-                    <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
-                    <div class="card-title">Blackberry Leaf Tea</div>
-                    <div class="card-description">Tea ingredients from the nature of norway</div>
-                </div>
-    
-                <div class="card-body">
-                    <div class="price">
-                        <p class="former-price">199kr</p>
-                        <p class="now-price">169kr</p>
-                    </div>
-                    <div class="star-rating">
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                    </div>
-                </div>
-            </a>
 
-            <a href="product-info.html" class="card">
-                <div class="card-header">
-                    <img src="Images/greentea-cropped.jpg" alt="Tea card picture"></img>
-                    <div class="card-title">Blackberry Leaf Tea</div>
-                    <div class="card-description">Tea ingredients from the nature of norway</div>
+        <div id = "productsWrapper">
+            <div class="product-filter">
+                <div id="filter">
+                    <span>Products filter</span>
+                    <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo rotatableLogo">
                 </div>
+                <form id="hidden-filter">
+                    <div class="Tea-type">
+                        <label for="blackTea">Black Tea</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="Tea-type">
+                        <label for="GreenTea">Green Tea</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="Tea-produser">
+                        <label for="Produser">Produser</label>
+                        <input type="checkbox">
+                    </div>
+                </form>
+            </div>
     
-                <div class="card-body">
-                    <div class="price">
-                        <p class = "former-price">199kr</p>
-                        <p class = "now-price">169kr</p>
+    
+            <div class="card-container">
+                <a href="product-info.html" class="card">
+                    <div class="card-header">
+                        <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
+                        <div class="card-title">Blackberry Leaf Tea</div>
+                        <div class="card-description">Tea ingredients from the nature of norway</div>
                     </div>
-                    <div class="star-rating">
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
-                        <span class="star">&#9734;</span>
+        
+                    <div class="card-body">
+                        <div class="price">
+                            <p class="former-price">199kr</p>
+                            <p class="now-price">169kr</p>
+                        </div>
+                        <div class="star-rating">
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </section>
+                </a>
+                <a href="product-info.html" class="card">
+                    <div class="card-header">
+                        <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
+                        <div class="card-title">Blackberry Leaf Tea</div>
+                        <div class="card-description">Tea ingredients from the nature of norway</div>
+                    </div>
+        
+                    <div class="card-body">
+                        <div class="price">
+                            <p class="former-price">199kr</p>
+                            <p class="now-price">169kr</p>
+                        </div>
+                        <div class="star-rating">
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-info.html" class="card">
+                    <div class="card-header">
+                        <img src="images/greentea-cropped.jpg" alt="Tea card picture"></img>
+                        <div class="card-title">Blackberry Leaf Tea</div>
+                        <div class="card-description">Tea ingredients from the nature of norway</div>
+                    </div>
+        
+                    <div class="card-body">
+                        <div class="price">
+                            <p class="former-price">199kr</p>
+                            <p class="now-price">169kr</p>
+                        </div>
+                        <div class="star-rating">
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="product-info.html" class="card">
+                    <div class="card-header">
+                        <img src="Images/greentea-cropped.jpg" alt="Tea card picture"></img>
+                        <div class="card-title">Blackberry Leaf Tea</div>
+                        <div class="card-description">Tea ingredients from the nature of norway</div>
+                    </div>
+        
+                    <div class="card-body">
+                        <div class="price">
+                            <p class = "former-price">199kr</p>
+                            <p class = "now-price">169kr</p>
+                        </div>
+                        <div class="star-rating">
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
+        <script src="javascript/products.js"></script>
+
     <footer id="footer">
         <div class="sectionFooter">
             <a href="index.html" id="footerLogo">

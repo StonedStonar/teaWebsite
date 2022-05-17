@@ -1,13 +1,3 @@
-.contactUsOption{
-    box-sizing: border-box;
-    /*Litt mer space enn 0.25. Dette får den til å føle seg mindre cramped.*/
-    padding: 1em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    /*Nye hvit fargen*/
-    background-color: var(--main-secbg-color);
-    border: 0.1px solid var(--main-border-color);
-}
 
 .contactUsOption>a{
     display: flex;
@@ -40,13 +30,25 @@
 
 .socialLogoContainer{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
 }
 
-.socialLogoContainer>a{
+.socialLogoContainer {
+    width: 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.socialLogoContainer>a {
+    text-decoration: none;
+}
+
+.socialLogoContainer>a>img{
     width: 40px;
+
 }
 
 .mainSection>div:last-child:hover{
@@ -57,7 +59,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--main-border-color);
 }
 
 .FAQOpener > p {
@@ -67,6 +68,29 @@
 #FAQContainer {
     border-top: 1px solid var(--main-border-color);
 }
+
+.info {
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0s visibility, 0.25s max-height;
+}
+
+.infoAnimation {
+    max-height: 9999px !important;
+    visibility: visible !important;
+}
+
+.FAQ {
+    
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+.headerThree {
+    margin-top: 3em;
+}
+
+
 
 
 

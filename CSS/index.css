@@ -10,6 +10,10 @@
     height: 100%;
 }
 
+#teacupImage {
+    margin-top: 2em;
+}
+
 
 #herbsInField {
     width: 100%;
@@ -33,6 +37,10 @@
 
 .frontpageButton:hover {
     background-color: var(--main-menubg-color);
+}
+
+.miniHeader {
+    margin-top: 3em;
 }
 
 #whiteBackground {

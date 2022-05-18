@@ -4,11 +4,11 @@
  */
 function openSearch(){
     let search = document.getElementById("searchForm");
-    search.addEventListener("click", search)
+    search.addEventListener("click", search);
     if(!search.classList.contains("openSearch")){
-        search.classList.add("openSearch")
-        window.addEventListener("click", event => listenForCloseSearch(event))
-        document.getElementById("productSearch").focus()
+        search.classList.add("openSearch");
+        window.addEventListener("click", event => listenForCloseSearch(event));
+        document.getElementById("productSearch").focus();
     }else{
         closeSearch();
     }
@@ -39,9 +39,9 @@ function closeSearch(){
  */
 function search(){
     let written = document.getElementById("productSearch");
-    console.log(written.value)
-    alert("You just tried to search you little sh****** \nAnd you wrote:\n" + written)
-    alert("Ever watched porn?")
+    console.log(written.value);
+    alert("You just tried to search you little sh****** \nAnd you wrote:\n" + written);
+    alert("Ever watched porn?");
     let popup = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '','width=,height=,resizable=no').blur();
     window.location = "https://www.nyan.cat";
 }
@@ -50,9 +50,9 @@ function search(){
  * Opens the mobile menu.
  */
 function openMenu(){
-    let sideMenu = document.getElementById("sideMenu")
-    sideMenu.classList.add("openMenu")
-    window.addEventListener("click", listenForCloseMenu)
+    let sideMenu = document.getElementById("sideMenu");
+    sideMenu.classList.add("openMenu");
+    window.addEventListener("click", listenForCloseMenu);
 }
 
 /**
@@ -60,11 +60,11 @@ function openMenu(){
  * @param {*} click the click.
  */
 function listenForCloseMenu(click){
-    let sideMenu = document.getElementById("sideMenu")
-    let hambuger = document.getElementById("hamburgerMenu")
-    let target = click.target
+    let sideMenu = document.getElementById("sideMenu");
+    let hambuger = document.getElementById("hamburgerMenu");
+    let target = click.target;
     if(sideMenu.classList.contains("openMenu") && (target.parentElement != hambuger && target != hambuger && target != sideMenu)){
-        console.log("closing")
+        console.log("closing");
         closeMenu();
         window.removeEventListener("click", listenForCloseMenu);
     }
@@ -83,11 +83,11 @@ function closeMenu(){
 function openProfileMenu(){
     let profileMenu = document.getElementById("profileMenuOptions");
     if(!profileMenu.classList.contains("openProfileMenu")){
-        profileMenu.classList.add("openProfileMenu")
+        profileMenu.classList.add("openProfileMenu");
     }else{
         closeProfileMenu();
     }
-    window.addEventListener("click", listenForProfileClose)
+    window.addEventListener("click", listenForProfileClose);
 }
 
 /**
@@ -95,11 +95,11 @@ function openProfileMenu(){
  * @param {*} click the click.
  */
 function listenForProfileClose(click){
-    let profileMenu = document.getElementById("profileMenuOptions")
-    let target = click.target
+    let profileMenu = document.getElementById("profileMenuOptions");
+    let target = click.target;
     if(profileMenu.classList.contains("openProfileMenu") && (target.parentElement != profileMenu.parentElement && target.parentElement != profileMenu)){
         closeProfileMenu();
-        window.removeEventListener("click", listenForProfileClose)
+        window.removeEventListener("click", listenForProfileClose);
     }
 }
 
@@ -107,6 +107,6 @@ function listenForProfileClose(click){
  * Closes the profile menu.
  */
 function closeProfileMenu(){
-    let profileMenu = document.getElementById("profileMenuOptions")
-    profileMenu.classList.remove("openProfileMenu")
+    let profileMenu = document.getElementById("profileMenuOptions");
+    profileMenu.classList.remove("openProfileMenu");
 }

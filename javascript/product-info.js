@@ -1,4 +1,4 @@
-document.getElementById("descriptionContainer").addEventListener("click", event => openDescription(event))
+document.getElementById("descriptionContainer").addEventListener("click", event => openDescription(event));
 
 function getParentContainer(target) {
     let container = null;
@@ -6,7 +6,7 @@ function getParentContainer(target) {
         let collection = document.getElementsByClassName("dropdown");
         let i = 0;
         while (container == null && i < collection.length) {
-            let item = collection[i]
+            let item = collection[i];
             if (item.contains(target)) {
                 container = item;
             }
@@ -21,7 +21,7 @@ function getParentContainer(target) {
 function openDescription(event) {
     let parent = getParentContainer(event.target);
     let description = document.getElementById("description");
-    makeContainerAppear(description, parent)
+    makeContainerAppear(description, parent);
 }
 
 document.getElementById("ingredientsContainer").addEventListener("click", event => openIngredients(event));
@@ -29,24 +29,24 @@ document.getElementById("ingredientsContainer").addEventListener("click", event 
 function openIngredients(event) {
     let parent = getParentContainer(event.target);
     let ingredients = document.getElementById("ingredients");
-    makeContainerAppear(ingredients, parent)
+    makeContainerAppear(ingredients, parent);
 }
 
 
-document.getElementById("productReviewsContainer").addEventListener("click", openProductReviews)
-document.querySelector(".star-rating").addEventListener("click", openProductReviews)
+document.getElementById("productReviewsContainer").addEventListener("click", openProductReviews);
+document.querySelector(".star-rating").addEventListener("click", openProductReviews);
 
 function openProductReviews(event){
     let parent = getParentContainer(event.target);
     let reviews = document.getElementById("hiddenReview");
-    makeContainerAppear(reviews, parent)
+    makeContainerAppear(reviews, parent);
 }
 
-document.getElementById("reviewButton").addEventListener("click", event => makeReview(event))
+document.getElementById("reviewButton").addEventListener("click", event => makeReview(event));
 
 async function makeReview(event) {
     let parent = getParentContainer(event.target);
-    let makeReviewContainer = document.getElementById("productReviews")
+    let makeReviewContainer = document.getElementById("productReviews");
     let reviews = document.getElementById("hiddenReview");
     reviews.classList.add("instantAnimation");
     let logo = parent.querySelector(".logo");
@@ -54,7 +54,7 @@ async function makeReview(event) {
     makeContainerAppear(makeReviewContainer, null);
     openProductReviews(event);
     openProductReviews(event);
-    reviews.classList.remove("instantAnimation")
+    reviews.classList.remove("instantAnimation");
     logo.classList.remove("instantAnimation");
     filterStars();
 }
@@ -81,7 +81,7 @@ function makeContainerAppear(node, parentNode) {
 document.querySelector(".plus-button", "num-to-change").addEventListener("click", event => incButton(event));
 document.querySelector(".minus-button").addEventListener("click", event => decButton(event));
 
-num = document.querySelector(".num-to-change");
+const num = document.querySelector(".num-to-change");
 let a = 1;
 
 function incButton() {
@@ -118,9 +118,9 @@ function giveStars() {
                 } else {
                     star.innerHTML = "&#9734";
                 }
-            })
-        }
-    })
+            });
+        };
+    });
 }
 
 document.getElementById("reviewButton").addEventListener("click", () => {
@@ -128,7 +128,7 @@ document.getElementById("reviewButton").addEventListener("click", () => {
 });
 
 function changeReivewButton(){
-    reviewButton.innerText = "Close review";
+    let reviewButton = document.getElementById("reviewButton");
     let productReviewsContainer = document.getElementById("productReviews");
     if (productReviewsContainer.classList.contains("containerAnimation")) {
         reviewButton.innerText = "Close review"; 
@@ -138,7 +138,7 @@ function changeReivewButton(){
 }
 
 
-document.addEventListener("DOMContentLoaded", addListener())
+document.addEventListener("DOMContentLoaded", addListener());
 
 function countReviews() {
     let allReviews = document.getElementsByClassName("reviews-container");

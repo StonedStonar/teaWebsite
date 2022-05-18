@@ -1,33 +1,47 @@
-document.getElementById("filter").addEventListener("click", event => openProductFilter(event))
+document.getElementById("filter").addEventListener("click", event => openProductFilter(event));
 
-function getParentContainer(target) {
+function getFilterOption(target) {
+    let collection = document.getElementsByClassName("filterOption");
     let container = null;
-    if (!target.classList.contains("product-filter")) {
-        let collection = document.getElementsByClassName("product-filter");
-        let i = 0;
-        while (container == null && i < collection.length) {
-            let item = collection[i]
-            if(item.contains(target)) {
-                container = item;
-            }
-
-            i++;
+    let i = 0;
+    while(i < collection.length && container == null) {
+        let contain = collection[i];
+        if (contain.contains(target) || contain == target) {
+            container = contain;
         }
-    } else {
-        container = target;
+        i++;
     }
     return container;
 }
 
 function openProductFilter(event) {
-    console.log(event);
-    let parent = getParentContainer(event.target);
     let productFilter = document.getElementById("hidden-filter");
-    makeContainerAppear(productFilter, parent)
+    makeContainerAppear(productFilter, event.target);
+    let filter = document.getElementById("product-filter");
+    if (!filter.classList.contains("containerAnimation")) {
+        let collection = filter.querySelectorAll(".closeable");
+        let i = 0;
+        while (i < collection.length) {
+            let filterOption = collection[i];
+            if (filterOption.classList.contains("containerAnimation")) {
+                filterOption.classList.remove("containerAnimation");
+            }
+            i++; 
+        }
+        let arrowCollection = filter.querySelectorAll(".rotatableLogo");
+        let j = 0;
+        while (j < arrowCollection.length) {
+            let arrow = arrowCollection[j];
+            if (arrow.classList.contains("rotateLogo")) {
+                arrow.classList.remove("rotateLogo");
+            }
+            j++;
+        }
+    }
 }
 
-function makeContainerAppear(node, parentNode) {
-    console.log(node);
+function makeContainerAppear(node, target) {
+    let parentNode = getFilterOption(target);
     let logo;
     if (parentNode != null) {
         logo = parentNode.querySelector(".logo");
@@ -43,4 +57,18 @@ function makeContainerAppear(node, parentNode) {
             logo.classList.remove("rotateLogo");
         }
     }
+}
+
+document.getElementById("tea").addEventListener("click", event => openTea(event));
+
+function openTea(event) {
+    let productType = document.getElementById("openTea");
+    makeContainerAppear(productType, event.target);
+}
+
+document.getElementById("mug").addEventListener("click", event => openMug(event));
+
+function openMug(event) {
+    let productType = document.getElementById("openMug");
+    makeContainerAppear(productType, event.target);
 }

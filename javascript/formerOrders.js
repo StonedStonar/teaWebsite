@@ -1,4 +1,4 @@
-window.addEventListener('load', (event) => addListeners())
+window.addEventListener('load', () => addListeners());
 
 /**
  * Adds listeners to all the interactions that needs it.
@@ -6,7 +6,7 @@ window.addEventListener('load', (event) => addListeners())
 function addListeners() {
     let elements = document.getElementsByClassName("orderContainer");
     //i = 0; i < elements.length; i++
-    for (thing of elements) {
+    for (let thing of elements) {
         thing.addEventListener("click", event => {
             handleContainer(event);
         });
@@ -21,11 +21,11 @@ function addListeners() {
 function handleContainer(event) {
     let container = getOrderFromTarget(event.target);
     if (container != null) {
-        let target = container.querySelector("div:first-of-type")
+        let target = container.querySelector("div:first-of-type");
         if (!target.classList.contains("openContainer")) {
-            openContainer(target, container, "rotatableLogo");
+            openContainer(target, container);
         } else {
-            closeContainer(target, container, "rotatableLogo");
+            closeContainer(target, container);
         }
     }
 }
@@ -77,9 +77,8 @@ function checkThatClickWasNotInOrder(target) {
  * Opens the wanted container. 
  * @param {*} container the container to open.
  * @param {*} containerHolder the element that holds that container.
- * @param {*} logoClassName the logo that should be flipped.
  */
-function openContainer(container, containerHolder, logoClassName) {
+function openContainer(container, containerHolder) {
     container.classList.add("openContainer");
     containerHolder.getElementsByClassName("logo")[0].classList.add("rotateLogo");
     containerHolder.classList.add("openOrder");
@@ -94,5 +93,5 @@ function openContainer(container, containerHolder, logoClassName) {
 function closeContainer(container, containerHolder, logoClassName) {
     container.classList.remove("openContainer");
     containerHolder.getElementsByClassName(logoClassName)[0].classList.remove("rotateLogo");
-    containerHolder.classList.remove("openOrder")
+    containerHolder.classList.remove("openOrder");
 }

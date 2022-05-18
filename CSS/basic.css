@@ -230,7 +230,6 @@ body{
     left: -3em;
     width: 300%;
     flex-direction: column;
-    max-height: auto;
 }
 
 #profileMenuOptions{

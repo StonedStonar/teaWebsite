@@ -214,11 +214,6 @@ figure {
 }
 
 @media screen and (max-width:800px) {
-   
-    .mainSection{
-        justify-content: none;
-    }
-
     .mainSection>div{
         width: 100%;
     }

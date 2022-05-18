@@ -3,7 +3,37 @@
     overflow: hidden;
     max-height: 0;
     transition: visibility 0.05s, max-height 0.20s;
-}  
+}
+
+#hidden-filter>input {
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 30px;
+}
+
+#openTea, #openMug{
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+    transition: visibility 0.05s, max-height 0.20s; 
+}
+
+.closeable>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterOption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.filterOption:hover {
+    cursor: pointer;
+}
 
 #productsWrapper {
     display: grid;
@@ -11,20 +41,15 @@
     gap: 1em;
 }
 
-.product-filter:hover {
-    cursor: pointer;
+.closeable> div> input {
+    width: 20px;
+    height: 20px;
 }
 
-.product-filter {
+#product-filter {
     border-bottom: 1px solid var(--main-border-color);
     border-top: 1px solid var(--main-border-color);
     height: fit-content;
-}
-
-#filter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .containerAnimation {
@@ -43,7 +68,7 @@
         grid-template-columns: 1fr;
     }
 
-    .product-filter {
+    #product-filter {
         width: 100%;
         border-bottom: 1px solid var(--main-border-color);
         border-top: 1px solid var(--main-border-color);

@@ -12,21 +12,21 @@
     <body>
         <header id = "headerWrapper">
             <div id = "menu">
-                <div id = "hamburgerMenu" class = "mobileElement" onclick = "openMenu()">
-                    <span class = "logoContainer">
+                <div id = "hamburgerMenu" class = "mobileElement topMenuLogo" onclick = "openMenu()">
+                    <button class = "logoContainer">
                         <img src = "#" srcset = "svg/Menu.svg" alt = "Hamburger menu" class = "svg logo">
                         <span>
                             Menu
                         </span>
-                    </span>
+                    </button>
                 </div>
-                <div id = "search" onclick = "openSearch()">
-                    <span class = "logoContainer">
+                <div id = "search" class = "topMenuLogo" onclick = "openSearch()">
+                    <button class = "logoContainer">
                         <img src = "#" srcset = "svg/search.svg" alt = "Looking glass logo" class = "svg logo">
                         <span>
                             Search
                         </span>
-                    </span>
+                    </button>
                 </div>
                 <a href = "index.html" id = "companyHeader">
                     <h1>
@@ -34,9 +34,9 @@
                     </h1>
                 </a>
                 <nav id = "sideMenu">
-                    <span id = "exit" class = "mobileElement" onclick = "closeMenu()">
+                    <button id = "exit" class = "mobileElement topMenuLogo" onclick = "closeMenu()">
                         <img src = "#" srcset = "svg/cross.svg" alt = "Image of a cross logo" class = "svg logo">
-                    </span>
+                    </button>
                     <a href = "products.html" class = "menuOption">
                         Products
                     </a>
@@ -59,7 +59,7 @@
                         <input type = "search" id = "productSearch" name="productSearch">
                     </form>
                 </div>
-                <div id = "cartMenu">
+                <div id = "cartMenu" class = "topMenuLogo">
                     <a href = "cart.html" class = "logoContainer">
                         <img src = "#" srcset = "svg/shoppingcart.svg" alt = "A shoppingcart" class = "svg logo">
                         <span>
@@ -67,13 +67,13 @@
                         </span>
                     </a>
                 </div>
-                <div id = "profileMenu" onmousedown = "openProfileMenu" >
-                    <span class = "logoContainer" onclick = "openProfileMenu()">
+                <div id = "profileMenu" class = "topMenuLogo" onmousedown = "openProfileMenu" >
+                    <button class = "logoContainer" onclick = "openProfileMenu()">
                         <img src = "#" srcset = "svg/profile.svg" alt = "A human looking logo" class = "svg logo">
                         <span>
                             Profile
                         </span>
-                    </span>
+                    </button>
                     <div id = "profileMenuOptions">
                         <div >
                             <div id = "profileTriangle">

@@ -43,7 +43,7 @@ figure {
 
 
 
-.price-and-review>.star-rating{
+#price-and-review>.star-rating{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -190,7 +190,7 @@ figure {
 
 
 
-.price-and-review {
+#price-and-review {
     display: flex;
     justify-content: space-between;
 }
@@ -223,7 +223,7 @@ figure {
         width: 100%;
     }
 
-    .price-and-review>.star-rating{
+    #price-and-review>.star-rating{
         width: auto;
     }
     

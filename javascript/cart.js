@@ -1,12 +1,12 @@
-window.addEventListener('load', (event) => addListeners());
+window.addEventListener('load', () => addListeners());
 
 function addListeners(){
     let minusButtons = document.getElementsByClassName("minus-button");
-    for(minusButton of minusButtons){
+    for(let minusButton of minusButtons){
         minusButton.addEventListener("click", event => decrement(event));
     }
     let plusButtons = document.getElementsByClassName("plus-button");
-    for(plusButton of plusButtons){
+    for(let plusButton of plusButtons){
         plusButton.addEventListener("click", event => increment(event));
     }
 }

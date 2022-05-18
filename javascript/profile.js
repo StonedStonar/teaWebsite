@@ -1,33 +1,34 @@
 addListeners();
 
-console.log(document.getElementsByClassName("exitOverlay"))
+console.log(document.getElementsByClassName("exitOverlay"));
 
 function addListeners(){
     document.getElementById("deleteProfileButton").addEventListener("click", deleteProfile);
     document.getElementById("editProfile").addEventListener("click", event => openOverlay(event));
     document.getElementById("editPassword").addEventListener("click", event => openOverlay(event));
     let exitOverlayCollection = document.getElementsByClassName("exitOverlay");
-    for(i = 0; i < exitOverlayCollection.length; i++){
-        exitOverlayCollection[i].addEventListener("click", event => openOverlay(event))
+    let i = 0;
+    while(i < exitOverlayCollection.length){
+        exitOverlayCollection[i].addEventListener("click", event => openOverlay(event));
+        i++;
     }
 }
 
 function deleteProfile(){
     if(confirm("Are you completly sure that you want to delete your profile?")){
-        alert("You fucked up human")
-        alert("Better watch your back for the next months")
-        alert("Your profile has now been deleted.")
+        alert("You fucked up human");
+        alert("Better watch your back for the next months");
+        alert("Your profile has now been deleted.");
         window.location.href = "index.html";
     }
 }
 
 function openOverlay(event){
     let overlay = event.target;
-    let body = document.body;
     if(overlay.classList.contains("logo")){
         overlay = getOverlayForCross(overlay);
     }else if(overlay.classList.contains("button")){
-        overlay = document.getElementById("editProfileContainer")
+        overlay = document.getElementById("editProfileContainer");
     }else if(overlay.classList.contains("editPassword")){
         overlay = document.getElementById("editPasswordContainer");
     }

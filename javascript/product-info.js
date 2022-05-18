@@ -139,16 +139,70 @@ function changeReivewButton(){
 
 
 document.addEventListener("DOMContentLoaded", addListener());
-
+/**
+ * 
+ */
 function countReviews() {
     let allReviews = document.getElementsByClassName("reviews-container");
     let amountOfReviews = document.getElementById("amount-of-reviews");
     amountOfReviews.innerText = allReviews.length;
+    let allReview = document.getElementsByClassName("reviews-container");
+    let i = 0;
+    let totalStars = 0;
+    while (i < allReview.length) {
+        let reveiw = allReview[i];
+        let ratingSpan = reveiw.querySelector(".rating-numb");
+        let ratingNumb = ratingSpan.innerHTML;
+        totalStars += parseInt(ratingNumb);
+        i++;
+    }
+    let averageStars = totalStars/allReview.length;
+    console.log(totalStars);
+    countAverageStars(averageStars, document.getElementById("price-and-review"));
 }
 
+/**
+ * 
+ */
 function addListener() {
+    SetAllRatingNumbers();
     countReviews();
 }
+
+
+/**
+ * 
+ */
+function SetAllRatingNumbers() {
+    let reviewCollection = document.getElementsByClassName("reviews-container");
+    let i = 0;
+    while (i < reviewCollection.length) {
+        let getReview = reviewCollection[i];
+        let ratingOfReview = getReview.querySelector(".rating-numb");
+        let averageStars = ratingOfReview.innerHTML;
+        countAverageStars(averageStars, getReview);
+        i++;
+    }
+}
+
+/**
+ * 
+ * @param {*} starAmount 
+ * @param {*} parentContainer 
+ */
+function countAverageStars(starAmount, parentContainer) {
+    let starContainer = parentContainer.querySelector(".review-star-rating");
+    console.log(starContainer);
+    let stars = starContainer.querySelectorAll(".star");
+    let i = 0;
+    while (i < starAmount) {
+        let star = stars[i];
+        star.innerHTML = "&#9733";
+        i++;
+    }
+}
+
+
 
 
 

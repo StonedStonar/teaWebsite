@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", event => addAllEventListeners())
+document.addEventListener("DOMContentLoaded", () => addAllEventListeners());
 
 function addAllEventListeners() {
     let collection = document.getElementsByClassName("FAQOpener");
-    for(container of collection) {
-        container.addEventListener("click", event => openContainer(event))
+    for(let container of collection) {
+        container.addEventListener("click", event => openContainer(event));
     }
 }
 
 function openContainer(event) {
     let target = event.target;
     let collection = document.getElementsByClassName("FAQ");
-    for(FAQ of collection) {
+    for(let FAQ of collection) {
         if(FAQ.contains(target)) {
             let info = FAQ.querySelector(".info");
             let arrow = target.querySelector(".logo");
@@ -22,9 +22,6 @@ function openContainer(event) {
                 info.classList.remove("infoAnimation");
                 arrow.classList.remove("rotateLogo");
             }
-
-            
-            
         }
     }
 }

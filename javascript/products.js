@@ -100,7 +100,7 @@ function openMug(event) {
  * @param {*} starAmount 
  * @param {*} parentContainer 
  */
- function countAverageStars(starAmount, parentContainer) {
+ function averageStarsOnCard(starAmount, parentContainer) {
     let starContainer = parentContainer.querySelector(".rating-on-cards");
     let stars = starContainer.querySelectorAll(".star");
     let i = 0;
@@ -118,7 +118,7 @@ function countReviewsOnCards() {
     while (i < cardCollection.length) {
         let card = cardCollection[i];
         let averageStarsSpan = card.querySelector(".average-stars");
-        countAverageStars(averageStarsSpan.innerHTML, card);
+        averageStarsOnCard(averageStarsSpan.innerHTML, card);
         i++;
     }
     

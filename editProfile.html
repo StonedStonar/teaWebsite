@@ -7,6 +7,7 @@
         <title>Account</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
         <link href = "CSS/profile.css" rel = "stylesheet" type = "text/css">
+        <link href = "CSS/editProfile.css" rel = "stylesheet" type = "text/css">
     </head>
     <body>
         <header id = "menu">
@@ -103,104 +104,67 @@
         </script>
         
         <section class = "mainSection">
-            <div id = "profileWrapper">
-                <div id = "profileIntro">
-                    <h2 class = "mainHeaderText">
-                        Your profile page
-                    </h2>
-                    <figure>
-                        <img src = "Images/handsWithTea.jpg" id = "profileStandardPicture" alt = "Two people toasting with metal cups.">
-                        <figcaption>Picture taken from Nathan Dumalo on Nosplash</figcaption>
-                    </figure>
+            <h1 class = "mainHeaderText">
+                Edit profile
+            </h1>
+            <div>
+                <div class = "headerOverlay">
+                    <h3>Profile details</h3>
                 </div>
-                
-                <div class = "personalInformation">
-                    <h3 id = "aboutYouHeader">
-                        About you
-                    </h3>
-                    <p class = "closeText">
-                        First name
-                    </p>
-                    <p class = "closeText">
-                        Test 
-                    </p>
-                    <p class = "closeText">
-                        Last name
-                    </p>
-                    <p class = "closeText">
-                        Testesen
-                    </p>
-                    <p class = "closeText">
-                        Email
-                    </p>
-                    <p class = "closeText">
-                        Test@Testesen.com
-                    </p>
-                    <p class = "closeText">
-                        Phonenumber
-                    </p>
-                    <p class = "closeText">
-                        44609832
-                    </p>
-                    <p>
-                        Main address
-                    </p>
-                    <p>
-                        <span>
-                        <span>Testvegen</span><span>12</span>
-                        </span>
-                        <span>6015</span>
-                        <span>Ålesund</span>
-                        <span>Norge</span>
-                    </p>
-                    <a href = "editProfile.html" class = "button greenButton" id = "editProfile">
-                        Edit profile
-                    </a>
-                </div>
-                <div id = "optionsForUser">
-                    <div class = "profileMenuOptions">
-                        <a href = "formerOrder.html">
-                            <span>
-                                Your orders
-                            </span>
-                            <span>
-                                Overview of orders and returns.
-                            </span>
-                        </a>
-                    </div>
-                    <div class = "profileMenuOptions">
-                        <a href = "contactUs.html">
-                            <span>
-                                Help and contact
-                            </span>
-                            <span>
-                                Contact information & help for the website
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <form id = "deleteProfile">
-                    <h3>
-                        Delete profile
-                    </h3>
-                    <p>
-                        If you want to delete your profile you can do it here. All former orders will be deleted from your profile and should be saved if you need them. These receipts are also needed for return or to use the warranty of a product.
-                    </p>
-                    <p>
-                        After the deletion you cannot login to your account again.
-                    </p>
-                    <button class = "button" id = "deleteProfileButton">
-                        Delete my profile
-                    </button>
+                <form class = "editForm">
+                    <label for="firstName">First name</label>
+                    <input type = "text" id = "firstName" placeholder = "Enter first name" class = "input">
+                    <label for="lastName">Last name</label>
+                    <input type = "text" id = "lastName" placeholder = "Enter last name">
+                    <label for = "email">E-mail</label>
+                    <input type = "email" id = "email" placeholder = "Enter email address">
+                    <label for = "mobileNumber">Mobile number</label>
+                    <input type = "number" id = "mobileNumber" placeholder = "Enter mobile number">
+                    <input type = "submit" value = "Change details" class = "button greenButton">
                 </form>
             </div>
 
-            
+            <div>
+                <h3>
+                    Address
+                </h3>
+                <form class = "editForm">
+                    <label for = "streetName">Street name</label>
+                    <input type = "text" id = "streetName" placeholder = "Enter street name">
+                    <label for = "houseNumber">House number</label>
+                    <input type = "text" id = "houseNumber" placeholder = "Enter house number">
+                    <label for = "postalCode">Postal code</label>
+                    <input type = "number" id = "postalCode" placeholder = "Enter postal code">
+                    <label for = "city">City</label>
+                    <input type = "text" id = "city"  placeholder = "Enter city">
+                    <label for = "country">Country</label>
+                    <input type = "text" id = "country" placeholder = "Enter country">
+                    <input type = "submit" value = "Update address" class = "button greenButton">
+                </form>
+            </div>
+
+            <div>
+                <div class = "headerOverlay">
+                    <h3>Edit password</h3>
+                </div>
+                <form class = "editForm">
+                    <label for = "oldPassword">Old password</label>
+                    <span id = "invalidPassword" class = "formHelpText"></span>
+                    <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "input">
+                    <label for = "newPassword">New password</label>
+                    <input type = "password" id = "newPassword" placeholder = "Enter new password">
+                    <span id = "newPasswordHelp">The password must be 8 letters in length</span>
+                    <label for = "twicePassword">Confirm new password</label>
+                    <input type = "password" id = "twicePassword" placeholder = "Enter the new password again">
+                    <span id = "passwordMismatch">The passwords does not match</span>
+                    <input type="submit" value = "Change password" class = "button greenButton">
+                </form>
+            </div>
+            <a href="profile.html" id = "backToProfile" class="button greenButton">
+                Back to profile
+            </a>
 
         </section>
-
-        <script src = "javascript/profile.js"></script>
-
         <footer id= "footer">
             <div class="sectionFooter">
                 <a href = "index.html" id="footerLogo">

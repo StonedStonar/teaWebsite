@@ -94,6 +94,7 @@ figure>img{
     border-bottom: 1px solid var(--main-border-color);
 }
 
+
 .editForm>input{
     border-radius: 5px;
     height: 30px;
@@ -105,32 +106,7 @@ figure>img{
     height: 40px;
 }
 
-.editContainer{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    visibility: hidden;
-    background-size: cover;
-    backdrop-filter: blur(5px);
-    max-height: 0;
-    transition: visibility 0s, max-heigt 1s;
-}
 
-.headerOverlay{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.headerOverlay>.logo{
-    cursor: pointer;
-}
 
 .editContainer>div{
     background-color: var(--main-bg-color);
@@ -194,12 +170,4 @@ figure>img{
         width: 80%;
     }
 
-}
-
-
-
-.openOverlay{
-    visibility: visible !important;
-    height: 100%;
-    max-height: 9999px !important;
 }

@@ -161,7 +161,6 @@ function countReviews() {
         i++;
     }
     let averageStars = totalStars/allReview.length;
-    console.log(totalStars);
     countAverageStars(averageStars, document.getElementById("price-and-review"));
 }
 
@@ -171,6 +170,12 @@ function countReviews() {
 function addListener() {
     SetAllRatingNumbers();
     countReviews();
+    let starContainer = document.getElementById("reviewStars");
+    let starCollection = starContainer.querySelectorAll(".star");
+    console.log(starContainer);
+    for (let star of starCollection) {
+        star.addEventListener("click", event => setStars(event));
+    }
 }
 
 
@@ -196,7 +201,6 @@ function SetAllRatingNumbers() {
  */
 function countAverageStars(starAmount, parentContainer) {
     let starContainer = parentContainer.querySelector(".review-star-rating");
-    console.log(starContainer);
     let stars = starContainer.querySelectorAll(".star");
     let i = 0;
     while (i < starAmount) {
@@ -204,6 +208,31 @@ function countAverageStars(starAmount, parentContainer) {
         star.innerHTML = "&#9733";
         i++;
     }
+}
+
+function setStars(event) {
+    let starContainer = document.getElementById("reviewStars");
+    let starCollection = starContainer.querySelectorAll(".star");
+    let setStarRating = document.getElementById("setStarRating");
+    let i = 0;
+    let amountOfStars = 0;
+    let foundStar = false;
+    while (i < starCollection.length) {
+        let star = stars[i];
+        if (star == event.target) {
+            foundStar = true;
+            console.log(star);
+            star.innerHTML = "&#9733";
+            amountOfStars = i+1;
+            setStarRating.value = amountOfStars;
+        } else {
+            star.innerHTML = "&#9734"
+        }
+        if (!foundStar) {
+            star.innerHTML = "&#9733";
+        } 
+        i++;
+    } 
 }
 
 

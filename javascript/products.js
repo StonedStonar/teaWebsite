@@ -1,4 +1,5 @@
-document.getElementById("filter").addEventListener("click", event => openProductFilter(event));
+document.addEventListener("DOMContentLoaded", addListener());
+
 
 function getFilterOption(target) {
     let collection = document.getElementsByClassName("filterOption");
@@ -59,16 +60,66 @@ function makeContainerAppear(node, target) {
     }
 }
 
-document.getElementById("tea").addEventListener("click", event => openTea(event));
+
 
 function openTea(event) {
     let productType = document.getElementById("openTea");
     makeContainerAppear(productType, event.target);
 }
 
-document.getElementById("mug").addEventListener("click", event => openMug(event));
-
 function openMug(event) {
     let productType = document.getElementById("openMug");
     makeContainerAppear(productType, event.target);
+}
+
+/**
+ * 
+ */
+ function addListener() {
+     countReviewsOnCards();
+     let filter = document.getElementById("filter");
+     if (filter != null) {
+        filter.addEventListener("click", event => openProductFilter(event));
+     }
+
+     let tea = document.getElementById("tea");
+     if (tea != null ) {
+        tea.addEventListener("click", event => openTea(event));
+     }
+
+     let mug = document.getElementById("mug");
+     if (mug != null) {
+         mug.addEventListener("click", event => openMug(event));
+     }
+     
+}
+
+
+/**
+ * 
+ * @param {*} starAmount 
+ * @param {*} parentContainer 
+ */
+ function countAverageStars(starAmount, parentContainer) {
+    let starContainer = parentContainer.querySelector(".rating-on-cards");
+    let stars = starContainer.querySelectorAll(".star");
+    let i = 0;
+    while (i < starAmount) {
+        let star = stars[i];
+        star.innerHTML = "&#9733";
+        i++;
+    }
+}
+
+function countReviewsOnCards() {
+    let cardCollection = document.getElementsByClassName("card");
+    let i = 0;
+    console.log(cardCollection);
+    while (i < cardCollection.length) {
+        let card = cardCollection[i];
+        let averageStarsSpan = card.querySelector(".average-stars");
+        countAverageStars(averageStarsSpan.innerHTML, card);
+        i++;
+    }
+    
 }

@@ -81,6 +81,7 @@ body{
 .button{
     border-radius: 0.5em;
     height: 40px;
+    border: none;
 }
 
 .greenButton{

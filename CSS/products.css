@@ -5,6 +5,10 @@
     transition: visibility 0.05s, max-height 0.20s;
 }
 
+.card-body> form > button {
+    width: 100%;
+}
+
 #hidden-filter>input {
     margin-top: 1.2em;
     margin-bottom: 1em;

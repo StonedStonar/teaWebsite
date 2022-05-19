@@ -1,5 +1,5 @@
 .card-header>img {
-    width: 50%;
+    width: 70%;
 }
 
 .card {
@@ -8,12 +8,14 @@
     max-width: 400px;
     padding: 1em;
     margin: 0.2em;
-    /*Vi burde vudere om vi skal ha så mye runde kanter. Prøv denne av og se*/
-    border-radius: 10px;
     box-shadow: 0 0.1em 0.1em 0 var(--main-shadow-color);
     text-align: center;
     text-decoration: none;
     transition: 0.7s;
+}
+
+.average-stars {
+    display: none;
 }
 
 .card:hover {
@@ -59,18 +61,25 @@
     cursor: pointer;
 }
 
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+} 
+
 .now-price {
-    font-size: 22px;
-    margin-top: 0;
+    margin: 0;
+    font-size: 20px;
     color: red;
     font-weight: bold;
 }
 
 .former-price {
+    margin: 0;
     text-decoration: line-through;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 0;
     color: black;
 }
 

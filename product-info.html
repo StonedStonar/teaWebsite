@@ -121,11 +121,15 @@
                     
                 </div>
     
-                <form id="addToCartContainer"> <!-- Changed class to id, and changed name from card-prices to addToCartContainer-->
+                <form id="addToCartContainer">
                     <div id="price-and-review">
-                        <div class="price">
-                            <p class = "former-price">199kr</p>
-                            <p class = "now-price">169kr</p>
+                        <div class="product-info-price">
+                            <div>
+                                <span class = "former-price">199kr</span>
+                            </div>
+                            <div>
+                                <span class = "now-price">169kr</span>
+                            </div>
                         </div>
                         <a class="star-rating" href = "#productReviews">
                                 <div class="review-star-rating">
@@ -219,6 +223,7 @@
                                     <span class="star">&#9734;</span>
                                     <span class="star">&#9734;</span>
                                 </div>
+                                <input type="number" name="starRating" id="setStarRating">
                                 <textarea rows="8" placeholder="write you're review here"></textarea>
                                 <button type="submit">Submit review</button>
                             </form>
@@ -230,19 +235,21 @@
                             <div class="reviews-container">
                                 <div class="review-body">
                                     <div class="name-reviewer">Per Ivar Johansen</div>
-                                    <div class="country-review">02.03.2011</div>
-                                    <div class="review-star-rating">
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span>(<span class="rating-numb">4</span>)</span> 
-                                    </div>
-                                    <div class="description-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                        quis nostrud voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                    <div class="content-container">
+                                        <div class="country-review">02.03.2011</div>
+                                        <div class="review-star-rating">
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span>(<span class="rating-numb">4</span>)</span> 
+                                        </div>
+                                        <div class="description-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                            quis nostrud voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -250,20 +257,22 @@
                             <div class="reviews-container">
                                 <div class="review-body">
                                     <div class="name-reviewer">Steinar Hjelle Midthus</div>
-                                    <div class="country-review">03.09.2014</div>
-                                    <div class="review-star-rating">
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span>(<span class="rating-numb">5</span>)</span> 
+                                    <div class="content-container">
+                                        <div class="country-review">03.09.2014</div>
+                                        <div class="review-star-rating">
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span>(<span class="rating-numb">5</span>)</span> 
+                                        </div>
+                                        <div class="description-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
                                     </div>
-                                    <div class="description-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
                                 </div>
                             </div>
                         </div>
@@ -272,16 +281,19 @@
                             <div class="reviews-container">
                                 <div class="review-body">
                                     <div class="name-reviewer">Kenneth Johansen Misund</div>
-                                    <div class="country-review">04.09.2018</div>
-                                    <div class="review-star-rating">
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span>(<span class="rating-numb">1</span>)</span> 
+                                    <div class="content-container">
+                                        <div class="country-review">04.09.2018</div>
+                                        <div class="review-star-rating">
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span>(<span class="rating-numb">1</span>)</span> 
+                                        </div>
+                                        <div class="description-review">"Sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                        </div>
                                     </div>
-                                    <div class="description-review">"Sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
                                 </div>
                             </div>
 
@@ -289,17 +301,20 @@
                                 
                                 <div class="review-body">
                                     <div class="name-reviewer">Chuck Norris</div>
-                                    <div class="country-review">01.01.1998</div>
-                                    <div class="review-star-rating">
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span>(<span class="rating-numb">2</span>)</span> 
+                                    <div class="content-container">
+                                        <div class="country-review">01.01.1998</div>
+                                        <div class="review-star-rating">
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span class="star">&#9734;</span>
+                                            <span>(<span class="rating-numb">2</span>)</span> 
+                                        </div>
+                                        <div class="description-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore deserunt mollit anim id est laborum."
+                                        </div>
                                     </div>
-                                    <div class="description-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore deserunt mollit anim id est laborum."</div>
                                 </div>
                             </div>
                         </div>
@@ -320,8 +335,8 @@
         
                     <div class="card-body">
                         <div class="price">
-                            <p class="former-price">199kr</p>
                             <p class="now-price">169kr</p>
+                            <p class="former-price">199kr</p>
                         </div>
                         <div class="rating-on-cards">
                             <span class="star">&#9734;</span>
@@ -329,7 +344,66 @@
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
+                            <span class="average-stars">2</span>
+                            <span>(<span class="average-stars-on-card">69</span>)</span>
                         </div>
+                        <form>
+                            <button type="submit" class="add-to-cart greenButton button">ADD TO CART</button>
+                        </form>
+                    </div>
+                </a>
+    
+            
+                <a href="product-info.html" class="card">
+                    <div class="card-header">
+                        <img src="Images/greentea-cropped.jpg" alt="Tea card picture">
+                        <div class="card-title">Blackberry Leaf Tea</div>
+                        <div class="card-description">Tea ingredients from the nature of norway</div>
+                    </div>
+        
+                    <div class="card-body">
+                        <div class="price">
+                            <p class="now-price">169kr</p>
+                            <p class="former-price">199kr</p>
+                        </div>
+                        <div class="rating-on-cards">
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="average-stars">4</span>
+                            <span>(<span class="average-stars-on-card">8</span>)</span>
+                        </div>
+                        <form>
+                            <button type="submit" class="add-to-cart greenButton button">ADD TO CART</button>
+                        </form>
+                    </div>
+                </a>
+                <a href="product-info.html" class="card">
+                    <div class="card-header">
+                        <img src="Images/greentea-cropped.jpg" alt="Tea card picture">
+                        <div class="card-title">Blackberry Leaf Tea</div>
+                        <div class="card-description">Tea ingredients from the nature of norway</div>
+                    </div>
+        
+                    <div class="card-body">
+                        <div class="price">
+                            <p class="now-price">169kr</p>
+                            <p class="former-price">199kr</p>
+                        </div>
+                        <div class="rating-on-cards">
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="average-stars">4</span>
+                            <span>(<span class="average-stars-on-card">11</span>)</span>
+                        </div>
+                        <form>
+                            <button type="submit" class="add-to-cart greenButton button">ADD TO CART</button>
+                        </form>
                     </div>
                 </a>
     
@@ -342,8 +416,8 @@
         
                     <div class="card-body">
                         <div class="price">
-                            <p class = "former-price">199kr</p>
-                            <p class = "now-price">169kr</p>
+                            <p class="now-price">169kr</p>
+                            <p class="former-price">199kr</p>
                         </div>
                         <div class="rating-on-cards">
                             <span class="star">&#9734;</span>
@@ -351,51 +425,12 @@
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
                             <span class="star">&#9734;</span>
+                            <span class="average-stars">1</span>
+                            <span>(<span class="average-stars-on-card">3</span>)</span>
                         </div>
-                    </div>
-                </a>
-    
-                <a href="product-info.html" class="card">
-                    <div class="card-header">
-                        <img src="Images/greentea-cropped.jpg" alt="Tea card picture">
-                        <div class="card-title">Blackberry Leaf Tea</div>
-                        <div class="card-description">Tea ingredients from the nature of norway</div>
-                    </div>
-        
-                    <div class="card-body">
-                        <div class="price">
-                            <p class = "former-price">199kr</p>
-                            <p class = "now-price">169kr</p>
-                        </div>
-                        <div class="rating-on-cards">
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                        </div>
-                    </div>
-                </a>
-    
-                <a href="product-info.html" class="card">
-                    <div class="card-header">
-                        <img src="Images/greentea-cropped.jpg" alt="Tea card picture">
-                        <div class="card-title">Blackberry Leaf Tea</div>
-                        <div class="card-description">Tea ingredients from the nature of norway</div>
-                    </div>
-        
-                    <div class="card-body">
-                        <div class="price">
-                            <p class = "former-price">199kr</p>
-                            <p class = "now-price">169kr</p>
-                        </div>
-                        <div class="rating-on-cards">
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                        </div>
+                        <form>
+                            <button type="submit" class="add-to-cart greenButton button">ADD TO CART</button>
+                        </form>
                     </div>
                 </a>
             </div>
@@ -403,6 +438,7 @@
         </section>
     
     <script src = "javascript/product-info.js"></script>
+    <script src = "javascript/products.js"></script>
     <footer id = "footerWrapper">
         <div id = "footer">
             <div class="sectionFooter">

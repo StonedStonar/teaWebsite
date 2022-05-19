@@ -21,7 +21,7 @@ function getParentContainer(target) {
 function openDescription(event) {
     let parent = getParentContainer(event.target);
     let description = document.getElementById("description");
-    makeContainerAppear(description, parent);
+    makeProductContainerAppear(description, parent);
 }
 
 document.getElementById("ingredientsContainer").addEventListener("click", event => openIngredients(event));
@@ -29,12 +29,12 @@ document.getElementById("ingredientsContainer").addEventListener("click", event 
 function openIngredients(event) {
     let parent = getParentContainer(event.target)
     let ingredients = document.getElementById("ingredients");
-    makeContainerAppear(ingredients, parent);
+    makeProductContainerAppear(ingredients, parent);
 }
 
 
-document.getElementById("productReviewsContainer").addEventListener("click", openProductReviews);
-document.querySelector(".star-rating").addEventListener("click", openProductReviews);
+document.getElementById("productReviewsContainer").addEventListener("click", event => openProductReviews(event));
+document.querySelector(".star-rating").addEventListener("click", event => openProductReviews(event));
 
 function openProductReviews(event){
     let parent = null;
@@ -45,7 +45,7 @@ function openProductReviews(event){
         parent = getParentContainer(event.target)
     }
     let reviews = document.getElementById("hiddenReview");
-    makeContainerAppear(reviews, parent);
+    makeProductContainerAppear(reviews, parent);
 }
 
 document.getElementById("reviewButton").addEventListener("click", event => makeReview(event));
@@ -57,7 +57,7 @@ async function makeReview(event) {
     reviews.classList.add("instantAnimation");
     let logo = parent.querySelector(".logo");
     logo.classList.add("instantAnimation");
-    makeContainerAppear(makeReviewContainer, null);
+    makeProductContainerAppear(makeReviewContainer, null);
     openProductReviews(event);
     openProductReviews(event);
     reviews.classList.remove("instantAnimation");
@@ -66,7 +66,7 @@ async function makeReview(event) {
 }
 
 
-function makeContainerAppear(node, parentNode) {
+function makeProductContainerAppear(node, parentNode) {
     let logo;
     if(parentNode != null){
         logo = parentNode.querySelector(".logo");

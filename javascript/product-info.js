@@ -27,7 +27,7 @@ function openDescription(event) {
 document.getElementById("ingredientsContainer").addEventListener("click", event => openIngredients(event));
 
 function openIngredients(event) {
-    let parent = getParentContainer(event.target);
+    let parent = getParentContainer(event.target)
     let ingredients = document.getElementById("ingredients");
     makeContainerAppear(ingredients, parent);
 }
@@ -37,7 +37,13 @@ document.getElementById("productReviewsContainer").addEventListener("click", ope
 document.querySelector(".star-rating").addEventListener("click", openProductReviews);
 
 function openProductReviews(event){
-    let parent = getParentContainer(event.target);
+    let parent = null;
+    let reviewCounter = document.getElementsByClassName("inStock");
+    if(reviewCounter[0].contains(event.target)){
+        parent = document.getElementById("productReviewsContainer");
+    }else{
+        parent = getParentContainer(event.target)
+    }
     let reviews = document.getElementById("hiddenReview");
     makeContainerAppear(reviews, parent);
 }
@@ -86,15 +92,13 @@ let a = 1;
 
 function incButton() {
     a++;
-    num.innerText = a;
-    console.log(a);
+    num.value = a;
 }
 
 function decButton() {
     if (a > 1) {
         a--;
-        num.innerText = a;
-        console.log(a);
+        num.value = a;
     }
 }
 

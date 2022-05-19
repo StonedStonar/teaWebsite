@@ -6,7 +6,7 @@
         <link href = "CSS/basic.css" rel="stylesheet" type="text/css">
         <link href = "CSS/card.css" rel="stylesheet" type="text/css">
         <link href = "CSS/product-info.css" rel="stylesheet" type="text/css">
-        <link href="CSS/review.css" rel="stylesheet" type="text/css">
+        <link href = "CSS/review.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -121,7 +121,7 @@
                     
                 </div>
     
-                <div id="addToCartContainer"> <!-- Changed class to id, and changed name from card-prices to addToCartContainer-->
+                <form id="addToCartContainer"> <!-- Changed class to id, and changed name from card-prices to addToCartContainer-->
                     <div id="price-and-review">
                         <div class="price">
                             <p class = "former-price">199kr</p>
@@ -136,21 +136,21 @@
                                     <span class="star">&#9734;</span>
                                 </div>
                                 <span class = "inStock">(
-                                    <span id="amount-of-reviews"></span>
+                                    <span id="amount-of-reviews">66666</span>
                                     )
                                 </span>
                         </a>
                     </div>
                 
-                    <button class="Add-To-Cart greenButton button">
+                    <button type = "submit" class="Add-To-Cart greenButton button">
                         ADD TO CART
                     </button>
                     
                     <div class="amount">
                         <div class="amount-to-add">
-                            <span class="minus-button">-</span>
-                            <span class="num-to-change">1</span>
-                            <span class="plus-button">+</span>
+                            <button class="minus-button" type="button">-</button>
+                            <input class="num-to-change" value="1" name = "amountOfProduct">
+                            <button class="plus-button" type="button">+</button>
                         </div>
     
                         <div class="amount-on-storage">
@@ -160,7 +160,7 @@
                             <span> on storage</span>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
 
             <div class="drop-down-meny">

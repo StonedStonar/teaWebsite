@@ -134,7 +134,6 @@
     outline: none;
     background-color: transparent;
     border: none;
-
 }
 
 .amount-to-add {
@@ -146,6 +145,7 @@
     background-color: white;
     border-radius: 8px;
 }
+
 .amount-to-add>input, .amount-to-add>button {
     width: 100%;
     text-align: center;

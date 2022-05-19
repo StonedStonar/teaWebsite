@@ -64,17 +64,24 @@ figure {
     height: fit-content;
 }
 
+.minus-button, .plus-button, .amount-to-add{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
 
 .amount-to-add {
     height: 30px;
-    min-width: 80px;
+    max-width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
     border-radius: 8px;
+
 }
-.amount-to-add>span {
+
+.amount-to-add>input, .amount-to-add>button {
     width: 100%;
     text-align: center;
     width: 100%;
@@ -83,7 +90,7 @@ figure {
     cursor: pointer;
 }
 
-.amount-to-add>span.num-to-change {
+.amount-to-add>.num-to-change {
    border-right: 2px solid rgba(0,0,0,0.1); 
    border-left: 2px solid rgba(0,0,0,0.1); 
    pointer-events: none;

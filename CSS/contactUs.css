@@ -10,7 +10,7 @@
     margin: 0;
 }
 
-.contactUsContainer>figure>figcaption {
+figure>figcaption {
     color: var(--figcap-color);
 }
 

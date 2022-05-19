@@ -90,6 +90,11 @@ figure {
     cursor: pointer;
 }
 
+.logoSocials:hover,  .logoSupport:hover{
+    box-shadow: 0px 0px 4px var(--main-shadow-color);
+}
+
+
 .amount-to-add>.num-to-change {
    border-right: 2px solid rgba(0,0,0,0.1); 
    border-left: 2px solid rgba(0,0,0,0.1); 

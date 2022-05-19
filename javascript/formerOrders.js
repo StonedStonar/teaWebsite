@@ -90,8 +90,8 @@ function openContainer(container, containerHolder) {
  * @param {*} containerHolder the element that holds that container.
  * @param {*} logoClassName the logo that should be flipped.
  */
-function closeContainer(container, containerHolder, logoClassName) {
+function closeContainer(container, containerHolder) {
     container.classList.remove("openContainer");
-    containerHolder.getElementsByClassName(logoClassName)[0].classList.remove("rotateLogo");
+    containerHolder.getElementsByClassName("logo")[0].classList.remove("rotateLogo");
     containerHolder.classList.remove("openOrder");
 }

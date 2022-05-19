@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <title>Cart</title>
     <link href="CSS/basic.css" rel="stylesheet" type="text/css">
     <link href="CSS/cart.css" rel="stylesheet" type="text/css">
-    <link href="CSS/orderedProductcard.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -106,135 +104,145 @@
     <script src="javascript/menu.js">
     </script>
     <section class="mainSection">
-        <div id="headerCart">
-            <h2 class="mainHeaderText">
-                Cart
-            </h2>
-            <button class="button" id = "clearCartButton">
-                Clear cart
-            </button>
-        </div>
-        <div id="orderedProductContainer">
-            <p class = "topItem mobileText">
-                Products
-            </p>
-            <p class="topItem">
-                Product
-            </p>
-            <p class="topItem">
-                Amount
-            </p>
-            <p class="topItem">
-                Total cost
-            </p>
-            <p class="topItem">
-                Discount
-            </p>
-            <p class="topItem">
-                Remove
-            </p>
-            <div class="orderedProduct">
-                <div class = "productInfo">
-                    <img class="productImage" src="Images/greentea-cropped.jpg" alt="Picutre of greentea">
-                    <div class="productDetails">
-                        <p class="productName">
-                            Green tea
-                        </p>
-                        <p>
-                            Procuded by Yo Papa
-                        </p>
-                        <p class = "productID">
-                            Product ID: 1
-                        </p>
-                    </div>
-                </div>
-                <div class = "priceAndAmount">
-                    <div class="amount-to-add">
-                        <span class="minus-button">-</span>
-                        <span class="num-to-change">1</span>
-                        <span class="plus-button">+</span>
-                    </div>
-                    <div class = price>
-                        <p>
-                            <span class = "mobileText">
-                                Total
-                            </span>
-                            499,00
-                        </p>
-                        <p>
-                            <span class = "mobileText">
-                                Discount
-                            </span>
-                            10,00
-                        </p>
-                    </div>
-                    <img src="#" srcset="svg/cross.svg" alt="A cross logo for removal of product" class="logo">
-                </div>
-            </div>
-            <div class="orderedProduct">
-                <div class = "productInfo">
-                    <img class="productImage" src="Images/greentea-cropped.jpg" alt="Picutre of greentea">
-                    <div class="productDetails">
-                        <p class="productName">
-                            Green tea
-                        </p>
-                        <p>
-                            Procuded by Yo Papa
-                        </p>
-                        <p class = "productID">
-                            Product ID: 2
-                        </p>
-
-                    </div>
-                </div>
-                <div class = "priceAndAmount">
-                    <div class="amount-to-add">
-                        <span class="minus-button">-</span>
-                        <span class="num-to-change">2</span>
-                        <span class="plus-button">+</span>
-                    </div>
-                    <div class = price>
-                        <p>
-                            <span class = "mobileText">
-                                Total
-                            </span>
-                            998,00
-                        </p>
-                        <p>
-                            <span class = "mobileText">
-                                Discount
-                            </span>
-                            20,00
-                        </p>
-                    </div>
-                    <img src="#" srcset="svg/cross.svg" alt="A cross logo for removal of product" class="logo">
-                </div>
-            </div>
-        </div>
-        
-        <div id = "buttonAndSumContainer">
-            <div>
-                <div id = "summary">
-                    <span>
-                        Total sum:
-                    </span>
-                    <span id = "totalSum">
-                        1497
-                    </span>
-                    <span>
-                        Total discount:
-                    </span>
-                    <span id = "totalDiscount">
-                        30
-                    </span>
-    
-                </div>
-    
-                <button id = "checkOutButton" class = "button greenButton">
-                    Go to checkout
+        <form action="">
+            <div id="headerCart">
+                <h2 class="mainHeaderText">
+                    Cart
+                </h2>
+                <button class="button" id = "clearCartButton">
+                    Clear cart
                 </button>
             </div>
-        </div>
+            <div id="orderedProductContainer">
+                <p class = "topItem mobileText">
+                    Products
+                </p>
+                <p class="topItem">
+                    Product
+                </p>
+                <p class="topItem">
+                    Amount
+                </p>
+                <p class="topItem">
+                    Total cost
+                </p>
+                <p class="topItem">
+                    Discount
+                </p>
+                <p class="topItem">
+                    Remove
+                </p>
+                <div class="orderedProduct">
+                    <div class = "productInfo">
+                        <img class="productImage" src="Images/greentea-cropped.jpg" alt="Picutre of greentea">
+                        <div class="productDetails">
+                            <p class="productName">
+                                Green tea
+                            </p>
+                            <p>
+                                Procuded by Yo Papa
+                            </p>
+                            <p class = "productID">
+                                Product ID: <span>1</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class = "priceAndAmount">
+                        <div class="amount-to-add">
+                            <button class="minus-button" type="button">-</button>
+                            <input class="num-to-change" value="2">
+                            <button class="plus-button" type="button">+</button>
+                        </div>
+                        <div class = price>
+                            <p>
+                                <span class = "mobileText">
+                                    Total
+                                </span>
+                                <span>
+                                    499,00
+                                </span>
+                            </p>
+                            <p>
+                                <span class = "mobileText">
+                                    Discount
+                                </span>
+                                <span>
+                                    10,00
+                                </span>
+                            </p>
+                        </div>
+                        <button class = "removeButton" type = "button">
+                            <img src="#" srcset="svg/cross.svg" alt="A cross logo for removal of product" class="logo">
+                        </button>
+                    </div>
+                </div>
+                <div class="orderedProduct">
+                    <div class = "productInfo">
+                        <img class="productImage" src="Images/greentea-cropped.jpg" alt="Picutre of greentea">
+                        <div class="productDetails">
+                            <p class="productName">
+                                Green tea
+                            </p>
+                            <p>
+                                Procuded by <span>Yo Papa</span>
+                            </p>
+                            <p class = "productID">
+                                Product ID: <span>2</span>
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class = "priceAndAmount">
+                        <div class="amount-to-add">
+                            <button class="minus-button" type = "button">-</button>
+                            <input class="num-to-change" value = "1">
+                            <button class="plus-button" type = "button">+</button>
+                        </div>
+                        <div class = price>
+                            <p>
+                                <span class = "mobileText">
+                                    Total
+                                </span>
+                                <span>
+                                    998,00
+                                </span>
+                            </p>
+                            <p>
+                                <span class = "mobileText">
+                                    Discount
+                                </span>
+                                <span>
+                                    20,00
+                                </span>
+                            </p>
+                        </div>
+                        <button class = "removeButton" type = "button">
+                            <img src="#" srcset="svg/cross.svg" alt="A cross logo for removal of product" class="logo">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id = "buttonAndSumContainer">
+                <div>
+                    <div id = "summary">
+                        <span>
+                            Total sum:
+                        </span>
+                        <span id = "totalSum">
+                            1497
+                        </span>
+                        <span>
+                            Total discount:
+                        </span>
+                        <span id = "totalDiscount">
+                            30
+                        </span>
+                    </div>
+                    <input type = "submit" id = "checkOutButton" class = "button greenButton" value="Go to checkout">
+                </div>
+            </div>
+        </form>
         <script src = "javascript/cart.js"></script>
     </section>
 

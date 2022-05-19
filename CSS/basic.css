@@ -107,12 +107,13 @@ body{
 }
 
 #menu{
+    position: relative;
     padding-top: 0.5em;
     width: 100%;
     justify-content: space-evenly;
     display: flex;
     align-items: center;
-    height: 60px;
+    min-height: 60px;
 }
 
 /*The logos on the top*/
@@ -196,7 +197,7 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 60px;
+    bottom: -3em;
     margin-top: 0.5em;
 }
 
@@ -490,7 +491,38 @@ body{
     .sectionFooter> * {
         margin: 0.5em 0;
     }
+}
 
+@media screen and (max-width:350px) {
+    #menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+    #companyHeader{
+        grid-column: 1/5;
+        text-align: center;
+    }
+
+    .logoContainer{
+        margin: 0 auto;
+    }
+
+    #hamburgerMenu{
+        order: 1;
+    }
+    #search{
+        order: 1;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+
+    #searchForm>form>input{
+        width: 80%;
+    }
 }
 
 /*The animations of the menus.*/

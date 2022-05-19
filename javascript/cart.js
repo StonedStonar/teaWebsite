@@ -1,5 +1,8 @@
 window.addEventListener('load', () => addListeners());
 
+/**
+ * Adds all the listeners.
+ */
 function addListeners(){
     let minusButtons = document.getElementsByClassName("minus-button");
     for(let minusButton of minusButtons){
@@ -9,13 +12,62 @@ function addListeners(){
     for(let plusButton of plusButtons){
         plusButton.addEventListener("click", event => increment(event));
     }
+    let removePrductButtons = document.getElementsByClassName("removeButton");
+    for(let removeButton of removePrductButtons){
+        removeButton.addEventListener("click", event => removeProduct(event));
+    }
+    let clearCartButton = document.getElementById("clearCartButton");
+    clearCartButton.addEventListener("click", () => removeAllProducts());
 }
 
+/**
+ * Removes a product form the cart.
+ * @param {*} event the click event.
+ */
+function removeProduct(event){
+    let target = event.target;
+    let productContainers = document.getElementsByClassName("orderedProduct");
+    let i = 0;
+    let foundContainer = false;
+    while(i < productContainers.length && !foundContainer){
+        let productContainer = productContainers[i];
+        if(productContainer.contains(target)){
+            foundContainer = true;
+            hideContainer(productContainer);
+        }
+        i++;
+    }
+}
+
+/**
+ * Hides an container.
+ * @param {*} productContainer the container to hide. 
+ */
+function hideContainer(productContainer){
+    let amount = productContainer.querySelector(".num-to-change");
+    amount.innerHTML = 0;
+    productContainer.classList.add("hideProduct");
+}
+
+/**
+ * Removes all products from the cart.
+ */
+function removeAllProducts(){
+    let orderedProducts = document.getElementsByClassName("orderedProduct");
+    for(let container of orderedProducts) {
+        hideContainer(container);
+    }
+}
+
+/**
+ * Increments the target product.
+ * @param {*} event the click event. 
+ */
 function increment(event){
     let target = event.target;
     let numberField = getNumberField(target);
-    let value = numberField.innerHTML;
-    numberField.innerHTML = (parseInt(value) + 1);
+    let value = numberField.value;
+    numberField.value = (parseInt(value) + 1);
 }
 
 /**
@@ -25,9 +77,9 @@ function increment(event){
 function decrement(event){
     let target = event.target;
     let numberField = getNumberField(target);
-    let value = numberField.innerHTML;
+    let value = numberField.value;
     if(value > 1){
-        numberField.innerHTML = (parseInt(value) - 1);
+        numberField.value = (parseInt(value) - 1);
     }
 }
 

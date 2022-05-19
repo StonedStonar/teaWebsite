@@ -130,11 +130,48 @@
     background-color: var(--hover-container-color);
 }
 
+.minus-button, .plus-button, .amount-to-add{
+    outline: none;
+    background-color: transparent;
+    border: none;
+
+}
+
+.amount-to-add {
+    height: 30px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+}
+.amount-to-add>input, .amount-to-add>button {
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.amount-to-add>.num-to-change {
+   border-right: 2px solid rgba(0,0,0,0.1); 
+   border-left: 2px solid rgba(0,0,0,0.1); 
+   pointer-events: none;
+}
+
 .productID{
     font-size: 0.75em;
     color: var(--main-font-color);
 }
 
+.removeButton{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 
 @media screen and (max-width:700px) {
@@ -185,4 +222,9 @@
     .productImage{
         width: 10em;
     }
+}
+
+.hideProduct{
+    display: none;
+    overflow: hidden;
 }

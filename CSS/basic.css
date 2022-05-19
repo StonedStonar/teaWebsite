@@ -247,7 +247,7 @@ body{
     visibility: hidden;
     opacity: 0;
     overflow: hidden;
-    left: -3em;
+    left: -2.5em;
     width: 300%;
     flex-direction: column;
     z-index: 1;

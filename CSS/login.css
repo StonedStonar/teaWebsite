@@ -5,7 +5,7 @@
     flex-flow: column;
 }
 
-.email, .password, .fullName, .re-enter-password{
+.loginLabel{
     font-size: 1.4rem;
 }
 

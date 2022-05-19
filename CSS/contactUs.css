@@ -65,6 +65,10 @@
     margin: 0.5em 0;
 }
 
+.FAQOpener:hover {
+    background-color: yellow;
+}
+
 #FAQContainer {
     border-top: 1px solid var(--main-border-color);
 }

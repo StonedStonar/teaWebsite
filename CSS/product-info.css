@@ -5,10 +5,23 @@
     justify-content: space-between;
 }
 
-#product-info, .card-prices {
-    width: 48%;
+#productContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+#product-info {
     align-self: center;
-    justify-self: center;
+}
+
+#addToCartContainer {
+    align-self: center;
+    max-width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    width: 100%;
+    
 }
 
 #product-info{
@@ -23,10 +36,7 @@ figure {
     width: 100%;
 }
 
-.card-prices {
-    max-width: 350px;
-    height: 200px;;
-}
+
 
 .Add-To-Cart {
     width: 100%;
@@ -218,13 +228,17 @@ figure {
         width: 100%;
     }
     
-    .card-prices, #product-info{
+    #addToCartContainer, #product-info{
         max-width: none;
         width: 100%;
     }
 
     #price-and-review>.star-rating{
         width: auto;
+    }
+
+    #productContainer {
+        grid-template-columns: 1fr;
     }
     
 }

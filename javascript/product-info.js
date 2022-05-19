@@ -90,7 +90,6 @@ function makeReview(event) {
     filterStars();
 }
 
-<<<<<<< HEAD
 /**
  * This function is used to flipp the arrow logo and 
  * use containerAnimation for other functions
@@ -98,10 +97,7 @@ function makeReview(event) {
  * @param {*} parentNode the parent container.
  */
 function makeContainerAppear(node, parentNode) {
-=======
 
-function makeProductContainerAppear(node, parentNode) {
->>>>>>> 9af2a3a8ba3dc554c411f2a2176b80b8bdf520b0
     let logo;
     if(parentNode != null){
         logo = parentNode.querySelector(".logo");

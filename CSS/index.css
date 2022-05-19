@@ -1,5 +1,3 @@
-
-
 .teaCupFrontPage{
     width: 100%;
     margin: 0;
@@ -8,12 +6,12 @@
 .teaCupFrontPage>img {
     width: 100%;
     height: 100%;
+    background-color: yellow;
 }
 
 #teacupImage {
     margin-top: 2em;
 }
-
 
 #herbsInField {
     width: 100%;
@@ -74,6 +72,4 @@
     position: absolute;
     top: 30%;
     width: 100%;
-    
-
 }

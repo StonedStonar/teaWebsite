@@ -109,54 +109,56 @@
         <script src = "javascript/menu.js"></script>
 
         <section class = "mainSection">
-            <div id= "product-info">
-                <h2  class="mainHeaderText">
-                    Troll Green Tea
-                </h2>
-                <figure>
-                    <img src = "Images/greentea.jpg" id = "pictureOfTeaType" alt="Troll Green Tea Picture">
-                    <figcaption>Picture taken from Nosplash</figcaption>
-                </figure>
-                
-            </div>
-
-            <div class="card-prices">
-                <div id="price-and-review">
-                    <div class="price">
-                        <p class = "former-price">199kr</p>
-                        <p class = "now-price">169kr</p>
-                    </div>
-                    <a class="star-rating" href = "#productReviews">
-                            <div class="review-star-rating">
-                                <span class="star">&#9734;</span>
-                                <span class="star">&#9734;</span>
-                                <span class="star">&#9734;</span>
-                                <span class="star">&#9734;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                            <span class = "inStock">(
-                                <span id="amount-of-reviews"></span>
-                                )
-                            </span>
-                    </a>
+            <div id = "productContainer">
+                <div id= "product-info">
+                    <h2  class="mainHeaderText">
+                        Troll Green Tea
+                    </h2>
+                    <figure>
+                        <img src = "Images/greentea.jpg" id = "pictureOfTeaType" alt="Troll Green Tea Picture">
+                        <figcaption>Picture taken from Nosplash</figcaption>
+                    </figure>
+                    
                 </div>
-            
-                <button class="Add-To-Cart greenButton button">
-                    ADD TO CART
-                </button>
-                
-                <div class="amount">
-                    <div class="amount-to-add">
-                        <span class="minus-button">-</span>
-                        <span class="num-to-change">1</span>
-                        <span class="plus-button">+</span>
+    
+                <div id="addToCartContainer"> <!-- Changed class to id, and changed name from card-prices to addToCartContainer-->
+                    <div id="price-and-review">
+                        <div class="price">
+                            <p class = "former-price">199kr</p>
+                            <p class = "now-price">169kr</p>
+                        </div>
+                        <a class="star-rating" href = "#productReviews">
+                                <div class="review-star-rating">
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                    <span class="star">&#9734;</span>
+                                </div>
+                                <span class = "inStock">(
+                                    <span id="amount-of-reviews"></span>
+                                    )
+                                </span>
+                        </a>
                     </div>
-
-                    <div class="amount-on-storage">
-                        <span class="circle"></span>
-                        <span class="amount-of-product">170</span>
-                        <span id = "storageStatus">+</span>
-                        <span> on storage</span>
+                
+                    <button class="Add-To-Cart greenButton button">
+                        ADD TO CART
+                    </button>
+                    
+                    <div class="amount">
+                        <div class="amount-to-add">
+                            <span class="minus-button">-</span>
+                            <span class="num-to-change">1</span>
+                            <span class="plus-button">+</span>
+                        </div>
+    
+                        <div class="amount-on-storage">
+                            <span class="circle"></span>
+                            <span class="amount-of-product">170</span>
+                            <span id = "storageStatus">+</span>
+                            <span> on storage</span>
+                        </div>
                     </div>
                 </div>
             </div>

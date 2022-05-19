@@ -107,7 +107,6 @@ body{
 }
 
 #menu{
-    position: relative;
     padding-top: 0.5em;
     width: 100%;
     justify-content: space-evenly;
@@ -197,8 +196,17 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -3em;
+    top: 3.5em;
     margin-top: 0.5em;
+    width: 100%;
+    visibility: hidden;
+    max-height: 0;
+    background-color: var(--main-menubg-color);
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 0 0.5em;
+    transition: visibility 0s,0.5s max-height, ease 0.5s;
 }
 
 #searchForm>form>label{
@@ -208,17 +216,6 @@ body{
 #searchForm>form{
     max-width: 1200px;
     width: 100%;
-}
-
-#searchForm{
-    visibility: hidden;
-    max-height: 0;
-    background-color: var(--main-menubg-color);
-    width: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    padding: 0 0.5em;
-    transition: visibility 0s,0.5s max-height, ease 0.5s;
 }
 
 #searchForm>form>input:focus{
@@ -514,6 +511,10 @@ body{
     }
     #search{
         order: 1;
+    }
+
+    #searchForm{
+        top: 6.5em;
     }
 }
 

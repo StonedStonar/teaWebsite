@@ -32,7 +32,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
+}
+
+.filterOption:hover {
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .filterOption:hover {

@@ -96,8 +96,8 @@
 }
 
 .amount-to-add>span.num-to-change {
-   border-right: 2px solid rgba(0,0,0,0.1); 
-   border-left: 2px solid rgba(0,0,0,0.1); 
+   border-bottom: 2px solid rgba(0,0,0,0.1); 
+   border-top: 2px solid rgba(0,0,0,0.1); 
    pointer-events: none;
 }
 
@@ -156,8 +156,8 @@
 }
 
 .amount-to-add>.num-to-change {
-   border-right: 2px solid rgba(0,0,0,0.1); 
-   border-left: 2px solid rgba(0,0,0,0.1); 
+   border-bottom: 2px solid rgba(0,0,0,0.1); 
+   border-top: 2px solid rgba(0,0,0,0.1); 
    pointer-events: none;
 }
 

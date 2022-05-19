@@ -1,5 +1,10 @@
 document.getElementById("descriptionContainer").addEventListener("click", event => openDescription(event));
 
+/**
+ * Gets the parent conatiner.
+ * @param {*} target is the target on a website we want to click on and make something happend.   
+ * @returns the parent container 
+ */
 function getParentContainer(target) {
     let container = null;
     if (!target.classList.contains("dropdown")) {
@@ -18,6 +23,11 @@ function getParentContainer(target) {
     return container;
 }
 
+/**
+ * This function opens the description part of the dropdown meny. When we click on description a hidden container
+ * with the discription will appear and when we click it again to close it the container will disappear. 
+ * @param {*} event click on discription to make it appear and click it again to close it.
+ */
 function openDescription(event) {
     let parent = getParentContainer(event.target);
     let description = document.getElementById("description");
@@ -26,6 +36,11 @@ function openDescription(event) {
 
 document.getElementById("ingredientsContainer").addEventListener("click", event => openIngredients(event));
 
+/**
+ * This function opens the ingredients part of the dropdown meny. When we click on ingredients a hidden container
+ * with the specified ingredients will appear and when we click it again to close it the container will disappear. 
+ * @param {*} event click on ingredients to make it appear and click it again to close it.
+ */
 function openIngredients(event) {
     let parent = getParentContainer(event.target)
     let ingredients = document.getElementById("ingredients");
@@ -36,6 +51,11 @@ function openIngredients(event) {
 document.getElementById("productReviewsContainer").addEventListener("click", event => openProductReviews(event));
 document.querySelector(".star-rating").addEventListener("click", event => openProductReviews(event));
 
+/**
+ * Opens the product review section of the dropdown meny. A hidden container with the reviews will appear and
+ * there is a button in this review section to open/create new reviews.
+ * @param {*} event used to open container for review and close it.
+ */
 function openProductReviews(event){
     let parent = null;
     let reviewCounter = document.getElementsByClassName("inStock");
@@ -50,7 +70,12 @@ function openProductReviews(event){
 
 document.getElementById("reviewButton").addEventListener("click", event => makeReview(event));
 
-async function makeReview(event) {
+/**
+ * This method makes the create review section come up when we click the write your review button
+ * and changes the text on the button if we want to close the review.
+ * @param {*} event makes the create review section appear and changes the text on button when closed.
+ */
+function makeReview(event) {
     let parent = getParentContainer(event.target);
     let makeReviewContainer = document.getElementById("productReviews");
     let reviews = document.getElementById("hiddenReview");
@@ -65,8 +90,14 @@ async function makeReview(event) {
     filterStars();
 }
 
+/**
+ * This function is used to flipp the arrow logo and 
+ * use containerAnimation for other functions
+ * @param {*} node the thing we want to open. 
+ * @param {*} parentNode the parent container.
+ */
+function makeContainerAppear(node, parentNode) {
 
-function makeProductContainerAppear(node, parentNode) {
     let logo;
     if(parentNode != null){
         logo = parentNode.querySelector(".logo");
@@ -90,11 +121,17 @@ document.querySelector(".minus-button").addEventListener("click", event => decBu
 const num = document.querySelector(".num-to-change");
 let a = 1;
 
+/**
+ * The function used to increase amount of products.
+ */
 function incButton() {
     a++;
     num.value = a;
 }
 
+/**
+ * The function used to decrease amount of products.
+ */
 function decButton() {
     if (a > 1) {
         a--;
@@ -104,6 +141,9 @@ function decButton() {
 
 var stars = [];
 
+/**
+ * 
+ */
 function filterStars() {
     let containerOfStars = document.getElementById("reviewStars");
     stars = containerOfStars.querySelectorAll(".star");
@@ -195,9 +235,9 @@ function SetAllRatingNumbers() {
 }
 
 /**
- * 
- * @param {*} starAmount 
- * @param {*} parentContainer 
+ * Counts the average stars so that we can find the averange of multiple rating of one review.
+ * @param {*} starAmount amount of stars given
+ * @param {*} parentContainer holds the stars 
  */
 function countAverageStars(starAmount, parentContainer) {
     let starContainer = parentContainer.querySelector(".review-star-rating");
@@ -210,6 +250,11 @@ function countAverageStars(starAmount, parentContainer) {
     }
 }
 
+/**
+ * Sets the stars for a review. "&#9733" is used for the full stars while the "&#9734" is used for empty stars.
+ * @param {*} event stars to be checked/unchecked. 
+ */
+
 function setStars(event) {
     let starContainer = document.getElementById("reviewStars");
     let starCollection = starContainer.querySelectorAll(".star");
@@ -221,7 +266,6 @@ function setStars(event) {
         let star = stars[i];
         if (star == event.target) {
             foundStar = true;
-            console.log(star);
             star.innerHTML = "&#9733";
             amountOfStars = i+1;
             setStarRating.value = amountOfStars;

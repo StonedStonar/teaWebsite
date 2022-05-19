@@ -40,7 +40,11 @@ figure {
     width: 100%;
 }
 
-
+#descriptionContainer:hover, #ingredientsContainer:hover, #productReviewsContainer:hover {
+    font-weight: bold;
+    cursor: pointer;
+    
+}
 
 .Add-To-Cart {
     width: 100%;
@@ -108,9 +112,9 @@ figure {
 
 
 .amount-to-add>.num-to-change {
-    border-right: 2px solid rgba(0,0,0,0.1); 
-    border-left: 2px solid rgba(0,0,0,0.1); 
-   pointer-events: none;
+    border-top: 2px solid rgba(0,0,0,0.1); 
+    border-bottom: 2px solid rgba(0,0,0,0.1); 
+    pointer-events: none;
 }
 
 .amount-on-storage {

@@ -27,7 +27,7 @@ figure>img{
 }
 
 .personalInformation>h3{
-    border-bottom: 1px solid var(--main-secondfont-color);
+    border-bottom: 1px solid var(--main-border-color);
 }
 
 
@@ -35,6 +35,12 @@ figure>img{
     display: grid;
     width: 50%;
     grid-template-columns: 1fr 1fr;
+}
+
+.personalInformation>p:last-of-type{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0.2em;
 }
 
 #editProfile{
@@ -52,7 +58,7 @@ figure>img{
     font-weight: bold;
 }
 
-.button>span{
+#editProfile{
     color: var(--main-secondfont-color);
 }
 
@@ -136,6 +142,38 @@ figure>img{
     width: 80%;
 }
 
+.profileMenuOptions{
+    outline: none;
+    margin: 0.5em 0;
+    box-sizing: border-box;
+    padding: 0.25em;
+    margin: 1.5em 0;
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
+    border-radius: 5px;
+    background-color: var(--main-secbg-color);
+    border: 0.1px solid var(--main-border-color);
+}
+
+.profileMenuOptions>a, #editPassword{
+    display: flex;
+    flex-flow: column nowrap;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.profileMenuOptions:hover{
+    background-color: var(--hover-container-color);
+}
+
+.profileMenuOptions>a>span:first-child, #editPassword>span:first-of-type{
+    font-weight: bold;
+}
+
+#editPassword>span{
+    font-size: 16px;
+}
+
 
 @media screen and (max-width:900px) {
     .mainSection>div{
@@ -145,6 +183,17 @@ figure>img{
     #deleteProfile{
         min-width: 100%;
     }
+}
+
+@media screen and (max-width:600px){
+    #profileWrapper>div{
+        width: 100%;
+    }
+
+    .editContainer>div {
+        width: 80%;
+    }
+
 }
 
 

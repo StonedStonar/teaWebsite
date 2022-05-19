@@ -20,6 +20,55 @@ function addListeners(){
     clearCartButton.addEventListener("click", () => removeAllProducts());
 }
 
+function updateTotalOfProduct(container){
+    console.log(container)
+    console.log("hello")
+    let pricePer = container.querySelector(".pricePer");
+    let amount = container.querySelector(".num-to-change");
+    let totalSpan = container.querySelector(".totalPricePerProduct");
+    let totalPrice = parseFloat(pricePer.innerHTML) * parseFloat(amount.value);
+    totalSpan.innerHTML = totalPrice;
+    
+    let discountPer = container.querySelector(".discountPer");
+    let discountSpan = container.querySelector(".discountPerProduct");
+    let totalDiscount = parseFloat(discountPer.innerHTML) * parseFloat(amount.value);
+    discountSpan.innerHTML = totalDiscount;
+    
+    updateTotalAmounts();
+}
+
+function updateTotalAmounts(){
+    updateTotalSum();
+    updateTotalDiscount();
+}
+
+function updateTotalSum(){
+    let totalPricesCollection = document.getElementsByClassName("totalPricePerProduct");
+    let i = 0;
+    let totalPrice = 0;
+    while(i < totalPricesCollection.length){
+        let totalPriceSpan = totalPricesCollection[i];
+        totalPrice += parseFloat(totalPriceSpan.innerHTML)
+        i++;
+    }
+    let totalPriceTag = document.getElementById("totalSum");
+    totalPriceTag.innerHTML = totalPrice;
+}
+
+function updateTotalDiscount(){
+    let totalDiscountCollecton = document.getElementsByClassName("discountPerProduct");
+    let i = 0;
+    let totalDiscount = 0;
+    while(i < totalDiscountCollecton.length){
+        let totalDiscountSpan = totalDiscountCollecton[i];
+        totalDiscount += parseFloat(totalDiscountSpan.innerHTML)
+        i++;
+    }
+    let totalDiscountTag = document.getElementById("totalDiscount");
+    totalDiscountTag.innerHTML = totalDiscount;
+
+}
+
 /**
  * Removes a product form the cart.
  * @param {*} event the click event.
@@ -45,7 +94,8 @@ function removeProduct(event){
  */
 function hideContainer(productContainer){
     let amount = productContainer.querySelector(".num-to-change");
-    amount.innerHTML = 0;
+    amount.value = 0;
+    updateTotalOfProduct(productContainer);
     productContainer.classList.add("hideProduct");
 }
 
@@ -65,9 +115,11 @@ function removeAllProducts(){
  */
 function increment(event){
     let target = event.target;
-    let numberField = getNumberField(target);
+    let orderedProduct = getOrderedProductContainer(target);
+    let numberField = getNumberField(orderedProduct);
     let value = numberField.value;
     numberField.value = (parseInt(value) + 1);
+    updateTotalOfProduct(orderedProduct);
 }
 
 /**
@@ -76,21 +128,22 @@ function increment(event){
  */
 function decrement(event){
     let target = event.target;
-    let numberField = getNumberField(target);
+    let orderedProduct = getOrderedProductContainer(target);
+    let numberField = getNumberField(orderedProduct);
     let value = numberField.value;
     if(value > 1){
         numberField.value = (parseInt(value) - 1);
+        updateTotalOfProduct(orderedProduct);
     }
 }
 
 /**
- * Gets the number field of the pressed target button.
- * @param {pressed button} target the target that was pressed.
+ * Gets the number field of the target container
+ * @param {container} container the cotnainer.
  * @returns the number field to change.
  */
-function getNumberField(target){
-    let orderedProduct = getOrderedProductContainer(target);
-    return orderedProduct.querySelector(".num-to-change");
+function getNumberField(container){
+    return container.querySelector(".num-to-change");
 }
 
 /**

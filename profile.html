@@ -7,7 +7,6 @@
         <title>Account</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
         <link href = "CSS/profile.css" rel = "stylesheet" type = "text/css">
-        <link href = "CSS/profileMenu.css" rel = "stylesheet" type = "text/css">
     </head>
     <body>
         <header id = "menu">
@@ -147,15 +146,15 @@
                         Main address
                     </p>
                     <p>
-                        Testvegen 12
-                        6015
-                        Ålesund
-                        Norge
+                        <span>
+                        <span>Testvegen</span><span>12</span>
+                        </span>
+                        <span>6015</span>
+                        <span>Ålesund</span>
+                        <span>Norge</span>
                     </p>
                     <button class = "button greenButton" id = "editProfile">
-                        <span>
-                            Edit profile
-                        </span>
+                        Edit profile
                     </button>
                 </div>
                 <div id = "optionsForUser">
@@ -169,16 +168,14 @@
                             </span>
                         </a>
                     </div>
-                    <div class = "profileMenuOptions">
-                        <a href = "#" class = "editPassword" id = "editPassword">
-                            <span class = "editPassword">
-                                Security
-                            </span>
-                            <span class = "editPassword">
-                                Manage your password.
-                            </span>
-                        </a>
-                    </div>
+                    <button class = "profileMenuOptions" id = "editPassword">
+                        <span>
+                            Security
+                        </span>
+                        <span>
+                            Manage your password.
+                        </span>
+                    </button>
                     <div class = "profileMenuOptions">
                         <a href = "contactUs.html">
                             <span>
@@ -190,7 +187,7 @@
                         </a>
                     </div>
                 </div>
-                <div id = "deleteProfile">
+                <form id = "deleteProfile">
                     <h3>
                         Delete profile
                     </h3>
@@ -203,7 +200,7 @@
                     <button class = "button" id = "deleteProfileButton">
                         Delete my profile
                     </button>
-                </div>
+                </form>
             </div>
 
             <div class = "editContainer" id = "editProfileContainer">

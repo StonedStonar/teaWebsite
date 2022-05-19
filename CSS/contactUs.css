@@ -1,37 +1,37 @@
 
-.contactUsOption>a{
+.contactUsOption>div>:first-child{
     display: flex;
-    flex-flow: column nowrap;
-    text-decoration: none;
-    color: var(--main-font-color);
-}
-
-.contactUsOption>a>span:first-child{
     font-weight: bold;
+    margin-top: 1em;
 }
 
-.mainSection > figure > figcaption{
+
+
+.mainSection>figure>figcaption{
     color: var(--figcap-color);
 }
 
-.mainSection > figure>img{
+
+.mainSection>figure>img{
     width: 100%;
 }
 
-.mainSection > figure{
+.mainSection>figure{
     width: fit-content;
     margin: 0;
 }
 
-#contactUsOption{
-    background-color: var(--main-secbg-color);
+#phoneContact>:last-child, #emailContact>:last-child {
+    text-decoration: none;
+    color: var(--main-font-color);
 }
 
+#socialContact{
+    margin-top: 2em;
+}
 
-.socialLogoContainer{
-    display: flex;
-    align-items: center;
-
+#phoneContact>:last-child:hover, #emailContact>:last-child:hover {
+    font-weight: bold;
 }
 
 .socialLogoContainer {
@@ -42,13 +42,12 @@
     margin-top: 1em;
 }
 
-.socialLogoContainer>a {
-    text-decoration: none;
-}
-
 .socialLogoContainer>a>img{
     width: 40px;
+}
 
+.socialLogoContainer>a>img:hover {
+    box-shadow: 0px 0px 4px var(--main-shadow-color);
 }
 
 .mainSection>div:last-child:hover{

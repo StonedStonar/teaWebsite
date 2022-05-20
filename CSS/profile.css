@@ -74,45 +74,8 @@ figure>img{
     color:var(--figcap-color);
 }
 
-/*Edit profile things*/
-.editForm{
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-}
-
-.editProfileContainer>div{
-    min-width: 48%;
-}
-
-.editForm>label{
-    font-size: 1.1em;
-    font-weight: 500;
-}
-
-.editProfileContainer>div>h3{
-    border-bottom: 1px solid var(--main-border-color);
-}
 
 
-.editForm>input{
-    border-radius: 5px;
-    height: 30px;
-    margin-bottom: 1em;
-    height: 20px;
-}
-
-.editForm>input:last-of-type{
-    height: 40px;
-}
-
-
-
-.editContainer>div{
-    background-color: var(--main-bg-color);
-    width: 50%;
-    padding: 1em;
-}
 
 #optionsForUser{
     width: 80%;
@@ -127,7 +90,7 @@ figure>img{
     box-shadow: 0px 4px 4px var(--main-shadow-color);
     border-radius: 5px;
     background-color: var(--main-secbg-color);
-    border: 0.1px solid var(--main-border-color);
+    border: 1px solid var(--main-border-color);
 }
 
 .profileMenuOptions>a, #editPassword{
@@ -155,19 +118,10 @@ figure>img{
     .mainSection>div{
         width: 100%;
     }
-
-    #deleteProfile{
-        min-width: 100%;
-    }
 }
 
 @media screen and (max-width:600px){
     #profileWrapper>div{
         width: 100%;
     }
-
-    .editContainer>div {
-        width: 80%;
-    }
-
 }

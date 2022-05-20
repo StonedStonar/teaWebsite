@@ -7,7 +7,27 @@
 .mainHeaderText{
     grid-column: 1/3;
     margin: 0;
-    
+     
+}
+
+.editForm{
+    font-size: 1.2em;
+}
+
+.editForm>label{
+    font-weight: 500;
+}
+
+.editForm>input:last-of-type{
+    height: 40px;
+}
+
+
+/*Edit profile things*/
+.editForm{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
 }
 
 
@@ -19,8 +39,23 @@
     margin-right: 2em;
     text-decoration: none;
     font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .editForm:last-of-type{
     grid-column: 1/3;
+}
+
+
+
+@media screen and (max-width:600px){
+    #profileWrapper>div{
+        width: 100%;
+    }
+
+    .editContainer>div {
+        width: 80%;
+    }
 }

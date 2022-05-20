@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Account</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/profile.css" rel = "stylesheet" type = "text/css">
         <link href = "CSS/editProfile.css" rel = "stylesheet" type = "text/css">
+        <link href = "CSS/form.css" rel = "stylesheet" type = "text/css">
     </head>
     <body>
         <header id = "menu">
@@ -104,23 +104,25 @@
         </script>
         
         <section class = "mainSection">
-            <h1 class = "mainHeaderText">
+            <h2 class = "mainHeaderText">
                 Edit profile
-            </h1>
+            </h2>
             <div>
                 <div class = "headerOverlay">
                     <h3>Profile details</h3>
                 </div>
                 <form class = "editForm">
-                    <label for="firstName">First name</label>
-                    <input type = "text" id = "firstName" placeholder = "Enter first name" class = "input">
-                    <label for="lastName">Last name</label>
-                    <input type = "text" id = "lastName" placeholder = "Enter last name">
-                    <label for = "email">E-mail</label>
-                    <input type = "email" id = "email" placeholder = "Enter email address">
-                    <label for = "mobileNumber">Mobile number</label>
-                    <input type = "number" id = "mobileNumber" placeholder = "Enter mobile number">
-                    <input type = "submit" value = "Change details" class = "button greenButton">
+                    <label for="firstName" class = "formLabel">First name</label>
+                    <input type = "text" id = "firstName" placeholder = "Enter first name" class = "inputForm">
+                    <label for="lastName" class = "formLabel">Last name</label>
+                    <input type = "text" id = "lastName" placeholder = "Enter last name" class = "inputForm">
+                    <label for = "email" class = "formLabel">E-mail</label>
+                    <input type = "email" id = "email" placeholder = "Enter email address" class = "inputForm">
+                    <label for = "mobileNumber" class = "formLabel">Mobile number</label>
+                    <input type = "number" id = "mobileNumber" placeholder = "Enter mobile number" class = "inputForm">
+                    <span class = "message errorMessage">All the fields must be filled in</span>
+                    <span class = "message">User has now been updated</span>
+                    <input type = "submit" value = "Change details" class = "button greenButton submitButton">
                 </form>
             </div>
 
@@ -129,17 +131,19 @@
                     Address
                 </h3>
                 <form class = "editForm">
-                    <label for = "streetName">Street name</label>
-                    <input type = "text" id = "streetName" placeholder = "Enter street name">
-                    <label for = "houseNumber">House number</label>
-                    <input type = "text" id = "houseNumber" placeholder = "Enter house number">
-                    <label for = "postalCode">Postal code</label>
-                    <input type = "number" id = "postalCode" placeholder = "Enter postal code">
-                    <label for = "city">City</label>
-                    <input type = "text" id = "city"  placeholder = "Enter city">
-                    <label for = "country">Country</label>
-                    <input type = "text" id = "country" placeholder = "Enter country">
-                    <input type = "submit" value = "Update address" class = "button greenButton">
+                    <label for = "streetName" class = "formLabel">Street name</label>
+                    <input type = "text" id = "streetName" placeholder = "Enter street name" class = "inputForm">
+                    <label for = "houseNumber" class = "formLabel">House number</label>
+                    <input type = "number" id = "houseNumber" placeholder = "Enter house number" class = "inputForm">
+                    <label for = "postalCode" class = "formLabel">Postal code</label>
+                    <input type = "number" id = "postalCode" placeholder = "Enter postal code" class = "inputForm">
+                    <label for = "city" class = "formLabel">City</label>
+                    <input type = "text" id = "city"  placeholder = "Enter city" class = "inputForm">
+                    <label for = "country" class = "formLabel">Country</label>
+                    <input type = "text" id = "country" placeholder = "Enter country" class = "inputForm">
+                    <span class = "message errorMessage">All the fields must be filled in</span>
+                    <span class = "message">Address has now been updated</span>
+                    <input type = "submit" value = "Update address" class = "button greenButton submitButton">
                 </form>
             </div>
 
@@ -148,16 +152,17 @@
                     <h3>Edit password</h3>
                 </div>
                 <form class = "editForm">
-                    <label for = "oldPassword">Old password</label>
-                    <span id = "invalidPassword" class = "formHelpText"></span>
-                    <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "input">
-                    <label for = "newPassword">New password</label>
-                    <input type = "password" id = "newPassword" placeholder = "Enter new password">
-                    <span id = "newPasswordHelp">The password must be 8 letters in length</span>
-                    <label for = "twicePassword">Confirm new password</label>
-                    <input type = "password" id = "twicePassword" placeholder = "Enter the new password again">
-                    <span id = "passwordMismatch">The passwords does not match</span>
-                    <input type="submit" value = "Change password" class = "button greenButton">
+                    <label for = "oldPassword" class = "formLabel">Old password</label>
+                    <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "inputForm">
+                    <label for = "newPassword" class = "formLabel">New password</label>
+                    <input type = "password" id = "newPassword" placeholder = "Enter new password" class = "inputForm">
+                    <span id = "newPasswordHelp" class = "message">The password must be 8 letters in length</span>
+                    <label for = "twicePassword" class = "formLabel">Confirm new password</label>
+                    <input type = "password" id = "twicePassword" placeholder = "Enter the new password again" class = "inputForm">
+                    <span id = "passwordMismatch" class = "errorMessage message">The passwords does not match</span>
+                    <span class = "message">The password has now been changed</span>
+                    <span class = "message errorMessage">The old password does not match the set password</span>
+                    <input type="submit" value = "Change password" class = "button greenButton submitButton">
                 </form>
             </div>
             <a href="profile.html" id = "backToProfile" class="button greenButton">

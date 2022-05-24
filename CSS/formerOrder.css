@@ -101,6 +101,11 @@
     margin: 0.5em 0;
 }
 
+.arrowButton{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
 
 .productPicture>img{
     width: 100px;
@@ -125,14 +130,13 @@
 .reviewButton{
     background-color: var(--main-button-color);
     width: 70%;
-    margin: auto 0;
     align-self: center;
     color: var(--main-secondfont-color);
 }
 .returnButton{
     grid-column: 1/3;
     margin: 0.5em 0;
-    width: 50%;
+    width: 100%;
 }
 
 .returnButton, .reviewButton{
@@ -159,9 +163,6 @@
 
 .openContainer{
     max-height: 9999px !important;
-    /*Look at this one later.*/
-    /**border-top: 1px solid black !important;
-    **/
 }
 
 

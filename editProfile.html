@@ -6,7 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Account</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/profile.css" rel = "stylesheet" type = "text/css">
+        <link href = "CSS/editProfile.css" rel = "stylesheet" type = "text/css">
+        <link href = "CSS/form.css" rel = "stylesheet" type = "text/css">
     </head>
     <body>
         <header id = "menu">
@@ -103,104 +104,72 @@
         </script>
         
         <section class = "mainSection">
-            <div id = "profileWrapper">
-                <div id = "profileIntro">
-                    <h2 class = "mainHeaderText">
-                        Your profile page
-                    </h2>
-                    <figure>
-                        <img src = "Images/handsWithTea.jpg" id = "profileStandardPicture" alt = "Two people toasting with metal cups.">
-                        <figcaption>Picture taken from Nathan Dumalo on Nosplash</figcaption>
-                    </figure>
+            <h2 class = "mainHeaderText">
+                Edit profile
+            </h2>
+            <div>
+                <div class = "headerOverlay">
+                    <h3>Profile details</h3>
                 </div>
-                
-                <div class = "personalInformation">
-                    <h3 id = "aboutYouHeader">
-                        About you
-                    </h3>
-                    <p class = "closeText">
-                        First name
-                    </p>
-                    <p class = "closeText">
-                        Test 
-                    </p>
-                    <p class = "closeText">
-                        Last name
-                    </p>
-                    <p class = "closeText">
-                        Testesen
-                    </p>
-                    <p class = "closeText">
-                        Email
-                    </p>
-                    <p class = "closeText">
-                        Test@Testesen.com
-                    </p>
-                    <p class = "closeText">
-                        Phonenumber
-                    </p>
-                    <p class = "closeText">
-                        44609832
-                    </p>
-                    <p>
-                        Main address
-                    </p>
-                    <p>
-                        <span>
-                        <span>Testvegen</span><span>12</span>
-                        </span>
-                        <span>6015</span>
-                        <span>Ålesund</span>
-                        <span>Norge</span>
-                    </p>
-                    <a href = "editProfile.html" class = "button greenButton" id = "editProfile">
-                        Edit profile
-                    </a>
-                </div>
-                <div id = "optionsForUser">
-                    <div class = "profileMenuOptions">
-                        <a href = "formerOrder.html">
-                            <span>
-                                Your orders
-                            </span>
-                            <span>
-                                Overview of orders and returns.
-                            </span>
-                        </a>
-                    </div>
-                    <div class = "profileMenuOptions">
-                        <a href = "contactUs.html">
-                            <span>
-                                Help and contact
-                            </span>
-                            <span>
-                                Contact information & help for the website
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <form id = "deleteProfile">
-                    <h3>
-                        Delete profile
-                    </h3>
-                    <p>
-                        If you want to delete your profile you can do it here. All former orders will be deleted from your profile and should be saved if you need them. These receipts are also needed for return or to use the warranty of a product.
-                    </p>
-                    <p>
-                        After the deletion you cannot login to your account again.
-                    </p>
-                    <button class = "button" id = "deleteProfileButton">
-                        Delete my profile
-                    </button>
+                <form class = "editForm">
+                    <label for="firstName" class = "formLabel">First name</label>
+                    <input type = "text" id = "firstName" placeholder = "Enter first name" class = "inputForm">
+                    <label for="lastName" class = "formLabel">Last name</label>
+                    <input type = "text" id = "lastName" placeholder = "Enter last name" class = "inputForm">
+                    <label for = "email" class = "formLabel">E-mail</label>
+                    <input type = "email" id = "email" placeholder = "Enter email address" class = "inputForm">
+                    <label for = "mobileNumber" class = "formLabel">Mobile number</label>
+                    <input type = "number" id = "mobileNumber" placeholder = "Enter mobile number" class = "inputForm">
+                    <span class = "message errorMessage">All the fields must be filled in</span>
+                    <span class = "message">User has now been updated</span>
+                    <input type = "submit" value = "Change details" class = "button greenButton submitButton">
                 </form>
             </div>
 
-            
+            <div>
+                <h3>
+                    Address
+                </h3>
+                <form class = "editForm">
+                    <label for = "streetName" class = "formLabel">Street name</label>
+                    <input type = "text" id = "streetName" placeholder = "Enter street name" class = "inputForm">
+                    <label for = "houseNumber" class = "formLabel">House number</label>
+                    <input type = "number" id = "houseNumber" placeholder = "Enter house number" class = "inputForm">
+                    <label for = "postalCode" class = "formLabel">Postal code</label>
+                    <input type = "number" id = "postalCode" placeholder = "Enter postal code" class = "inputForm">
+                    <label for = "city" class = "formLabel">City</label>
+                    <input type = "text" id = "city"  placeholder = "Enter city" class = "inputForm">
+                    <label for = "country" class = "formLabel">Country</label>
+                    <input type = "text" id = "country" placeholder = "Enter country" class = "inputForm">
+                    <span class = "message errorMessage">All the fields must be filled in</span>
+                    <span class = "message">Address has now been updated</span>
+                    <input type = "submit" value = "Update address" class = "button greenButton submitButton">
+                </form>
+            </div>
+
+            <div>
+                <div class = "headerOverlay">
+                    <h3>Edit password</h3>
+                </div>
+                <form class = "editForm">
+                    <label for = "oldPassword" class = "formLabel">Old password</label>
+                    <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "inputForm">
+                    <label for = "newPassword" class = "formLabel">New password</label>
+                    <input type = "password" id = "newPassword" placeholder = "Enter new password" class = "inputForm">
+                    <span id = "newPasswordHelp" class = "message">The password must be 8 letters in length</span>
+                    <label for = "twicePassword" class = "formLabel">Confirm new password</label>
+                    <input type = "password" id = "twicePassword" placeholder = "Enter the new password again" class = "inputForm">
+                    <span id = "passwordMismatch" class = "errorMessage message">The passwords does not match</span>
+                    <span class = "message">The password has now been changed</span>
+                    <span class = "message errorMessage">The old password does not match the set password</span>
+                    <input type="submit" value = "Change password" class = "button greenButton submitButton">
+                </form>
+            </div>
+            <a href="profile.html" id = "backToProfile" class="button greenButton">
+                Back to profile
+            </a>
 
         </section>
-
-        <script src = "javascript/profile.js"></script>
-
         <footer id= "footer">
             <div class="sectionFooter">
                 <a href = "index.html" id="footerLogo">

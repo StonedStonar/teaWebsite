@@ -1,0 +1,29 @@
+.mainHeaderText{
+    grid-column: 1/3;
+}
+
+.mainSection{
+    display: block;
+}
+
+.preview{
+    display: none;
+}
+
+#productCardPreview{
+    display: initial;
+}
+
+.card-container{
+    grid-template-columns: 1fr;
+}
+
+#mainEditDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#editProductForm{
+    display: flex;
+    flex-flow: column;
+}

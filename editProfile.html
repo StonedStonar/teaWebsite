@@ -121,7 +121,7 @@
                     <label for = "mobileNumber" class = "formLabel">Mobile number</label>
                     <input type = "number" id = "mobileNumber" placeholder = "Enter mobile number" class = "inputForm">
                     <span class = "message errorMessage">All the fields must be filled in</span>
-                    <span class = "message">User has now been updated</span>
+                    <span class = "message okMessage">User details has now been updated</span>
                     <input type = "submit" value = "Change details" class = "button greenButton submitButton">
                 </form>
             </div>
@@ -142,7 +142,7 @@
                     <label for = "country" class = "formLabel">Country</label>
                     <input type = "text" id = "country" placeholder = "Enter country" class = "inputForm">
                     <span class = "message errorMessage">All the fields must be filled in</span>
-                    <span class = "message">Address has now been updated</span>
+                    <span class = "message okMessage">Address has now been updated</span>
                     <input type = "submit" value = "Update address" class = "button greenButton submitButton">
                 </form>
             </div>
@@ -153,14 +153,14 @@
                 </div>
                 <form class = "editForm">
                     <label for = "oldPassword" class = "formLabel">Old password</label>
-                    <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "inputForm">
+                    <input type = "password" id = "oldPassword" placeholder = "Enter old password" class = "inputForm" name = "oldPassword">
                     <label for = "newPassword" class = "formLabel">New password</label>
-                    <input type = "password" id = "newPassword" placeholder = "Enter new password" class = "inputForm">
+                    <input type = "password" id = "newPassword" placeholder = "Enter new password" class = "inputForm" name = "password">
                     <span id = "newPasswordHelp" class = "message">The password must be 8 letters in length</span>
                     <label for = "twicePassword" class = "formLabel">Confirm new password</label>
-                    <input type = "password" id = "twicePassword" placeholder = "Enter the new password again" class = "inputForm">
+                    <input type = "password" id = "twicePassword" placeholder = "Enter the new password again" class = "inputForm" name = "secondPassword">
                     <span id = "passwordMismatch" class = "errorMessage message">The passwords does not match</span>
-                    <span class = "message">The password has now been changed</span>
+                    <span class = "message okMessage">The password has now been changed</span>
                     <span class = "message errorMessage">The old password does not match the set password</span>
                     <input type="submit" value = "Change password" class = "button greenButton submitButton">
                 </form>
@@ -179,9 +179,7 @@
                     <span>
                         For tea lovers
                     </span>
-                </a>
-    
-                
+                </a>                
                 <div id="addressFooter">
                     <span>
                         Contact Information

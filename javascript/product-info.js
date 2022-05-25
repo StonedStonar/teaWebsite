@@ -96,8 +96,7 @@ function makeReview(event) {
  * @param {*} node the thing we want to open. 
  * @param {*} parentNode the parent container.
  */
-function makeContainerAppear(node, parentNode) {
-
+function makeProductContainerAppear(node, parentNode) {
     let logo;
     if(parentNode != null){
         logo = parentNode.querySelector(".logo");

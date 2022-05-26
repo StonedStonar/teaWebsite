@@ -179,6 +179,10 @@ body{
     /*box-shadow: 0px 2px 3px #564125;*/
 }
 
+.logoContainer:hover {
+    cursor:pointer;
+}
+
 #searchForm>form>input{
     border: none;
     height: 100%;

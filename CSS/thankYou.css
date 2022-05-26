@@ -1,0 +1,12 @@
+#mainContent>figure>figcaption{
+    color: gray;
+}
+
+#mainContent>figure{
+    width: 100%;
+    margin: 0;
+}
+
+#mainContent>figure>img{
+    width: 100%;
+}

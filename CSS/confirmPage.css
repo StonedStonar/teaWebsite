@@ -1,0 +1,32 @@
+
+
+.infoButtonWrapper {
+    height: 100px;
+    background: var(--main-bg-color);
+    box-shadow: 0px 4px 4px var(--second-shadow-color);
+    text-decoration: none;
+    border-radius: 5px;
+    width: 70%;
+    color: var(--main-font-color);
+    font-weight: 700;
+    margin: 1em auto;
+    padding: 0.5em;
+}
+
+#infoShower {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+#editButton {
+    justify-self: flex-end;
+    text-decoration: none;
+    height: fit-content;
+    color: var(--main-font-color);
+}
+
+#editButton:hover {
+    cursor: pointer;
+}

@@ -29,3 +29,16 @@
     margin-top: 0.5em;
     color: red;
 }
+
+.editForm>deliverySelect {
+    position: relative;
+    font-family: Arial;
+  }
+  
+.deliverySelect select {
+    display: none;
+}
+  
+.select-selected {
+    background-color: DodgerBlue;
+}

@@ -6,7 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Thank you-page</title>
         <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/thankYou.css" rel = "stylesheet" type="text/css">
+        <link href = "CSS/confirmPage.css" rel = "stylesheet" type="text/css">
+        <link href = "CSS/form.css" rel = "stylesheet" type="text/css">
     </head>
     <body>
         <header id = "menu">
@@ -104,9 +105,48 @@
 
         
         <section class = "mainSection" id = "mainContent">
-            <div>
-                hello :-)
+            <div class = "myInfo">
+                <h2>
+                    My info
+                </h2>
+                <div class = "infoButtonWrapper">
+                    <div id = "infoShower">
+                        <div>
+                            <div>
+                                name
+                            </div>
+                            <div>
+                                Address line1
+                            </div>
+                            <div>
+                                address line2
+                            </div>
+                        </div>
+                        <a href="editProfil.html" id = "editButton">
+                            Edit
+                        </a>
+                    </div>
+                </div>
             </div>
+            <form class = "editForm">
+                <label for = "chooseDeliveryMethod" class = "formLabel">choose delivery method</label>
+                        <select type = "text" id = "deliveryMethod" placeholder = "meh" class = "inputForm">
+                            <option value="0"> </option>
+                            <option value="0"> Postnord</option>
+                            <option value="0"> brevdue</option>
+                            <option value="0"> Posten</option>
+                        </select>
+                    </div>
+                    <label for = "choosePaymentMethod" class = "formLabel">choose payment method</label>
+                    <select type = "text" id = "paymentMethod" placeholder = "meh" class = "inputForm">
+                        <option value="0"> </option>
+                        <option value="0"> Klarna</option>
+                        <option value="0"> Vipps</option>
+                        <option value="0"> Your mom</option>
+                    </select>
+                </div>
+            </form>
+            
         </section>
 
 

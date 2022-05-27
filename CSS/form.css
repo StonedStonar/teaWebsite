@@ -30,15 +30,9 @@
     color: red;
 }
 
-.editForm>deliverySelect {
-    position: relative;
-    font-family: Arial;
-  }
-  
-.deliverySelect select {
-    display: none;
-}
-  
-.select-selected {
-    background-color: DodgerBlue;
+
+.formOptions{
+    border-radius: 5px;
+    height: 30px;
+    font-size: 1em;
 }

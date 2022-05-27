@@ -18,6 +18,7 @@ function addListeners(){
     }
     let clearCartButton = document.getElementById("clearCartButton");
     clearCartButton.addEventListener("click", () => removeAllProducts());
+    updateTotalAmounts();
 }
 
 function updateTotalOfProduct(container){

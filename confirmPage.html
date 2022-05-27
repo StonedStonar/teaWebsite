@@ -1,270 +1,307 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Thank you-page</title>
-        <link href = "CSS/basic.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/confirmPage.css" rel = "stylesheet" type="text/css">
-        <link href = "CSS/form.css" rel = "stylesheet" type="text/css">
-    </head>
-    <body>
-        <header id = "menu">
-            <div id = "hamburgerMenu" class = "mobileElement" onclick = "openMenu()">
-                <span class = "logoContainer">
-                    <img src = "#" srcset = "svg/Menu.svg" alt = "Hamburger menu" class = "svg logo">
-                    <span>
-                        Menu
-                    </span>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Confirmation</title>
+    <link href="CSS/basic.css" rel="stylesheet" type="text/css">
+    <link href="CSS/confirmPage.css" rel="stylesheet" type="text/css">
+    <link href="CSS/form.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header id="menu">
+        <div id="hamburgerMenu" class="mobileElement" onclick="openMenu()">
+            <span class="logoContainer">
+                <img src="#" srcset="svg/Menu.svg" alt="Hamburger menu" class="svg logo">
+                <span>
+                    Menu
                 </span>
-            </div>
-            <div id = "search" onclick = "openSearch()">
-                <span class = "logoContainer">
-                    <img src = "#" srcset = "svg/search.svg" alt = "Looking glass logo" class = "svg logo">
-                    <span>
-                        Search
-                    </span>
-                </span>
-            </div>
-            <a href = "index.html" id = "companyHeader">
-                <h1>
-                    NORTE
-                </h1>
-            </a>
-            <nav id = "sideMenu">
-                <span id = "exit" class = "mobileElement" onclick = "closeMenu()">
-                    <img src = "#" srcset = "svg/cross.svg" alt = "Image of a cross logo" class = "svg logo">
-                </span>
-                <a href = "products.html" class = "menuOption">
-                    Products
-                </a>
-                <a href = "products.html" class = "menuOption">
-                    Sale
-                </a>
-                <a href = "contactUs.html" class = "menuOption">
-                    Contact us
-                </a>
-                <a href = "aboutUs.html" class = "menuOption">
-                     About us
-                </a> 
-            </nav>
-            <form id = "searchForm">
-                <label for = "productSearch">
+            </span>
+        </div>
+        <div id="search" onclick="openSearch()">
+            <span class="logoContainer">
+                <img src="#" srcset="svg/search.svg" alt="Looking glass logo" class="svg logo">
+                <span>
                     Search
-                </label>
-                <img src = "#" srcset = "svg/search.svg" alt = "Search button" class = "svg logo">
-                <input type = "search" id = "productSearch" name="productSearch">
-            </form>
-            <div id = "cartMenu">
-                <a href = "cart.html" class = "logoContainer">
-                    <img src = "#" srcset = "svg/shoppingcart.svg" alt = "A shoppingcart" class = "svg logo">
-                    <span>
-                        Cart
-                    </span>
-                </a>
-            </div>
-            <div id = "profileMenu" onmousedown = "openProfileMenu" >
-                <span class = "logoContainer" onclick = "openProfileMenu()">
-                    <img src = "#" srcset = "svg/profile.svg" alt = "A human looking logo" class = "svg logo">
-                    <span>
-                        Profile
-                    </span>
                 </span>
-                <div id = "profileMenuOptions">
-                    <div >
-                        <div id = "profileTriangle">
+            </span>
+        </div>
+        <a href="index.html" id="companyHeader">
+            <h1>
+                NORTE
+            </h1>
+        </a>
+        <nav id="sideMenu">
+            <span id="exit" class="mobileElement" onclick="closeMenu()">
+                <img src="#" srcset="svg/cross.svg" alt="Image of a cross logo" class="svg logo">
+            </span>
+            <a href="products.html" class="menuOption">
+                Products
+            </a>
+            <a href="products.html" class="menuOption">
+                Sale
+            </a>
+            <a href="contactUs.html" class="menuOption">
+                Contact us
+            </a>
+            <a href="aboutUs.html" class="menuOption">
+                About us
+            </a>
+        </nav>
+        <form id="searchForm">
+            <label for="productSearch">
+                Search
+            </label>
+            <img src="#" srcset="svg/search.svg" alt="Search button" class="svg logo">
+            <input type="search" id="productSearch" name="productSearch">
+        </form>
+        <div id="cartMenu">
+            <a href="cart.html" class="logoContainer">
+                <img src="#" srcset="svg/shoppingcart.svg" alt="A shoppingcart" class="svg logo">
+                <span>
+                    Cart
+                </span>
+            </a>
+        </div>
+        <div id="profileMenu" onmousedown="openProfileMenu">
+            <span class="logoContainer" onclick="openProfileMenu()">
+                <img src="#" srcset="svg/profile.svg" alt="A human looking logo" class="svg logo">
+                <span>
+                    Profile
+                </span>
+            </span>
+            <div id="profileMenuOptions">
+                <div>
+                    <div id="profileTriangle">
 
-                        </div>
                     </div>
-                    <div class = "profileOption">
-                        <a href = "Login.html">
-                            Login
-                        </a>
-                    </div>
-                    <div class = "profileOption">
-                        <a href = "profile.html">
-                            My profile
-                        </a>
-                    </div>
-                    <div class = "profileOption">
-                        <a href = "formerOrder.html">
-                            My orders
-                        </a>
-                    </div>
-                    <div class = "profileOption">
-                        <a href="index.html">
-                            Logout
-                        </a>
-                    </div>
-                </div>   
-            </div> 
-        </header>
-        <script src = "javascript/menu.js">   
-        </script>
+                </div>
+                <div class="profileOption">
+                    <a href="Login.html">
+                        Login
+                    </a>
+                </div>
+                <div class="profileOption">
+                    <a href="profile.html">
+                        My profile
+                    </a>
+                </div>
+                <div class="profileOption">
+                    <a href="formerOrder.html">
+                        My orders
+                    </a>
+                </div>
+                <div class="profileOption">
+                    <a href="index.html">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
 
-        
-        <section class = "mainSection" id = "mainContent">
-            <div class = "myInfo">
-                <h2>
-                    My info
-                </h2>
-                <div class = "infoButtonWrapper">
-                    <div id = "infoShower">
+
+    <section class="mainSection" id="mainContent">
+        <div id="orderWrapper">
+            <h2 class="mainHeaderText">
+                My info
+            </h2>
+            <div class="infoButtonWrapper">
+                <div id="infoShower">
+                    <div>
+                        <p>
+                            <span>Bjarne</span> <span>Bjarnesen</span>
+                        </p>
+                        <p>
+                            <span>Testvegen</span> <span>12</span>
+                        </p>
+                        <p>
+                            <span> 6015</span> <span>Ålesund</span>
+                        </p>
+                        <p>
+                            Norge
+                        </p>
+                    </div>
+                    <a href="editProfile.html" id="editButton">
+                        Edit
+                    </a>
+                </div>
+            </div>
+
+            <form class="editForm" id = "orderForm">
+                <h3 class="headerOptions">
+                    Choose delivery-method
+                </h3>
+
+
+                <select type="text" class="formOptions" id = "selectDelivery" required name = "deliveryMethod">
+                    <option value="0" disabled selected> Select delivery-method</option>
+                    <option value = "1" class = "option" label = "Postnord - 56,-">56</option>
+                    <option value = "2" class = "option" label = "Posten - 120,-">120</option>
+                    <option value = "3" class = "option" label = "Brevdue - 0,-">0</option>
+                </select>
+
+                <h3 class="headerOptions">
+                    Choose payment-method
+                </h3>
+                <select type="text" class="formOptions" id = "selectPayment" required name = "paymentMethod">
+                    <option value="0" disabled selected> Select payment-method</option>
+                    <option value = "1" class = "option" label = "Klarna - 56,-">56</option>
+                    <option value = "2" class = "option" label = "Vipps - 120,-">120</option>
+                    <option value = "3" class = "option" label = "Your mom  - 0,-">0</option>
+                </select>
+                <div class="myInfo">
+                    <h2>
+                        Confirm
+                    </h2>
+                    <div class="confirmationAndInfo">
                         <div>
                             <div>
-                                name
+                                Product cost: <span id = "productCost" class = "costs">200</span>,-
                             </div>
                             <div>
-                                Address line1
+                                Shipping: <span id = "shippingCost" class = "costs">0</span>,-
                             </div>
                             <div>
-                                address line2
+                                Payment: <span id = "paymentCost" class = "costs">0</span>,-
+                            </div>
+                            <div id = "subTotal">
+                                Subtotal: <span id = "TotalCost">0</span>,-
                             </div>
                         </div>
-                        <a href="editProfil.html" id = "editButton">
-                            Edit
-                        </a>
+                        <button id="confirmButton" class="button greenButton">
+                            Confirm order
+                        </button>
                     </div>
                 </div>
-            </div>
-            <form class = "editForm">
-                <label for = "chooseDeliveryMethod" class = "formLabel">choose delivery method</label>
-                        <select type = "text" id = "deliveryMethod" placeholder = "meh" class = "inputForm">
-                            <option value="0"> </option>
-                            <option value="0"> Postnord</option>
-                            <option value="0"> brevdue</option>
-                            <option value="0"> Posten</option>
-                        </select>
-                    </div>
-                    <label for = "choosePaymentMethod" class = "formLabel">choose payment method</label>
-                    <select type = "text" id = "paymentMethod" placeholder = "meh" class = "inputForm">
-                        <option value="0"> </option>
-                        <option value="0"> Klarna</option>
-                        <option value="0"> Vipps</option>
-                        <option value="0"> Your mom</option>
-                    </select>
-                </div>
+
             </form>
-            
-        </section>
+        </div>
+
+
+    </section>
 
 
 
-        <footer id= "footer">
-            <div class="sectionFooter">
-                <a href = "index.html" id="footerLogo">
+    <footer id="footer">
+        <div class="sectionFooter">
+            <a href="index.html" id="footerLogo">
+                <span>
+                    NORTE
+                </span>
+                <span>
+                    For tea lovers
+                </span>
+            </a>
+
+
+            <div id="addressFooter">
+                <span>
+                    Contact Information
+                </span>
+                <span>
+                    NORTE AS,
+                </span>
+                <span>
+                    LegitAddress 69,
+                </span>
+                <span>
+                    6015 Ålesund
+                </span>
+            </div>
+            <div id="contactInformation">
+                <a href="tel:82097082">
                     <span>
-                        NORTE
-                    </span>
-                    <span>
-                        For tea lovers
+                        820 97 082
                     </span>
                 </a>
-    
-                
-                <div id="addressFooter">
+                <a href="mailto:norte@professionalemail.com">
                     <span>
-                        Contact Information
+                        norte@professionalemail.com
                     </span>
+                </a>
+            </div>
+        </div>
+        <div class="sectionFooter" id="pressButton">
+            <a href="contactUs.html" class="buttonFooter">
+                <span>
+                    Home
+                </span>
+            </a>
+            <a href="aboutUs.html" class="buttonFooter">
+                <span>
+                    About us
+                </span>
+            </a>
+            <a href="login.html" class="buttonFooter">
+                <span>
+                    Log in
+                </span>
+            </a>
+
+        </div>
+        <div class="sectionFooter">
+            <div class="rightFooterDiv">
+                <a href="https://twitter.com/">
+                    <img src="Images/twitterLogoBlack.png" alt="twitter logo" class="logoSocials">
+                </a>
+                <a href="https://instagram.com/">
+                    <img src="Images/instagramLogo.png" alt="Instagram logo" class="logoSocials">
+                </a>
+                <a href="https://facebook.com/">
+                    <img src="Images/facebookLogo.png" alt="Facebook logo" class="logoSocials">
+                </a>
+            </div>
+            <div class="rightFooterDiv" id="companies">
+                <span>
+                    We cooperate with:
+                </span>
+                <a href="https://www.yogitea.com/nb/">
                     <span>
-                        NORTE AS,
+                        Yogi Tea
                     </span>
+                </a>
+                <a href="https://www.ahmadtea.com/">
                     <span>
-                        LegitAddress 69,
-                    </span> 
-                    <span>
-                        6015 Ålesund
+                        Ahmad Tea
                     </span>
+                </a>
+                <a href="https://www.clipper-teas.com/">
+                    <span>
+                        Clipper Tea
+                    </span>
+                </a>
+                <a href="https://www.pukkaherbs.com/no/no">
+                    <span>
+                        Pukka Tea
+                    </span>
+                </a>
+            </div>
+            <div class="rightFooterDiv" id="donators">
+                <span>
+                    Feel free to support
+                </span>
+                <div id="fairtradeLogo">
+                    <a href="https://www.fairtrade.no/">
+                        <img src="Images/FairtradeLogo.jpg" alt="Fairtrade link" class="logoSupport">
+                    </a>
                 </div>
-                <div id="contactInformation">
-                    <a href="tel:82097082">
-                        <span>
-                            820 97 082
-                        </span>
-                     </a>   
-                    <a href = "mailto:norte@professionalemail.com">
-                        <span>
-                            norte@professionalemail.com
-                        </span>
+                <div id="amnestyLogo">
+                    <a href="https://amnesty.no/">
+                        <img src="Images/Amnesty_logo_RGB_yellow.png" alt="Amnesty link" class="logoSupport">
                     </a>
                 </div>
             </div>
-            <div class="sectionFooter" id = "pressButton">
-                <a href="contactUs.html" class="buttonFooter">
-                    <span>
-                        Home
-                    </span>
-                </a>
-                <a href="aboutUs.html" class="buttonFooter">
-                    <span>
-                        About us
-                    </span>
-                </a>
-                <a href="login.html" class="buttonFooter">
-                    <span>
-                        Log in
-                    </span>
-                </a>
-                
-            </div>
-            <div class="sectionFooter">
-                <div class="rightFooterDiv">
-                    <a href="https://twitter.com/">
-                        <img src="Images/twitterLogoBlack.png" alt="twitter logo" class = "logoSocials">
-                    </a>
-                    <a href="https://instagram.com/">
-                        <img src="Images/instagramLogo.png" alt="Instagram logo" class = "logoSocials">
-                    </a>
-                    <a href="https://facebook.com/">
-                        <img src="Images/facebookLogo.png" alt="Facebook logo" class = "logoSocials">
-                    </a>
-                </div>
-                <div class="rightFooterDiv" id="companies">
-                    <span>
-                        We cooperate with:
-                    </span>
-                    <a href="https://www.yogitea.com/nb/">
-                        <span>
-                            Yogi Tea
-                        </span>
-                    </a>
-                    <a href="https://www.ahmadtea.com/">
-                        <span>
-                            Ahmad Tea
-                        </span>
-                    </a>
-                    <a href="https://www.clipper-teas.com/">
-                        <span>
-                            Clipper Tea
-                        </span>
-                    </a>
-                    <a href="https://www.pukkaherbs.com/no/no">
-                        <span>
-                            Pukka Tea
-                        </span>
-                    </a>
-                </div>
-                <div class="rightFooterDiv" id="donators">
-                    <span>
-                        Feel free to support
-                    </span>
-                    <div id="fairtradeLogo">
-                        <a href="https://www.fairtrade.no/">
-                            <img src="Images/FairtradeLogo.jpg" alt="Fairtrade link" class="logoSupport">
-                        </a>
-                    </div>
-                    <div id="amnestyLogo">
-                        <a href="https://amnesty.no/">
-                            <img src="Images/Amnesty_logo_RGB_yellow.png" alt="Amnesty link" class="logoSupport">
-                        </a>
-                    </div>
-                </div>
-            
-            </div>
-    
-        </footer>
-    </body>
 
-    
+        </div>
+
+    </footer>
+</body>
+<script src="javascript/menu.js"> </script>
+<script src="javascript/confirmation.js"> </script>
+
 </html>

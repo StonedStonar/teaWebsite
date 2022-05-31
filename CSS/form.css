@@ -30,7 +30,6 @@
     color: red;
 }
 
-<<<<<<< HEAD
 .okMessage{
     color: green;
 }
@@ -38,11 +37,9 @@
 .hiddenInput{
     display: none;
 }
-=======
 
 .formOptions{
     border-radius: 5px;
     height: 30px;
     font-size: 1em;
 }
->>>>>>> d30d7dd2af5b25f8105ee4a1458c24d02c9b5d41

@@ -84,7 +84,6 @@
                         </div>
                     </div>
                     <div class="profileOption">
-                        <a href="Login.html">
                             Login
                         </a>
                     </div>
@@ -114,7 +113,7 @@
             Edit product page
         </h2>
         <div id = "mainEditDiv">
-            <form id = "editProductForm" class = "editForm" action="#">
+            <form id = "editProductForm" class = "editForm">
                 <button class = "button greenButton" id = "switchViewButton" type = "button">
                     Switch view
                 </button>
@@ -144,32 +143,35 @@
                 </p>
                 <label for = "previewBox" class = "formLabel">Preview</label>
                 <input type = "checkbox" id = "previewBox" class = "button greenButton submitButton" name = "previewProduct">
-                <input type = "submit" class = "button greenButton submitButton" value = "Submit">
+                <span class = "message">
+                    Normal message.
+                </span>
+                <span class = "errorMessage message">
+                    Error message.
+                </span>
+                <input type = "submit" class = "button greenButton submitButton" value = "Submit changes">
             </form>
             <div id = "productInfoPreview" class = "preview">
-                <div id="productContainer">
-                    <div id="product-info">
-                        <h2 class="mainHeaderText">
+                <div id = "productContainer">
+                    <div id= "product-info">
+                        <h2  class="mainHeaderText">
                             Troll Green Tea
                         </h2>
                         <figure>
-                            <img src="Images/greentea.jpg" id="pictureOfTeaType" alt="Troll Green Tea Picture">
+                            <img src = "Images/greentea.jpg" id = "pictureOfTeaType" alt="Troll Green Tea Picture">
                             <figcaption>Picture taken from Nosplash</figcaption>
                         </figure>
-
                     </div>
 
                     <form id="addToCartContainer">
                         <div id="price-and-review">
                             <div class="product-info-price">
                                 <div>
-                                    <span class="former-price">199kr</span>
-                                </div>
-                                <div>
-                                    <span class="now-price">169kr</span>
+                                    <span class = "normal-price">139</span>
+                                    <span class="normal-price"> kr</span>
                                 </div>
                             </div>
-                            <a class="star-rating" href="#productReviews">
+                            <a class="star-rating" href = "#productReviews">
                                 <div class="review-star-rating">
                                     <span class="star">&#9734;</span>
                                     <span class="star">&#9734;</span>
@@ -177,28 +179,28 @@
                                     <span class="star">&#9734;</span>
                                     <span class="star">&#9734;</span>
                                 </div>
-                                <span class="inStock">(
-                                    <span id="amount-of-reviews">66666</span>
+                                <span class = "inStock">(
+                                    <span id="amount-of-reviews">666</span>
                                     )
                                 </span>
                             </a>
                         </div>
 
-                        <button type="submit" class="Add-To-Cart greenButton button">
+                        <button type = "submit" class="Add-To-Cart greenButton button">
                             ADD TO CART
                         </button>
 
                         <div class="amount">
                             <div class="amount-to-add">
                                 <button class="minus-button" type="button">-</button>
-                                <input class="num-to-change" value="1" name="amountOfProduct">
+                                <input class="num-to-change" value="1" name = "amountOfProduct">
                                 <button class="plus-button" type="button">+</button>
                             </div>
 
                             <div class="amount-on-storage">
                                 <span class="circle"></span>
                                 <span class="amount-of-product">170</span>
-                                <span id="storageStatus">+</span>
+                                <span id = "storageStatus">+</span>
                                 <span> on storage</span>
                             </div>
                         </div>
@@ -207,38 +209,31 @@
 
                 <div class="drop-down-meny">
                     <div class="dropdown">
-                        <div id="descriptionContainer">
-                            <span>
-                                Description
-                            </span>
-                            <img src="#" srcset="svg/Arrow-for-dropdown-meny.svg" alt="A arrow head"
-                                class="svg logo rotatableLogo">
+                        <div id = "descriptionContainer">
+                        <span>
+                            Description
+                        </span>
+                            <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo rotatableLogo">
                         </div>
-                        <div id="description">
+                        <div id = "description">
                             <h4>
                                 Chuck Norris doesn’t wear a watch. He decides what time it is.
                             </h4>
                             <p>
-                                Chuck Norris’ roundhouse kick is so powerful, it can be seen from outer space by the
-                                naked eye.
+                                Chuck Norris’ roundhouse kick is so powerful, it can be seen from outer space by the naked eye.
                             </p>
 
                         </div>
                     </div>
 
                     <div class="dropdown">
-                        <div id="ingredientsContainer">
+                        <div id = "ingredientsContainer" >
                             <span>Ingredients</span>
-                            <img src="#" srcset="svg/Arrow-for-dropdown-meny.svg" alt="A arrow head"
-                                class="svg logo rotatableLogo">
+                            <img src = "#" srcset = "svg/Arrow-for-dropdown-meny.svg" alt = "A arrow head" class = "svg logo rotatableLogo">
                         </div>
-                        <div id="ingredients">
-                            <h4>
-                                Hmmm Chuck you say? hmmm
-                            </h4>
+                        <div id = "ingredients">
                             <p>
-                                Chuck Norris once went skydiving, but promised never to do it again. One Grand Canyon is
-                                enough.
+                                Chuck Norris once went skydiving, but promised never to do it again. One Grand Canyon is enough.
                             </p>
                         </div>
                     </div>
@@ -248,15 +243,18 @@
                 <div class = "card-container">
                     <a href="product-info.html" class="card">
                         <div class="card-header">
-                            <img src="Images/greentea-cropped.jpg" alt="Tea card picture">
+                            <img src="images/greentea-cropped.jpg" alt="Tea card picture">
                             <div class="card-title">Blackberry Leaf Tea</div>
                             <div class="card-description">Tea ingredients from the nature of norway</div>
                         </div>
-    
+
                         <div class="card-body">
                             <div class="price">
                                 <p class="now-price">169kr</p>
                                 <p class="former-price">199kr</p>
+                            </div>
+                            <div class="price">
+                                <p class="now-price normal-price">199kr</p>
                             </div>
                             <div class="rating-on-cards">
                                 <span class="star">&#9734;</span>
@@ -264,8 +262,8 @@
                                 <span class="star">&#9734;</span>
                                 <span class="star">&#9734;</span>
                                 <span class="star">&#9734;</span>
-                                <span class="average-stars">1</span>
-                                <span>(<span class="average-stars-on-card">3</span>)</span>
+                                <span class="average-stars">2</span>
+                                <span>(<span class="average-stars-on-card">69</span>)</span>
                             </div>
                             <form>
                                 <button type="submit" class="add-to-cart greenButton button">ADD TO CART</button>
@@ -275,11 +273,12 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <script src="javascript/product-info.js"></script>
     <script src="javascript/products.js"></script>
-    <script src = "javascript/editProfile.js"></script>
+    <script src="javascript/editProfile.js"></script>
     <footer id="footerWrapper">
         <div id="footer">
             <div class="sectionFooter">
@@ -414,7 +413,6 @@
 
             </div>
         </div>
-
     </footer>
 
 </body>

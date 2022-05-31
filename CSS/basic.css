@@ -83,8 +83,9 @@ body{
     border-radius: 0.5em;
     height: 40px;
     border: none;
+  
 }
-
+ 
 .greenButton{
     background-color: var(--main-button-color);
     color: var(--main-secondfont-color);
@@ -182,6 +183,10 @@ body{
     /*box-shadow: 2px 2px var(--main-shadow-color);
     /*border-radius: 5px;*/
     /*box-shadow: 0px 2px 3px #564125;*/
+}
+
+.logoContainer:hover {
+    cursor:pointer;
 }
 
 #searchForm>form>input{

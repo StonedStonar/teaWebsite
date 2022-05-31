@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cart</title>
+    <title>Confirmation</title>
     <link href="CSS/basic.css" rel="stylesheet" type="text/css">
-    <link href="CSS/cart.css" rel="stylesheet" type="text/css">
+    <link href="CSS/confirmPage.css" rel="stylesheet" type="text/css">
+    <link href="CSS/form.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -99,164 +101,91 @@
                 </div>
             </div>
         </div>
-
     </header>
-    <script src="javascript/menu.js">
-    </script>
-    <section class="mainSection">
-        <form>
-            <div id="headerCart">
-                <h2 class="mainHeaderText">
-                    Cart
-                </h2>
-                <button class="button" id = "clearCartButton">
-                    Clear cart
-                </button>
-            </div>
-            <div id="orderedProductContainer">
-                <p class = "topItem mobileText">
-                    Products
-                </p>
-                <p class="topItem">
-                    Product
-                </p>
-                <p class="topItem">
-                    Amount
-                </p>
-                <p class="topItem">
-                    Total cost
-                </p>
-                <p class="topItem">
-                    Discount
-                </p>
-                <p class="topItem">
-                    Remove
-                </p>
-                <div class="orderedProduct">
-                    <div class = "productInfo">
-                        <img class="productImage" src="Images/greentea-cropped.jpg" alt="Picutre of greentea">
-                        <div class="productDetails">
-                            <p class="productName">
-                                Green tea
-                            </p>
-                            <p>
-                                Procuded by <span>Yo Papa</span>
-                            </p>
-                            <p class = "productID">
-                                Product ID: <span>1</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class = "priceAndAmount">
-                        <div class="amount-to-add">
-                            <button class="minus-button" type="button">-</button>
-                            <input class="num-to-change" value="1">
-                            <button class="plus-button" type="button">+</button>
-                        </div>
-                        <div class = price>
-                            <p class = "pricePer">
-                                499,00
-                            </p>
-                            <p>
-                                <span class = "mobileText">
-                                    Total
-                                </span>
-                                <span class = "totalPricePerProduct">
-                                    499,00
-                                </span>
-                            </p>
-                            <p class = "discountPer">
-                                10,00
-                            </p>
-                            <p>
-                                <span class = "mobileText">
-                                    Discount
-                                </span>
-                                <span class = "discountPerProduct">
-                                    10,00
-                                </span>
-                            </p>
-                        </div>
-                        <button class = "removeButton" type = "button">
-                            <img src="#" srcset="svg/cross.svg" alt="A cross logo for removal of product" class="logo">
-                        </button>
-                    </div>
-                </div>
-                <div class="orderedProduct">
-                    <div class = "productInfo">
-                        <img class="productImage" src="Images/greentea-cropped.jpg" alt="Picutre of greentea">
-                        <div class="productDetails">
-                            <p class="productName">
-                                Green tea
-                            </p>
-                            <p>
-                                Procuded by <span>Yo Papa</span>
-                            </p>
-                            <p class = "productID">
-                                Product ID: <span>2</span>
-                            </p>
     
-                        </div>
+
+
+    <section class="mainSection" id="mainContent">
+        <div id="orderWrapper">
+            <h2 class="mainHeaderText">
+                My info
+            </h2>
+            <div class="infoButtonWrapper">
+                <div id="infoShower">
+                    <div>
+                        <p>
+                            <span>Bjarne</span> <span>Bjarnesen</span>
+                        </p>
+                        <p>
+                            <span>Testvegen</span> <span>12</span>
+                        </p>
+                        <p>
+                            <span> 6015</span> <span>Ålesund</span>
+                        </p>
+                        <p>
+                            Norge
+                        </p>
                     </div>
-                    <div class = "priceAndAmount">
-                        <div class="amount-to-add">
-                            <button class="minus-button" type = "button">-</button>
-                            <input class="num-to-change" value = "2">
-                            <button class="plus-button" type = "button">+</button>
-                        </div>
-                        <div class = price>
-                            <p class = "pricePer">
-                                499,00
-                            </p>
-                            <p>
-                                <span class = "mobileText">
-                                    Total
-                                </span>
-                                <span class = "totalPricePerProduct">
-                                    998,00
-                                </span>
-                            </p>
-                            <p class = "discountPer">
-                                10,00
-                            </p>
-                            <p>
-                                <span class = "mobileText">
-                                    Discount
-                                </span>
-                                <span class = "discountPerProduct">
-                                    20,00
-                                </span>
-                            </p>
-                        </div>
-                        <button class = "removeButton" type = "button">
-                            <img src="#" srcset="svg/cross.svg" alt="A cross logo for removal of product" class="logo">
-                        </button>
-                    </div>
+                    <a href="editProfile.html" id="editButton">
+                        Edit
+                    </a>
                 </div>
             </div>
-            
-            <div id = "buttonAndSumContainer">
-                <div>
-                    <div id = "summary">
-                        <span>
-                            Total sum:
-                        </span>
-                        <span id = "totalSum">
-                            9999
-                        </span>
-                        <span>
-                            Total discount:
-                        </span>
-                        <span id = "totalDiscount">
-                            30
-                        </span>
+
+            <form class="editForm" id = "orderForm">
+                <h3 class="headerOptions">
+                    Choose delivery-method
+                </h3>
+
+
+                <select type="text" class="formOptions" id = "selectDelivery" required name = "deliveryMethod">
+                    <option value="0" disabled selected> Select delivery-method</option>
+                    <option value = "1" class = "option" label = "Postnord - 56,-">56</option>
+                    <option value = "2" class = "option" label = "Posten - 120,-">120</option>
+                    <option value = "3" class = "option" label = "Brevdue - 0,-">0</option>
+                </select>
+
+                <h3 class="headerOptions">
+                    Choose payment-method
+                </h3>
+                <select type="text" class="formOptions" id = "selectPayment" required name = "paymentMethod">
+                    <option value="0" disabled selected> Select payment-method</option>
+                    <option value = "1" class = "option" label = "Klarna - 56,-">56</option>
+                    <option value = "2" class = "option" label = "Vipps - 120,-">120</option>
+                    <option value = "3" class = "option" label = "Your mom  - 0,-">0</option>
+                </select>
+                <div class="myInfo">
+                    <h2>
+                        Confirm
+                    </h2>
+                    <div class="confirmationAndInfo">
+                        <div>
+                            <div>
+                                Product cost: <span id = "productCost" class = "costs">200</span>,-
+                            </div>
+                            <div>
+                                Shipping: <span id = "shippingCost" class = "costs">0</span>,-
+                            </div>
+                            <div>
+                                Payment: <span id = "paymentCost" class = "costs">0</span>,-
+                            </div>
+                            <div id = "subTotal">
+                                Subtotal: <span id = "TotalCost">0</span>,-
+                            </div>
+                        </div>
+                        <a href="thankYouPage.html" id ="confirmButton" class="button greenButton">
+                            Confirm order
+                        </a>
                     </div>
-                    <input type = "submit" id = "checkOutButton" class = "button greenButton" value="Go to checkout">
                 </div>
-            </div>
-        </form>
-        <script src = "javascript/cart.js"></script>
+
+            </form>
+        </div>
+
+
     </section>
+
+
 
     <footer id="footer">
         <div class="sectionFooter">
@@ -372,5 +301,7 @@
 
     </footer>
 </body>
+<script src="javascript/menu.js"> </script>
+<script src="javascript/confirmation.js"> </script>
 
 </html>

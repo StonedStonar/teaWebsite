@@ -106,8 +106,6 @@
                 </div>
             </div>
         </div>
-
-
     </header>
     <script src="javascript/menu.js"></script>
 
@@ -116,23 +114,37 @@
             Edit product page
         </h2>
         <div id = "mainEditDiv">
-            <form id = "editProductForm" class = "editForm">
+            <form id = "editProductForm" class = "editForm" action="#">
+                <button class = "button greenButton" id = "switchViewButton" type = "button">
+                    Switch view
+                </button>
+                <input type="hidden" class = "inputForm" id = "productID" name = "productID">
                 <label for="productNameInput" class="formLabel">Product name</label>
                 <input type="text" class = "inputForm" id = "productNameInput" placeholder="Enter product name" name = "productName">
                 <label for="productAmountInput" class="formLabel">Product amount</label>
                 <input type="number" class = "inputForm" id = "productAmountInput" placeholder="Enter product amount" name = "productAmount">
                 <label for="productPriceInput" class="formLabel">Product price</label>
                 <input type="number" class = "inputForm" id = "productPriceInput" placeholder="Enter product price" name = "productPrice">
-                <label for="compandyIDInput" class="formLabel">Producer ID</label>
-                <input type="number" class = "inputForm" id = "compandyIDInput" placeholder="Enter company id" name = "companyID">
-                <label for="comapnyID" class="formLabel">Producer ID</label>
-                <input type="number" class = "inputForm" id = "comapnyID" placeholder="Enter company id" name = "companyID">
+                <label for="companyIDInput" class="formLabel">Producer ID</label>
+                <input type="number" class = "inputForm" id = "companyIDInput" placeholder="Enter company id" name = "companyID">
+                <label for="descriptionInput" class="formLabel">Description</label>
+                <textarea class = "inputForm" form = "editProductForm" placeholder = "Insert ingredients" id = "descriptionInput" name = "description"></textarea>
                 <label for="ingredientsInput" class="formLabel">Ingredients</label>
-                <textarea class = "inputForm" form = "editProductForm" placeholder = "Insert ingredients" id = "ingredientsInput"></textarea>
+                <textarea class = "inputForm" form = "editProductForm" placeholder = "Insert ingredients" id = "ingredientsInput" name = "ingredients"></textarea>
                 <p>
-                    Ingredients 
+                    Ingredients must be inserted with a ":" between the name and value. Also a comma is needed to seperate the values.
                 </p>
-                <input type = "submit" class = "button greenButton submitButton">
+                <p>
+                    Example: sugar:54g, fiber:10g
+                </p>
+                <label for = "tags" class="formLabel">Tags</label>
+                <textarea class = "inputForm" form = "editProductForm" placeholder = "Insert tags" id = "tags" name = "tags"></textarea>
+                <p>
+                    Tags must be separated with a ",". Example: "11,23,3"
+                </p>
+                <label for = "previewBox" class = "formLabel">Preview</label>
+                <input type = "checkbox" id = "previewBox" class = "button greenButton submitButton" name = "previewProduct">
+                <input type = "submit" class = "button greenButton submitButton" value = "Submit">
             </form>
             <div id = "productInfoPreview" class = "preview">
                 <div id="productContainer">
@@ -230,142 +242,9 @@
                             </p>
                         </div>
                     </div>
-
-                    <div class="dropdown last">
-                        <div id="productReviewsContainer">
-                            <span>Proudct reviews</span>
-                            <img src="#" srcset="svg/Arrow-for-dropdown-meny.svg" alt="A arrow head"
-                                class="svg logo rotatableLogo">
-                        </div>
-                        <div id="hiddenReview">
-
-                            <div id="productReviews">
-                                <form class="review-form">
-                                    <span>Title of review</span>
-                                    <input type="text" placeholder="Title for review">
-                                    <span>Reviewer</span>
-                                    <input type="text" placeholder="Name or Username">
-
-                                    <div class="set-star-rating" id="reviewStars">
-                                        <span>Set rating:</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                        <span class="star">&#9734;</span>
-                                    </div>
-                                    <input type="number" name="starRating" id="setStarRating">
-                                    <textarea rows="8" placeholder="write you're review here"></textarea>
-                                    <button type="submit">Submit review</button>
-                                </form>
-
-                            </div>
-
-                            <div class="review-content">
-                                <button id="reviewButton" class="button greenButton">Write your review</button>
-                                <div class="reviews-container">
-                                    <div class="review-body">
-                                        <div class="name-reviewer">Per Ivar Johansen</div>
-                                        <div class="content-container">
-                                            <div class="country-review">02.03.2011</div>
-                                            <div class="review-star-rating">
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span>(<span class="rating-numb">4</span>)</span>
-                                            </div>
-                                            <div class="description-review">"Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit,
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                enim ad minim veniam,
-                                                quis nostrud voluptate velit esse cillum dolore eu fugiat nulla
-                                                pariatur.
-                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                officia deserunt mollit anim id est laborum."
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="reviews-container">
-                                    <div class="review-body">
-                                        <div class="name-reviewer">Steinar Hjelle Midthus</div>
-                                        <div class="content-container">
-                                            <div class="country-review">03.09.2014</div>
-                                            <div class="review-star-rating">
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span>(<span class="rating-numb">5</span>)</span>
-                                            </div>
-                                            <div class="description-review">"Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit,
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat.
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                                dolore eu fugiat nulla pariatur.
-                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                officia deserunt mollit anim id est laborum."</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="review-content">
-                                <div class="reviews-container">
-                                    <div class="review-body">
-                                        <div class="name-reviewer">Kenneth Johansen Misund</div>
-                                        <div class="content-container">
-                                            <div class="country-review">04.09.2018</div>
-                                            <div class="review-star-rating">
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span>(<span class="rating-numb">1</span>)</span>
-                                            </div>
-                                            <div class="description-review">"Sunt in culpa qui officia deserunt mollit
-                                                anim id est laborum."
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="reviews-container">
-
-                                    <div class="review-body">
-                                        <div class="name-reviewer">Chuck Norris</div>
-                                        <div class="content-container">
-                                            <div class="country-review">01.01.1998</div>
-                                            <div class="review-star-rating">
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span class="star">&#9734;</span>
-                                                <span>(<span class="rating-numb">2</span>)</span>
-                                            </div>
-                                            <div class="description-review">"Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit,
-                                                sed do eiusmod tempor incididunt ut labore et dolore deserunt mollit
-                                                anim id est laborum."
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <div id = "productCardPreview" class = "preview">
+            <div id = "productCardPreview" class = "preview showPreview">
                 <div class = "card-container">
                     <a href="product-info.html" class="card">
                         <div class="card-header">
@@ -396,11 +275,11 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <script src="javascript/product-info.js"></script>
     <script src="javascript/products.js"></script>
+    <script src = "javascript/editProfile.js"></script>
     <footer id="footerWrapper">
         <div id="footer">
             <div class="sectionFooter">
@@ -412,8 +291,6 @@
                         For tea lovers
                     </span>
                 </a>
-
-
                 <div id="addressFooter">
                     <span>
                         Contact Information

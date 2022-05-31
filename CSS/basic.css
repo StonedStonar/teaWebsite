@@ -26,6 +26,7 @@
     /*Buttton*/
     --main-button-color: #267f29;
     --main-hoverbutton-color: #0f4911;
+    --main-activebutton-color: #3fca44;
     --active-button-color: #34ac38;
 
     /*Login colors*/
@@ -92,6 +93,10 @@ body{
 .greenButton:hover{
     cursor: pointer;
     background-color: var(--main-hoverbutton-color);
+}
+
+.greenButton:active{
+    background-color: var(--main-activebutton-color);
 }
 
 .closeText{

@@ -33,3 +33,7 @@
 .okMessage{
     color: green;
 }
+
+.hiddenInput{
+    display: none;
+}

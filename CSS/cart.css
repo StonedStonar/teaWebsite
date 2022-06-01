@@ -2,6 +2,10 @@
     display: grid;
 }
 
+.mainHeaderText{
+    border-bottom: none;
+}
+
 /*Ordered product container*/
 #orderedProductContainer{
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr 0.5fr;
@@ -124,10 +128,6 @@
 
 #clearCartButton{
     width: 10em;
-}
-
-#clearCartButton:hover{
-    background-color: var(--hover-container-color);
 }
 
 .minus-button, .plus-button, .amount-to-add{

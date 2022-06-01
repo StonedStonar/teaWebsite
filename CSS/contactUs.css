@@ -44,6 +44,7 @@ figure>figcaption {
 .mainSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content;
 }
 
 .mainHeaderText, #FAQHeader, #FAQContainer {
@@ -64,6 +65,7 @@ figure>figcaption {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.1s font-weight;
 }
 
 .FAQOpener > p {

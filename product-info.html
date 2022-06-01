@@ -109,11 +109,11 @@
         <script src = "javascript/menu.js"></script>
 
         <section class = "mainSection">
+            <h2  class="mainHeaderText">
+                Troll Green Tea
+            </h2>
             <div id = "productContainer">
                 <div id= "product-info">
-                    <h2  class="mainHeaderText">
-                        Troll Green Tea
-                    </h2>
                     <figure>
                         <img src = "Images/greentea.jpg" id = "pictureOfTeaType" alt="Troll Green Tea Picture">
                         <figcaption>Picture taken from Nosplash</figcaption>
@@ -121,7 +121,7 @@
                     
                 </div>
     
-                <form id="addToCartContainer">
+                <div id="addToCartContainer">
                     <div id="price-and-review">
                         <div class="product-info-price">
                             <div>
@@ -146,9 +146,10 @@
                         </a>
                     </div>
                 
-                    <button type = "submit" class="Add-To-Cart greenButton button">
-                        ADD TO CART
-                    </button>
+                    <form class = "Add-to-cart">
+                        <input type = "hidden" name = "productID">
+                        <button type="submit" class="greenButton button">ADD TO CART</button>
+                    </form>
                     
                     <div class="amount">
                         <div class="amount-to-add">
@@ -164,7 +165,7 @@
                             <span> on storage</span>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
 
             <div class="drop-down-meny">

@@ -8,10 +8,14 @@
     max-width: 400px;
     padding: 1em;
     margin: 0.2em;
-    box-shadow: 0 0.1em 0.1em 0 var(--main-shadow-color);
+    box-shadow: 0 0 0.1em 0 var(--main-shadow-color);
     text-align: center;
     text-decoration: none;
     transition: 0.3s;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--main-border-color);
 }
 
 .average-stars {
@@ -20,7 +24,8 @@
 
 .card:hover {
     cursor: pointer;
-    box-shadow: 0 0.4em 0.4em 0 var(--main-shadow-color);
+    box-shadow: 0 0em 0.7em 0 var(--main-shadow-color);
+    z-index: 1;
 }
 
 
@@ -40,8 +45,8 @@
 .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1em;
     width: 100%;
+    gap: 1em;
 }
 
 .card-container>*{
@@ -51,7 +56,7 @@
 .star {
     width: 1.4em;
     font-size: 2em;
-    color: #f0c508;
+    color: var(--main-star-color);
     background-color: unset;
     border: none;
     text-decoration: none;
@@ -67,6 +72,10 @@
     align-items: center;
     
 } 
+
+.former-price{
+    text-decoration: line-through;
+}
 
 .now-price {
     margin: 0;

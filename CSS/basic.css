@@ -4,8 +4,8 @@
     --figcap-color: gray;
     
     /*Backgrounds*/
-    --main-bg-color: #e9e2d8; /*Orginal #FDF7EE*/
-    --main-secbg-color: #fdf6ee; /*Orginal white*/
+    --main-bg-color: #fdf6ee; /*Orginal #FFFEFD*/
+    --main-secbg-color: #FFFEFD; /*Orginal white #fdf6ee*/
     --third-background-color: #fdf6ee; /*Not original but this was set first #FDF7EE*/
 
     /*Background container*/
@@ -20,27 +20,29 @@
     --second-border-color: #a39c9c;
 
     /*Font color*/
-    --main-font-color: black;
-    --main-secondfont-color: white;
+    --main-font-color: #1A1A1A;
+    --main-secondfont-color: #FFFEFD;
 
     /*Buttton*/
     --main-button-color: #267f29;
     --main-hoverbutton-color: #0f4911;
     --main-activebutton-color: #3fca44;
+    --second-button-color: #c0c0c0;
+    --second-hoverbutton-color: #5d5d5d;
     --active-button-color: #34ac38;
 
     /*Login colors*/
     --main-link-color: #1080BF;
 
     /*Product color*/
-    --main-star-color: #f0c508;
+    --main-star-color: #2E2C00;
 
     /*Menu colors*/
     --main-menubg-color: #eee2d1;
 }
 
 body{
-    background-color: var(--main-bg-color);
+    background-color: var(--main-secbg-color);
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
@@ -48,15 +50,15 @@ body{
 }
 
 #footerWrapper, #headerWrapper{
-    background-color: var(--main-secbg-color);
+    background-color: var(--main-bg-color) !important;
 }
 
 #headerWrapper{
-    box-shadow: 0 0px 3px var(--main-shadow-color);
+    box-shadow: 0 0px 6px var(--main-shadow-color);
 }
 
 #footerWrapper{
-    box-shadow: 0 0px 3px var(--main-shadow-color);
+    box-shadow: 0 0px 6px var(--main-shadow-color);
 }
 
 .mainSection, #menu, #footer{
@@ -66,8 +68,6 @@ body{
 
 
 .mainSection{
-    box-shadow: 0 0px 3px var(--main-shadow-color);
-    background-color: var(--third-background-color);
     margin: 1em auto;
     min-height: 70vh;
     padding: 0 1em 1em 1em;
@@ -77,13 +77,21 @@ body{
     padding-top: 1em;
     margin: 0;
     margin-bottom: 1em;
+    width: 100%;
+    border-bottom: 1px solid var(--main-border-color);
 }
 
 .button{
     border-radius: 0.5em;
     height: 40px;
     border: none;
-  
+    background-color: var(--second-button-color);
+    transition: 0.3s background-color;
+}
+
+.button:hover{
+    background-color: var(--second-hoverbutton-color);
+    color: var(--main-secondfont-color)
 }
  
 .greenButton{
@@ -363,7 +371,6 @@ body{
     display: flex;
     height: 300px;
     justify-content: space-between;
-    background-color: var(--main-secbg-color);
     padding: 0 1em;
 }
 
@@ -389,6 +396,7 @@ body{
     color: var(--main-font-color);
     margin-top: 0.3em;
     width: fit-content;
+    transition: 0.3s font-weight;
 }
 
 #shortcutContainer> h3 {

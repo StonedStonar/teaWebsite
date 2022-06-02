@@ -1,0 +1,33 @@
+.editTagDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.editTag {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+.editTag>label {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.preview> #tagDescription, .preview> #tagName {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.editTag>input {
+    margin-bottom: 0.6em;
+}
+
+.previewText {
+    margin: 0;
+}
+
+.editTag > #preview {
+    margin-top: -0.5em;
+}
+

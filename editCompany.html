@@ -5,7 +5,7 @@
         <title>Edit page for tags</title>
         <link href="CSS/basic.css" rel="stylesheet" type="text/css">
         <link href="CSS/form.css" rel="stylesheet" type="text/css">
-        <link href="CSS/editTag.css" rel="stylesheet" type="text/css">
+        <link href="CSS/editCompany.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -106,24 +106,47 @@
 
 
         <section class="mainSection">
-            <h2 class="headerText">Edit tag page</h1>
-            <div class="editTagDiv">
-                <form id="editTagForm" class="editTag">
-                    <input type="hidden" class="inputForm" id="tagID" name="tagID"> </input>
-                    <label for="tagNameInput" class="inputLabel">Tag name</label>
-                    <input type="text" class="inputForm" id="tagNameInput" placeholder="Enter tag name" name="tagName">
-                    <label for="tagDescriptionInput" class="inputLabel">Tag description</label>
-                    <input type="text" class="inputForm" id="tagDescriptionInput" placeholder="Enter tag description" name="tagDescription">
+            <h2 class="headerText">Edit company page</h1>
+            <div class="editCompanyDiv">
+                <form id="editCompanyForm" class="editCompany">
+                    <input type="hidden" class="inputForm" id="companyID" name="companyID">
+                    <label for="companyNameInput" class="inputLabel">Company name</label>
+                    <input type="text" class="inputForm" id="companyNameInput" placeholder="Enter name of company" name="companyName">
+                    <label for="companyDescriptionInput" class="inputLabel">Company description</label>
+                    <textarea class="inputForm" form="editCompanyForm" placeholder="Enter company description" id="companyDescriptionTextarea" name="companyDescription"></textarea>
+                    <input type="hidden" class="inputForm" id="addressID" name="addressID">
+                    <label for="postalCodeInput" class="inputLabel">Postal code</label>
+                    <input type="number" class="inputForm" id="postalCodeInput" placeholder="Enter postal code" name="postalCode">
+                    <label for="postalPlaceInput" class="inputLabel">Postal place</label>
+                    <input type="text" class="inputForm" id="postalPlaceInput" placeholder="Enter postal place" name="postalPlace">
+                    <label for="streetNameInput" class="inputLabel">Street name</label>
+                    <input type="text" class="inputForm" id="streetNameInput" placeholder="Enter street name" name="streetName">
+                    <label for="houseNumberInput" class="inputLabel">House number</label>
+                    <input type="number" class="inputForm" id="houseNumberInput" placeholder="Enter house number" name="houseNumber">
+                    <label for="countryInput" class="inputLabel">Country</label>
+                    <input type="text" class="inputForm" id="countryInput" placeholder="Enter country" name="country">
 
                     <label for="preview" class="formLabel">Preview</label>
                     <input type="checkbox" id="preview" class="button greenButton submitButton" value="submit changes">
                     <input type="submit" class="button greenButton submitButton" value="Submit changes">
                 </form>
-                <div id="tagPreview" class="preview">
-                    <h3>Tag name</h3>
-                    <p>The name of the tag</p>
-                    <h3>Tag description</h3>
-                    <p>The description written</p>
+
+                <div id="companyPreview" class="preview">
+                    <h3>Company name</h3>
+                    <p>The company name</p>
+                    <h3>Company description</h3>
+                    <p>The company description written</p>
+                    <h3>Postal code</h3>
+                    <p>The postal code entered</p>
+                    <h3>Postal place</h3>
+                    <p>The postal place written</p>
+                    <h3>Street name</h3>
+                    <p>The street name written</p>
+                    <h3>House number</h3>
+                    <p>The house number entered</p>
+                    <h3>Country</h3>
+                    <p>The country</p>
+
                 </div>
             </div>
         </section>

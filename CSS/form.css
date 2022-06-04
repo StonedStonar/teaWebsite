@@ -14,8 +14,6 @@
     font-weight: 600;
 }
 
-
-
 .formLabel{
     font-size: 1.2em;
     margin-top: 0.75em;
@@ -42,4 +40,14 @@
     border-radius: 5px;
     height: 30px;
     font-size: 1em;
+}
+
+.editButton{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+    text-decoration: none;
+    margin-bottom: 1em;
 }

@@ -1,0 +1,26 @@
+.editCompanyDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.editCompany {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+.editCompany>label {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.editCompany>input, .editCompany>textarea {
+    margin-bottom: 0.6em;
+}
+.editCompany > #preview {
+    margin-top: -0.5em;
+}
+
+.preview> p {
+    margin-top: -1em;
+}

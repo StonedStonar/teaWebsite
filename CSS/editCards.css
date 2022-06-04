@@ -1,0 +1,45 @@
+.cardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.customCard{
+    box-shadow: 0 0 2px var(--main-shadow-color);
+    padding: 0.5em;
+}
+
+.headerOnCard{
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+.cardText{
+    margin-top: 0;
+}
+
+.editButton{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+    text-decoration: none;
+}
+
+.customCard>p:first-of-type{
+    margin-top: 0;
+}
+
+@media screen and (max-width:900px) {
+    .cardContainer{
+        grid-template-columns: 1fr;
+    }
+
+    .editButton{
+        width: 100%;
+    }
+}
+

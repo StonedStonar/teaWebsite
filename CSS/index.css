@@ -17,6 +17,11 @@
     height: 100%;
 }
 
+
+.card > .button {
+    width: 100%;
+}
+
 .frontpageButton {
     height: 60px;
     display: flex;

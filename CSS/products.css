@@ -1,8 +1,6 @@
-#hidden-filter {
-    visibility: hidden;
-    overflow: hidden;
-    max-height: 0;
-    transition: visibility 0.05s, max-height 0.20s;
+#filter {
+    font-weight: bold;
+    margin-top: 0.5em;
 }
 
 .card-body> form > button {

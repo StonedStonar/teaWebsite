@@ -80,7 +80,7 @@ figure {
     height: fit-content;
 }
 
-.minus-button, .plus-button, .amount-to-add{
+.minus-button, .plus-button {
     outline: none;
     background-color: transparent;
     border: none;
@@ -92,9 +92,8 @@ figure {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #e1e1e1;
     border-radius: 8px;
-
 }
 
 .content-container {

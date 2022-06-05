@@ -1,5 +1,34 @@
 window.addEventListener('load', () => addListeners());
 
+
+document.getElementById("form").addEventListener("submit", event => sendForm(event));
+/**
+ * Sends the form to the server.
+ */
+function sendForm(event){
+    event.preventDefault();
+    let collection = event.target.querySelectorAll(".num-to-change");
+    let link = window.location.origin;
+    link = link + "/users/cart?";
+    for(let i = 0; i < collection.length; i++){
+        let input = collection[i];
+        let extraAnd = "";
+        if(i > 0){
+            extraAnd = "&";
+        }
+        link = link + extraAnd + input.name + "=" + input.value;
+    }
+    let http = new XMLHttpRequest();
+    http.open("PUT", link);
+    http.send();
+}
+
+function sendCart(){
+    let updateCartButton = document.getElementById("updateCartButton");
+    updateCartButton.click();
+
+}
+
 /**
  * Adds all the listeners.
  */
@@ -18,23 +47,30 @@ function addListeners(){
     }
     let clearCartButton = document.getElementById("clearCartButton");
     clearCartButton.addEventListener("click", () => removeAllProducts());
+    document.getElementById("form").addEventListener("submit", event => sendForm(event));
+    let collection = document.getElementsByTagName("a");
+    for(let a of collection){
+        a.addEventListener("click", () => sendCart());
+    }
+    let productCollection = document.getElementsByClassName("orderedProduct");
+    for(let productContainer of productCollection){
+        updateTotalOfProduct(productContainer);
+    }
     updateTotalAmounts();
 }
 
 function updateTotalOfProduct(container){
-    console.log(container)
-    console.log("hello")
     let pricePer = container.querySelector(".pricePer");
     let amount = container.querySelector(".num-to-change");
     let totalSpan = container.querySelector(".totalPricePerProduct");
     let totalPrice = parseFloat(pricePer.innerHTML) * parseFloat(amount.value);
     totalSpan.innerHTML = totalPrice;
-    
+
     let discountPer = container.querySelector(".discountPer");
     let discountSpan = container.querySelector(".discountPerProduct");
     let totalDiscount = parseFloat(discountPer.innerHTML) * parseFloat(amount.value);
     discountSpan.innerHTML = totalDiscount;
-    
+
     updateTotalAmounts();
 }
 
@@ -91,7 +127,7 @@ function removeProduct(event){
 
 /**
  * Hides an container.
- * @param {*} productContainer the container to hide. 
+ * @param {*} productContainer the container to hide.
  */
 function hideContainer(productContainer){
     let amount = productContainer.querySelector(".num-to-change");
@@ -112,7 +148,7 @@ function removeAllProducts(){
 
 /**
  * Increments the target product.
- * @param {*} event the click event. 
+ * @param {*} event the click event.
  */
 function increment(event){
     let target = event.target;
@@ -124,8 +160,8 @@ function increment(event){
 }
 
 /**
- * Makes the amount value decrease. 
- * @param {clicked decrement button} event the button that was pressed. 
+ * Makes the amount value decrease.
+ * @param {clicked decrement button} event the button that was pressed.
  */
 function decrement(event){
     let target = event.target;

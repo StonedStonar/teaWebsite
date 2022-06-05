@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", addListener());
 
-
 function getFilterOption(target) {
     let collection = document.getElementsByClassName("filterOption");
     let container = null;

@@ -105,10 +105,11 @@
 }
 
 .amount-to-add>.num-to-change {
-    border-top: 2px solid rgba(0,0,0,0.1); 
-    border-bottom: 2px solid rgba(0,0,0,0.1); 
+    border-top: 2px solid rgba(0,0,0,0.1);
+    border-bottom: 2px solid rgba(0,0,0,0.1);
     pointer-events: none;
 }
+
 
 #buttonAndSumContainer{
     display: flex;

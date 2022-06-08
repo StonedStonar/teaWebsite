@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", addEventListeners());
 /**
- * Adds event listeners to objects. 
+ * Adds event listeners to objects.
  */
 function addEventListeners() {
     let deliverySelect = document.getElementById("selectDelivery");
     let paymentSelect = document.getElementById("selectPayment");
-   
+
 
     deliverySelect.addEventListener("change", () => updateDelivery());
     paymentSelect.addEventListener("change", () => updatePayment());
     updateSubtotal();
-    
+
 
 }
 
 /**
- * Updates what delivery is selected and updates the subtotal. 
+ * Updates what delivery is selected and updates the subtotal.
  */
 function updateDelivery() {
     let deliverySelect = document.getElementById("selectDelivery");
@@ -26,7 +26,7 @@ function updateDelivery() {
 }
 
 /**
- * Updates what payment is selected and updates the subtotal. 
+ * Updates what payment is selected and updates the subtotal.
  */
 function updatePayment() {
     let paymentSelect = document.getElementById("selectPayment");
@@ -38,7 +38,7 @@ function updatePayment() {
 }
 
 /**
- * Gets selected item from select. 
+ * Gets selected item from select.
  * @param {*} select the select tag.
  * @returns the text within the selected option.
  */
@@ -56,14 +56,14 @@ function getSelectedItemFromSelect(select) {
             i++;
         }
 
-    } 
+    }
 
     return text;
 
 }
 
 /**
- * Updates the total amount. 
+ * Updates the total amount.
  */
 function updateSubtotal(){
     let costCollection = document.getElementsByClassName("costs");

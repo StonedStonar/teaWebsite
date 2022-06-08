@@ -80,7 +80,7 @@ figure {
     height: fit-content;
 }
 
-.minus-button, .plus-button {
+.minus-button, .plus-button, .amount-to-add {
     outline: none;
     background-color: transparent;
     border: none;

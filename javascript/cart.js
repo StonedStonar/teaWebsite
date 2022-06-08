@@ -23,10 +23,10 @@ function sendForm(event){
     http.send();
 }
 
-function sendCart(){
+async function sendCart(event){
     let updateCartButton = document.getElementById("updateCartButton");
     updateCartButton.click();
-
+    await new Promise(resolve => setTimeout(resolve, 5000));
 }
 
 /**
@@ -50,7 +50,7 @@ function addListeners(){
     document.getElementById("form").addEventListener("submit", event => sendForm(event));
     let collection = document.getElementsByTagName("a");
     for(let a of collection){
-        a.addEventListener("click", () => sendCart());
+        a.addEventListener("click", event => sendCart(event));
     }
     let productCollection = document.getElementsByClassName("orderedProduct");
     for(let productContainer of productCollection){

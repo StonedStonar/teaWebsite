@@ -211,7 +211,6 @@ function addListener() {
     countReviews();
     let starContainer = document.getElementById("reviewStars");
     let starCollection = starContainer.querySelectorAll(".star");
-    console.log(starContainer);
     for (let star of starCollection) {
         star.addEventListener("click", event => setStars(event));
     }

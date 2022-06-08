@@ -28,6 +28,5 @@ function swithView(){
     if(placeOfCurrentContainer != -1){
         let newPlace = (placeOfCurrentContainer+1)%previewCollection.length;
         previewCollection[newPlace].classList.add("showPreview");
-        console.log(newPlace)
     }
 }

@@ -35,18 +35,6 @@ function closeSearch(){
 }
 
 /**
- * The action of searching.
- */
-function search(){
-    let written = document.getElementById("productSearch");
-    console.log(written.value);
-    alert("You just tried to search you little sh****** \nAnd you wrote:\n" + written);
-    alert("Ever watched porn?");
-    let popup = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '','width=,height=,resizable=no').blur();
-    window.location = "https://www.nyan.cat";
-}
-
-/**
  * Opens the mobile menu.
  */
 function openMenu(){
@@ -64,7 +52,6 @@ function listenForCloseMenu(click){
     let hambuger = document.getElementById("hamburgerMenu");
     let target = click.target;
     if(sideMenu.classList.contains("openMenu") && (target.parentElement != hambuger && target != hambuger && target != sideMenu)){
-        console.log("closing");
         closeMenu();
         window.removeEventListener("click", listenForCloseMenu);
     }

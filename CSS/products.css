@@ -18,7 +18,7 @@
     visibility: hidden;
     overflow: hidden;
     max-height: 0;
-    transition: visibility 0.05s, max-height 0.20s; 
+    transition: visibility 0.05s, max-height 0.20s;
 }
 
 .closeable>div {
@@ -79,5 +79,5 @@
         border-bottom: 1px solid var(--main-border-color);
         border-top: 1px solid var(--main-border-color);
     }
-      
+
 }

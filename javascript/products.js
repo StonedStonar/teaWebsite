@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", addListener());
 
+
 function getFilterOption(target) {
     let collection = document.getElementsByClassName("filterOption");
     let container = null;
@@ -113,7 +114,6 @@ function openMug(event) {
 function countReviewsOnCards() {
     let cardCollection = document.getElementsByClassName("card");
     let i = 0;
-    console.log(cardCollection);
     while (i < cardCollection.length) {
         let card = cardCollection[i];
         let averageStarsSpan = card.querySelector(".average-stars");

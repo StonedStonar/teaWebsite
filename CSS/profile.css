@@ -51,11 +51,9 @@ figure>img{
 }
 
 .button{
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
 }
 
 #editProfile{
@@ -73,9 +71,6 @@ figure>img{
 #profileIntro>figure>figcaption{
     color:var(--figcap-color);
 }
-
-
-
 
 #optionsForUser{
     width: 80%;
